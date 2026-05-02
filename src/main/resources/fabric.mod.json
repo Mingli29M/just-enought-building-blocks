@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "just-enought-building-blocks",
+	"version": "${version}",
+	"name": "Just Enought Building Blocks",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Mingli29, J00000NEY"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/just-enought-building-blocks/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"mingli29.jebb.JustEnoughtBuildingBlocks"
+		],
+		"client": [
+			"mingli29.jebb.client.JustEnoughtBuildingBlocksClient"
+		],
+		"fabric-datagen": [
+			"mingli29.jebb.client.JustEnoughtBuildingBlocksDataGenerator"
+		]
+	},
+	"mixins": [
+		"just-enought-building-blocks.mixins.json",
+		{
+			"config": "just-enought-building-blocks.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
