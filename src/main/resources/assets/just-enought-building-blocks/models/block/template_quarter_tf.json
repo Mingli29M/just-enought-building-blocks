@@ -1,5 +1,6 @@
 {
-	"ambientocclusion": true,
+	"parent": "minecraft:block/block",
+	"ambientocclusion": false,
 	"textures": {
 		"particle": "#all"
 	},

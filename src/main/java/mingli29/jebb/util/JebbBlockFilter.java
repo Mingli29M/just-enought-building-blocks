@@ -43,7 +43,11 @@ public final class JebbBlockFilter {
             "target", "jukebox", "note_block", "lodestone",
             "sandstone", "red_sandstone", "chiseled_sandstone", "cut_sandstone",
             "chiseled_red_sandstone", "cut_red_sandstone",
-            "sculk_catalyst", "respawn_anchor"
+            "sculk_catalyst", "respawn_anchor",
+            "infested_stone", "infested_cobblestone", "infested_stone_bricks",
+            "infested_mossy_stone_bricks", "infested_cracked_stone_bricks",
+            "infested_chiseled_stone_bricks", "infested_deepslate",
+            "reinforced_deepslate"
     );
 
     private JebbBlockFilter() {

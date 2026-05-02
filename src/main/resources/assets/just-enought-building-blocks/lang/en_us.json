@@ -1,3 +1,6 @@
 {
-	"itemGroup.just-enought-building-blocks.main": "Just Enough Building Blocks"
+	"itemGroup.just-enought-building-blocks.vertical_slabs": "Vertical Slabs",
+	"itemGroup.just-enought-building-blocks.quarters": "Quarter Blocks",
+	"jebb.vertical_slab": "Vertical %s",
+	"jebb.quarter": "Quarter %s"
 }

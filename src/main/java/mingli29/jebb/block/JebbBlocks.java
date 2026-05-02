@@ -1,6 +1,7 @@
 package mingli29.jebb.block;
 
 import mingli29.jebb.JustEnoughtBuildingBlocks;
+import mingli29.jebb.item.JebbVariantBlockItem;
 import mingli29.jebb.util.JebbBlockFilter;
 import mingli29.jebb.util.JebbBlockProps;
 import net.minecraft.core.Registry;
@@ -9,7 +10,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -34,8 +34,8 @@ public final class JebbBlocks {
                     "quarter_" + parentPath,
                     new JebbQuarterBlock(JebbBlockProps.copyFromParent(parent)));
 
-            registerItem("vertical_slab_" + parentPath, vs);
-            registerItem("quarter_" + parentPath, q);
+            registerVariantItem("vertical_slab_" + parentPath, vs, parent, "jebb.vertical_slab");
+            registerVariantItem("quarter_" + parentPath, q, parent, "jebb.quarter");
 
             VERTICAL_SLABS.put(parent, vs);
             QUARTERS.put(parent, q);
@@ -50,9 +50,9 @@ public final class JebbBlocks {
         return Registry.register(BuiltInRegistries.BLOCK, id, block);
     }
 
-    private static Item registerItem(String name, Block block) {
+    private static Item registerVariantItem(String name, Block block, Block parent, String prefixKey) {
         ResourceLocation id = new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, name);
-        BlockItem item = new BlockItem(block, new Item.Properties());
+        BlockItem item = new JebbVariantBlockItem(block, parent, prefixKey, new Item.Properties());
         Item registered = Registry.register(BuiltInRegistries.ITEM, id, item);
         item.registerBlocks(Item.BY_BLOCK, item);
         return registered;
