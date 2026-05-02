@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "minecraft:purple_wool"
+  },
+  "result": "just-enought-building-blocks:quarter_purple_wool"
+}

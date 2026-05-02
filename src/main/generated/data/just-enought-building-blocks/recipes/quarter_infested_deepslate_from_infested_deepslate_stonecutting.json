@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "minecraft:infested_deepslate"
+  },
+  "result": "just-enought-building-blocks:quarter_infested_deepslate"
+}

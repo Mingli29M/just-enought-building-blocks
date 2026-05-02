@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "minecraft:jungle_leaves"
+  },
+  "result": "just-enought-building-blocks:quarter_jungle_leaves"
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "minecraft:deepslate_copper_ore"
+  },
+  "result": "just-enought-building-blocks:vertical_slab_deepslate_copper_ore"
+}

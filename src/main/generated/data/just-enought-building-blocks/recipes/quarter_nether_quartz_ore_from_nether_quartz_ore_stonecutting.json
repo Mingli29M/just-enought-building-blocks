@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "minecraft:nether_quartz_ore"
+  },
+  "result": "just-enought-building-blocks:quarter_nether_quartz_ore"
+}

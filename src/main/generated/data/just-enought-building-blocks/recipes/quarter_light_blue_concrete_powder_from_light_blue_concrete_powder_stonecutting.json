@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "minecraft:light_blue_concrete_powder"
+  },
+  "result": "just-enought-building-blocks:quarter_light_blue_concrete_powder"
+}

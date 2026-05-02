@@ -1,0 +1,6 @@
+{
+  "parent": "just-enought-building-blocks:block/template_vertical_slab",
+  "textures": {
+    "all": "minecraft:block/mud_bricks"
+  }
+}

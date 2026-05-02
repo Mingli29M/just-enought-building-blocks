@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "minecraft:emerald_ore"
+  },
+  "result": "just-enought-building-blocks:quarter_emerald_ore"
+}

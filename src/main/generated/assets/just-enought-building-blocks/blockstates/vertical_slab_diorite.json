@@ -1,0 +1,60 @@
+{
+  "variants": {
+    "doubled=false,facing=east,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/vertical_slab_diorite",
+      "y": 90
+    },
+    "doubled=false,facing=east,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/vertical_slab_diorite",
+      "y": 90
+    },
+    "doubled=false,facing=north,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/vertical_slab_diorite",
+      "y": 0
+    },
+    "doubled=false,facing=north,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/vertical_slab_diorite",
+      "y": 0
+    },
+    "doubled=false,facing=south,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/vertical_slab_diorite",
+      "y": 180
+    },
+    "doubled=false,facing=south,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/vertical_slab_diorite",
+      "y": 180
+    },
+    "doubled=false,facing=west,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/vertical_slab_diorite",
+      "y": 270
+    },
+    "doubled=false,facing=west,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/vertical_slab_diorite",
+      "y": 270
+    },
+    "doubled=true,facing=east,waterlogged=false": {
+      "model": "minecraft:block/diorite"
+    },
+    "doubled=true,facing=east,waterlogged=true": {
+      "model": "minecraft:block/diorite"
+    },
+    "doubled=true,facing=north,waterlogged=false": {
+      "model": "minecraft:block/diorite"
+    },
+    "doubled=true,facing=north,waterlogged=true": {
+      "model": "minecraft:block/diorite"
+    },
+    "doubled=true,facing=south,waterlogged=false": {
+      "model": "minecraft:block/diorite"
+    },
+    "doubled=true,facing=south,waterlogged=true": {
+      "model": "minecraft:block/diorite"
+    },
+    "doubled=true,facing=west,waterlogged=false": {
+      "model": "minecraft:block/diorite"
+    },
+    "doubled=true,facing=west,waterlogged=true": {
+      "model": "minecraft:block/diorite"
+    }
+  }
+}

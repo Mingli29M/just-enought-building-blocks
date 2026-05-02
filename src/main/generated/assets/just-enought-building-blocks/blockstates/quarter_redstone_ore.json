@@ -1,0 +1,132 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "just-enought-building-blocks:block/quarter_redstone_ore_bn",
+        "y": 0
+      },
+      "when": {
+        "AND": [
+          {
+            "axis": "z"
+          },
+          {
+            "bottom_near": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "just-enought-building-blocks:block/quarter_redstone_ore_bf",
+        "y": 0
+      },
+      "when": {
+        "AND": [
+          {
+            "axis": "z"
+          },
+          {
+            "bottom_far": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "just-enought-building-blocks:block/quarter_redstone_ore_tn",
+        "y": 0
+      },
+      "when": {
+        "AND": [
+          {
+            "axis": "z"
+          },
+          {
+            "top_near": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "just-enought-building-blocks:block/quarter_redstone_ore_tf",
+        "y": 0
+      },
+      "when": {
+        "AND": [
+          {
+            "axis": "z"
+          },
+          {
+            "top_far": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "just-enought-building-blocks:block/quarter_redstone_ore_bn",
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "axis": "x"
+          },
+          {
+            "bottom_near": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "just-enought-building-blocks:block/quarter_redstone_ore_bf",
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "axis": "x"
+          },
+          {
+            "bottom_far": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "just-enought-building-blocks:block/quarter_redstone_ore_tn",
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "axis": "x"
+          },
+          {
+            "top_near": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "just-enought-building-blocks:block/quarter_redstone_ore_tf",
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "axis": "x"
+          },
+          {
+            "top_far": "true"
+          }
+        ]
+      }
+    }
+  ]
+}

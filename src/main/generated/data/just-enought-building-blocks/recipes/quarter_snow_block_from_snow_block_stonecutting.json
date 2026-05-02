@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "minecraft:snow_block"
+  },
+  "result": "just-enought-building-blocks:quarter_snow_block"
+}

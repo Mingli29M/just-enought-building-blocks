@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "minecraft:smooth_basalt"
+  },
+  "result": "just-enought-building-blocks:quarter_smooth_basalt"
+}

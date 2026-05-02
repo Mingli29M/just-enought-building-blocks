@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "minecraft:flowering_azalea_leaves"
+  },
+  "result": "just-enought-building-blocks:quarter_flowering_azalea_leaves"
+}

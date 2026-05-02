@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "minecraft:black_concrete_powder"
+  },
+  "result": "just-enought-building-blocks:quarter_black_concrete_powder"
+}

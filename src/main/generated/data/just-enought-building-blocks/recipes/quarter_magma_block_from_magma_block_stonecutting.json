@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "minecraft:magma_block"
+  },
+  "result": "just-enought-building-blocks:quarter_magma_block"
+}

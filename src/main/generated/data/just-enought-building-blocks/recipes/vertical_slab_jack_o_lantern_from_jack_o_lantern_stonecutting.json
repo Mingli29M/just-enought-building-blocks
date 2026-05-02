@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "minecraft:jack_o_lantern"
+  },
+  "result": "just-enought-building-blocks:vertical_slab_jack_o_lantern"
+}

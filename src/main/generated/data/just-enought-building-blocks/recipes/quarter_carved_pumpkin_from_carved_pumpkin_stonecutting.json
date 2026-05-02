@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "minecraft:carved_pumpkin"
+  },
+  "result": "just-enought-building-blocks:quarter_carved_pumpkin"
+}

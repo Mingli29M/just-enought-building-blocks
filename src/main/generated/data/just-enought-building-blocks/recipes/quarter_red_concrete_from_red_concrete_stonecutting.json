@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "minecraft:red_concrete"
+  },
+  "result": "just-enought-building-blocks:quarter_red_concrete"
+}

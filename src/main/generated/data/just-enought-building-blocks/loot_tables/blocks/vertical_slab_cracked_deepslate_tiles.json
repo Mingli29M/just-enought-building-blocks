@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "conditions": [
+                {
+                  "block": "just-enought-building-blocks:vertical_slab_cracked_deepslate_tiles",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "doubled": "true"
+                  }
+                }
+              ],
+              "count": 2.0,
+              "function": "minecraft:set_count"
+            },
+            {
+              "function": "minecraft:explosion_decay"
+            }
+          ],
+          "name": "just-enought-building-blocks:vertical_slab_cracked_deepslate_tiles"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ]
+}
