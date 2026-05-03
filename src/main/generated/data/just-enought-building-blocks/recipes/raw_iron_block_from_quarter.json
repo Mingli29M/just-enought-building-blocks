@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_raw_iron_block"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_raw_iron_block"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_raw_iron_block"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_raw_iron_block"
+    }
+  ],
+  "result": {
+    "item": "minecraft:raw_iron_block"
+  }
+}

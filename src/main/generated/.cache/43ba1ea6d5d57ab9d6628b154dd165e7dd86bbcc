@@ -1,4 +1,4 @@
-// 1.20.1	2026-05-02T22:18:08.6175927	Just Enought Building Blocks/Block Loot Tables
+// 1.20.1	2026-05-03T11:33:06.5992696	Just Enought Building Blocks/Block Loot Tables
 67d1e8492b3eea3ab6fac3b4481f4f10a8fc96d2 data\just-enought-building-blocks\loot_tables\blocks\quarter_gray_concrete_powder.json
 4c11be759d1fd84af76a59cf189e9edb1c05c2fd data\just-enought-building-blocks\loot_tables\blocks\vertical_slab_tinted_glass.json
 4f117d1b041f88711809744c0e3a188583f0569a data\just-enought-building-blocks\loot_tables\blocks\quarter_purple_stained_glass.json
@@ -46,7 +46,6 @@ c9eca1a8a313768b900ef08f707ed2e0459c699e data\just-enought-building-blocks\loot_
 c80b83e5195be19a0eb6ed340cb2f43e55e12a99 data\just-enought-building-blocks\loot_tables\blocks\quarter_magenta_concrete.json
 fe971dd38f36afcee525c2a98b0dc6e79c9da399 data\just-enought-building-blocks\loot_tables\blocks\vertical_slab_waxed_weathered_cut_copper.json
 587cfd2cfe903fd6a5ad25a02fc1a98c899b8773 data\just-enought-building-blocks\loot_tables\blocks\quarter_end_stone.json
-7698b16c27ef4a7156859670aca3211ea3393144 data\just-enought-building-blocks\loot_tables\blocks\vertical_slab_jack_o_lantern.json
 e431958b3ddf50deaa9aace53bef20c601b77814 data\just-enought-building-blocks\loot_tables\blocks\vertical_slab_black_stained_glass.json
 34dd847305e1f59180e4254b676a063d0b016758 data\just-enought-building-blocks\loot_tables\blocks\quarter_cyan_concrete_powder.json
 e6e1cf6ab668328aaa2980715c6c1fc9297dc9b5 data\just-enought-building-blocks\loot_tables\blocks\vertical_slab_deepslate_bricks.json
@@ -88,7 +87,6 @@ c8b810ce1ef77e6f35791d7a3906dca5bf9486d7 data\just-enought-building-blocks\loot_
 183c1a44eedce930d338473cb5a8102fd0aec0bd data\just-enought-building-blocks\loot_tables\blocks\quarter_amethyst_block.json
 82d72f4d18d1343453896d0a61e99527a6be9b9c data\just-enought-building-blocks\loot_tables\blocks\quarter_podzol.json
 5c9f734db4d02d685cd47889aa1cbceb396d0775 data\just-enought-building-blocks\loot_tables\blocks\quarter_orange_wool.json
-1eb5030299c64eda6dc9526db8e2c94e4db02545 data\just-enought-building-blocks\loot_tables\blocks\quarter_carved_pumpkin.json
 f5967503005fd72a7e5e3e748f883e33fd26a7b7 data\just-enought-building-blocks\loot_tables\blocks\quarter_blue_terracotta.json
 65f76b54fbe38466c9ef7ffeb89722483a324521 data\just-enought-building-blocks\loot_tables\blocks\quarter_deepslate_coal_ore.json
 df7262738f74c0b57ea416b43b2bf68e5733cb62 data\just-enought-building-blocks\loot_tables\blocks\quarter_purple_concrete_powder.json
@@ -120,7 +118,6 @@ bfefb7a9020f27750c2ff5bef2fb440effa88a5a data\just-enought-building-blocks\loot_
 34aef568cb2273679f4048191aee2a3c7f45ab6b data\just-enought-building-blocks\loot_tables\blocks\quarter_quartz_block.json
 f3c8376d482c33e0c828f82068731a240ba4074b data\just-enought-building-blocks\loot_tables\blocks\quarter_yellow_terracotta.json
 8f865943431c5f6ec9f9628d62f69a6c300e9f57 data\just-enought-building-blocks\loot_tables\blocks\vertical_slab_purple_wool.json
-3f32d2c4e3b9449cb0042c65776369d372090c80 data\just-enought-building-blocks\loot_tables\blocks\vertical_slab_carved_pumpkin.json
 ea37b643cd050155aa7672a2a07ccb597450641e data\just-enought-building-blocks\loot_tables\blocks\vertical_slab_birch_leaves.json
 cea2b591f5adae7636a7a80b12ed87a9e11d80a8 data\just-enought-building-blocks\loot_tables\blocks\vertical_slab_snow_block.json
 80bed466c5b0a4c704c530dc435c42c3cdfcc8a5 data\just-enought-building-blocks\loot_tables\blocks\vertical_slab_cracked_stone_bricks.json
@@ -142,8 +139,8 @@ b2923f60dd3ce09fdfa1fe33b11bb7e79cad832f data\just-enought-building-blocks\loot_
 008112b8a8e6f4eb0b98882c0e219e36d70b6b46 data\just-enought-building-blocks\loot_tables\blocks\vertical_slab_copper_block.json
 0dcd44fd97e72c0c93e4f84aedcf93691e952957 data\just-enought-building-blocks\loot_tables\blocks\vertical_slab_quartz_bricks.json
 cdc84a4665894ae14e47d8785c6edfd504c43646 data\just-enought-building-blocks\loot_tables\blocks\quarter_raw_gold_block.json
-3e10566e21fcfffea600c87728e8c604b32688f7 data\just-enought-building-blocks\loot_tables\blocks\vertical_slab_smooth_basalt.json
 b7fbb23b46d1f9afff6c86311b114815e27dae90 data\just-enought-building-blocks\loot_tables\blocks\quarter_redstone_block.json
+3e10566e21fcfffea600c87728e8c604b32688f7 data\just-enought-building-blocks\loot_tables\blocks\vertical_slab_smooth_basalt.json
 48e2dd810a16a7df0724d8886bdc8e6d80d8e785 data\just-enought-building-blocks\loot_tables\blocks\quarter_redstone_ore.json
 295b281628dd551028ca904d679d8384634226e8 data\just-enought-building-blocks\loot_tables\blocks\vertical_slab_oxidized_copper.json
 5a4fb06a4415f164bb040cea59c9a1b0cfc2d576 data\just-enought-building-blocks\loot_tables\blocks\quarter_coal_block.json
@@ -199,7 +196,6 @@ bca358da8ca517c2907a2970ec951c87c5c3eec6 data\just-enought-building-blocks\loot_
 70aeae3afc66e75278e159a4486c2992d1b557a1 data\just-enought-building-blocks\loot_tables\blocks\vertical_slab_deepslate_redstone_ore.json
 b0a4bb4b3777053beecf9f9f286b3b6926ca749f data\just-enought-building-blocks\loot_tables\blocks\quarter_black_glazed_terracotta.json
 0d81709d53621982d9241ff56a6d28859973dc3e data\just-enought-building-blocks\loot_tables\blocks\quarter_mossy_cobblestone.json
-d260976bdafc713ffe379a1aa18726c697543ef0 data\just-enought-building-blocks\loot_tables\blocks\quarter_jack_o_lantern.json
 fd8427cb0b7b4c234545c212eec0fcf94269093a data\just-enought-building-blocks\loot_tables\blocks\quarter_polished_deepslate.json
 952e21e36cdd05154d6af42395eb5f67b3efe6da data\just-enought-building-blocks\loot_tables\blocks\quarter_cyan_terracotta.json
 487785e732492fbc0deda7bbad0b9b5ff027c7a8 data\just-enought-building-blocks\loot_tables\blocks\vertical_slab_mud_bricks.json

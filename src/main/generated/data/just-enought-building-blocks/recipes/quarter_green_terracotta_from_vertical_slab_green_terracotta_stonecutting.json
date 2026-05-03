@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "just-enought-building-blocks:vertical_slab_green_terracotta"
+  },
+  "result": "just-enought-building-blocks:quarter_green_terracotta"
+}

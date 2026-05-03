@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_dark_prismarine"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_dark_prismarine"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_dark_prismarine"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_dark_prismarine"
+    }
+  ],
+  "result": {
+    "item": "minecraft:dark_prismarine"
+  }
+}

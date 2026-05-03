@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_light_gray_wool"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_light_gray_wool"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_light_gray_wool"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_light_gray_wool"
+    }
+  ],
+  "result": {
+    "item": "minecraft:light_gray_wool"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_quarter_iron_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "just-enought-building-blocks:quarter_iron_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "just-enought-building-blocks:vertical_slab_iron_ore_from_quarter"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_quarter_iron_ore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "just-enought-building-blocks:vertical_slab_iron_ore_from_quarter"
+    ]
+  },
+  "sends_telemetry_event": false
+}

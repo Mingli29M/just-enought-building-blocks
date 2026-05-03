@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_gold_ore"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_gold_ore"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_gold_ore"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_gold_ore"
+    }
+  ],
+  "result": {
+    "item": "minecraft:gold_ore"
+  }
+}

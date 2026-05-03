@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:vertical_slab_sea_lantern"
+    },
+    {
+      "item": "just-enought-building-blocks:vertical_slab_sea_lantern"
+    }
+  ],
+  "result": {
+    "item": "minecraft:sea_lantern"
+  }
+}

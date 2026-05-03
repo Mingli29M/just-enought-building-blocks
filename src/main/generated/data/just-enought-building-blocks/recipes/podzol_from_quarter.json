@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_podzol"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_podzol"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_podzol"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_podzol"
+    }
+  ],
+  "result": {
+    "item": "minecraft:podzol"
+  }
+}

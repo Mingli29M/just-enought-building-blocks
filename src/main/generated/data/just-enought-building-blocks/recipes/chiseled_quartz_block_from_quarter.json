@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_chiseled_quartz_block"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_chiseled_quartz_block"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_chiseled_quartz_block"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_chiseled_quartz_block"
+    }
+  ],
+  "result": {
+    "item": "minecraft:chiseled_quartz_block"
+  }
+}

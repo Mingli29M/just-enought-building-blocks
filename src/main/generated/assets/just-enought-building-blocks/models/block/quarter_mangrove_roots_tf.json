@@ -1,6 +1,8 @@
 {
-  "parent": "just-enought-building-blocks:block/template_quarter_tf",
+  "parent": "just-enought-building-blocks:block/template_quarter_tf_bts",
   "textures": {
-    "all": "minecraft:block/mangrove_roots"
+    "bottom": "minecraft:block/mangrove_roots_top",
+    "side": "minecraft:block/mangrove_roots_side",
+    "top": "minecraft:block/mangrove_roots_top"
   }
 }

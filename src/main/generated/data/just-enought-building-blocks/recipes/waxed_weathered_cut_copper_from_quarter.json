@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_waxed_weathered_cut_copper"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_waxed_weathered_cut_copper"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_waxed_weathered_cut_copper"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_waxed_weathered_cut_copper"
+    }
+  ],
+  "result": {
+    "item": "minecraft:waxed_weathered_cut_copper"
+  }
+}

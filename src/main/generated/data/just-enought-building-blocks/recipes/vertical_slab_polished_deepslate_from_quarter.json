@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_polished_deepslate"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_polished_deepslate"
+    }
+  ],
+  "result": {
+    "item": "just-enought-building-blocks:vertical_slab_polished_deepslate"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_chorus_flower"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_chorus_flower"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_chorus_flower"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_chorus_flower"
+    }
+  ],
+  "result": {
+    "item": "minecraft:chorus_flower"
+  }
+}

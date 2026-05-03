@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_chiseled_polished_blackstone"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_chiseled_polished_blackstone"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_chiseled_polished_blackstone"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_chiseled_polished_blackstone"
+    }
+  ],
+  "result": {
+    "item": "minecraft:chiseled_polished_blackstone"
+  }
+}

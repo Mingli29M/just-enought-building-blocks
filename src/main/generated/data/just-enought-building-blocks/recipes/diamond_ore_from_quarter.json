@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_diamond_ore"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_diamond_ore"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_diamond_ore"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_diamond_ore"
+    }
+  ],
+  "result": {
+    "item": "minecraft:diamond_ore"
+  }
+}

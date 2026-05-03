@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_cyan_concrete_powder"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_cyan_concrete_powder"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_cyan_concrete_powder"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_cyan_concrete_powder"
+    }
+  ],
+  "result": {
+    "item": "minecraft:cyan_concrete_powder"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_pink_wool"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_pink_wool"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_pink_wool"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_pink_wool"
+    }
+  ],
+  "result": {
+    "item": "minecraft:pink_wool"
+  }
+}

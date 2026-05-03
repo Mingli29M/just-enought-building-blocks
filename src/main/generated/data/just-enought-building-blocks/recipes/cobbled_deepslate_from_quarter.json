@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_cobbled_deepslate"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_cobbled_deepslate"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_cobbled_deepslate"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_cobbled_deepslate"
+    }
+  ],
+  "result": {
+    "item": "minecraft:cobbled_deepslate"
+  }
+}

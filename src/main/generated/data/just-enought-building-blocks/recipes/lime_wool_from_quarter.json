@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_lime_wool"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_lime_wool"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_lime_wool"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_lime_wool"
+    }
+  ],
+  "result": {
+    "item": "minecraft:lime_wool"
+  }
+}

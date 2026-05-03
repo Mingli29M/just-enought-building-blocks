@@ -3,9 +3,12 @@ package mingli29.jebb.block;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.FluidTags;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
@@ -19,6 +22,7 @@ import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.pathfinder.PathComputationType;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -42,8 +46,11 @@ public class JebbQuarterBlock extends Block implements SimpleWaterloggedBlock {
     private static final VoxelShape X_TN = Block.box(0.0, 8.0, 0.0, 16.0, 16.0, 8.0);
     private static final VoxelShape X_TF = Block.box(0.0, 8.0, 8.0, 16.0, 16.0, 16.0);
 
-    public JebbQuarterBlock(BlockBehaviour.Properties properties) {
+    private final Block parent;
+
+    public JebbQuarterBlock(Block parent, BlockBehaviour.Properties properties) {
         super(properties);
+        this.parent = parent;
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(AXIS, Direction.Axis.Z)
                 .setValue(BOTTOM_NEAR, true)
@@ -112,9 +119,10 @@ public class JebbQuarterBlock extends Block implements SimpleWaterloggedBlock {
         BlockPos pos = ctx.getClickedPos();
         BlockState here = ctx.getLevel().getBlockState(pos);
         Vec3 hit = ctx.getClickLocation();
-        double offX = hit.x - pos.getX();
-        double offY = hit.y - pos.getY();
-        double offZ = hit.z - pos.getZ();
+        Direction face = ctx.getClickedFace();
+        double offX = hit.x - pos.getX() + face.getStepX() * 0.5;
+        double offY = hit.y - pos.getY() + face.getStepY() * 0.5;
+        double offZ = hit.z - pos.getZ() + face.getStepZ() * 0.5;
 
         if (here.is(this)) {
             Direction.Axis axis = here.getValue(AXIS);
@@ -143,8 +151,11 @@ public class JebbQuarterBlock extends Block implements SimpleWaterloggedBlock {
         if (!ctx.replacingClickedOnBlock()) return true;
         Vec3 hit = ctx.getClickLocation();
         BlockPos pos = ctx.getClickedPos();
-        BooleanProperty quad = quadrantFor(state.getValue(AXIS),
-                hit.x - pos.getX(), hit.y - pos.getY(), hit.z - pos.getZ());
+        Direction face = ctx.getClickedFace();
+        double offX = hit.x - pos.getX() + face.getStepX() * 0.5;
+        double offY = hit.y - pos.getY() + face.getStepY() * 0.5;
+        double offZ = hit.z - pos.getZ() + face.getStepZ() * 0.5;
+        BooleanProperty quad = quadrantFor(state.getValue(AXIS), offX, offY, offZ);
         return !state.getValue(quad);
     }
 
@@ -182,5 +193,30 @@ public class JebbQuarterBlock extends Block implements SimpleWaterloggedBlock {
 
     public static int countFilledQuadrants(BlockState state) {
         return filledCount(state);
+    }
+
+    @Override
+    public void fallOn(Level level, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
+        parent.fallOn(level, parent.defaultBlockState(), pos, entity, fallDistance);
+    }
+
+    @Override
+    public void updateEntityAfterFallOn(BlockGetter level, Entity entity) {
+        parent.updateEntityAfterFallOn(level, entity);
+    }
+
+    @Override
+    public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
+        parent.stepOn(level, pos, parent.defaultBlockState(), entity);
+    }
+
+    @Override
+    public void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
+        parent.entityInside(parent.defaultBlockState(), level, pos, entity);
+    }
+
+    @Override
+    public void onProjectileHit(Level level, BlockState state, BlockHitResult hit, Projectile projectile) {
+        parent.onProjectileHit(level, parent.defaultBlockState(), hit, projectile);
     }
 }

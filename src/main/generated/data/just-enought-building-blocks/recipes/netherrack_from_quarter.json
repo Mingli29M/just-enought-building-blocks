@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_netherrack"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_netherrack"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_netherrack"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_netherrack"
+    }
+  ],
+  "result": {
+    "item": "minecraft:netherrack"
+  }
+}

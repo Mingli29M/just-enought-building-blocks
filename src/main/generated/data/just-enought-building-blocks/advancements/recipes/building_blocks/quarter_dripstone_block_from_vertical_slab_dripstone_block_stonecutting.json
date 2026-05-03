@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:quarter_dripstone_block_from_vertical_slab_dripstone_block_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vertical_slab_dripstone_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "just-enought-building-blocks:vertical_slab_dripstone_block"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_vertical_slab_dripstone_block",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:quarter_dripstone_block_from_vertical_slab_dripstone_block_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

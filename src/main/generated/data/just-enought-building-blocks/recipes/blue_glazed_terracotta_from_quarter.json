@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_blue_glazed_terracotta"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_blue_glazed_terracotta"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_blue_glazed_terracotta"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_blue_glazed_terracotta"
+    }
+  ],
+  "result": {
+    "item": "minecraft:blue_glazed_terracotta"
+  }
+}

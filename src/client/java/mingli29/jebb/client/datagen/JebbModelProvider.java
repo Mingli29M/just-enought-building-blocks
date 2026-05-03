@@ -4,6 +4,7 @@ import mingli29.jebb.JustEnoughtBuildingBlocks;
 import mingli29.jebb.block.JebbBlocks;
 import mingli29.jebb.block.JebbQuarterBlock;
 import mingli29.jebb.block.JebbVerticalSlabBlock;
+import mingli29.jebb.util.JebbTextureMap;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.core.Direction;
@@ -34,11 +35,28 @@ public class JebbModelProvider extends FabricModelProvider {
     private static final ResourceLocation TEMPLATE_Q_TN = new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, "block/template_quarter_tn");
     private static final ResourceLocation TEMPLATE_Q_TF = new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, "block/template_quarter_tf");
 
+    private static final ResourceLocation TEMPLATE_VS_BTS = new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, "block/template_vertical_slab_bts");
+    private static final ResourceLocation TEMPLATE_Q_BN_BTS = new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, "block/template_quarter_bn_bts");
+    private static final ResourceLocation TEMPLATE_Q_BF_BTS = new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, "block/template_quarter_bf_bts");
+    private static final ResourceLocation TEMPLATE_Q_TN_BTS = new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, "block/template_quarter_tn_bts");
+    private static final ResourceLocation TEMPLATE_Q_TF_BTS = new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, "block/template_quarter_tf_bts");
+
     private static final ModelTemplate VS_CHILD = new ModelTemplate(Optional.of(TEMPLATE_VS), Optional.empty(), TextureSlot.ALL);
     private static final ModelTemplate Q_BN = new ModelTemplate(Optional.of(TEMPLATE_Q_BN), Optional.empty(), TextureSlot.ALL);
     private static final ModelTemplate Q_BF = new ModelTemplate(Optional.of(TEMPLATE_Q_BF), Optional.empty(), TextureSlot.ALL);
     private static final ModelTemplate Q_TN = new ModelTemplate(Optional.of(TEMPLATE_Q_TN), Optional.empty(), TextureSlot.ALL);
     private static final ModelTemplate Q_TF = new ModelTemplate(Optional.of(TEMPLATE_Q_TF), Optional.empty(), TextureSlot.ALL);
+
+    private static final ModelTemplate VS_BTS = new ModelTemplate(Optional.of(TEMPLATE_VS_BTS), Optional.empty(),
+            TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.BOTTOM);
+    private static final ModelTemplate Q_BN_BTS = new ModelTemplate(Optional.of(TEMPLATE_Q_BN_BTS), Optional.empty(),
+            TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.BOTTOM);
+    private static final ModelTemplate Q_BF_BTS = new ModelTemplate(Optional.of(TEMPLATE_Q_BF_BTS), Optional.empty(),
+            TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.BOTTOM);
+    private static final ModelTemplate Q_TN_BTS = new ModelTemplate(Optional.of(TEMPLATE_Q_TN_BTS), Optional.empty(),
+            TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.BOTTOM);
+    private static final ModelTemplate Q_TF_BTS = new ModelTemplate(Optional.of(TEMPLATE_Q_TF_BTS), Optional.empty(),
+            TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.BOTTOM);
 
     public JebbModelProvider(FabricDataOutput output) {
         super(output);
@@ -51,7 +69,12 @@ public class JebbModelProvider extends FabricModelProvider {
             JebbVerticalSlabBlock vs = e.getValue();
             String path = BuiltInRegistries.BLOCK.getKey(parent).getPath();
             ResourceLocation slabModel = new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, "block/vertical_slab_" + path);
-            VS_CHILD.create(slabModel, TextureMapping.cube(parent), gen.modelOutput);
+            JebbTextureMap.Faces faces = JebbTextureMap.forParent(parent);
+            if (faces != null) {
+                VS_BTS.create(slabModel, btsMapping(faces), gen.modelOutput);
+            } else {
+                VS_CHILD.create(slabModel, TextureMapping.cube(parent), gen.modelOutput);
+            }
             ResourceLocation parentModel = ModelLocationUtils.getModelLocation(parent);
             gen.blockStateOutput.accept(
                     MultiVariantGenerator.multiVariant(vs)
@@ -81,11 +104,24 @@ public class JebbModelProvider extends FabricModelProvider {
             Block parent = e.getKey();
             JebbQuarterBlock q = e.getValue();
             String path = BuiltInRegistries.BLOCK.getKey(parent).getPath();
-            TextureMapping tex = TextureMapping.cube(parent);
-            ResourceLocation mBn = Q_BN.create(new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, "block/quarter_" + path + "_bn"), tex, gen.modelOutput);
-            ResourceLocation mBf = Q_BF.create(new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, "block/quarter_" + path + "_bf"), tex, gen.modelOutput);
-            ResourceLocation mTn = Q_TN.create(new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, "block/quarter_" + path + "_tn"), tex, gen.modelOutput);
-            ResourceLocation mTf = Q_TF.create(new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, "block/quarter_" + path + "_tf"), tex, gen.modelOutput);
+            JebbTextureMap.Faces faces = JebbTextureMap.forParent(parent);
+            ResourceLocation mBn;
+            ResourceLocation mBf;
+            ResourceLocation mTn;
+            ResourceLocation mTf;
+            if (faces != null) {
+                TextureMapping tex = btsMapping(faces);
+                mBn = Q_BN_BTS.create(new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, "block/quarter_" + path + "_bn"), tex, gen.modelOutput);
+                mBf = Q_BF_BTS.create(new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, "block/quarter_" + path + "_bf"), tex, gen.modelOutput);
+                mTn = Q_TN_BTS.create(new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, "block/quarter_" + path + "_tn"), tex, gen.modelOutput);
+                mTf = Q_TF_BTS.create(new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, "block/quarter_" + path + "_tf"), tex, gen.modelOutput);
+            } else {
+                TextureMapping tex = TextureMapping.cube(parent);
+                mBn = Q_BN.create(new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, "block/quarter_" + path + "_bn"), tex, gen.modelOutput);
+                mBf = Q_BF.create(new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, "block/quarter_" + path + "_bf"), tex, gen.modelOutput);
+                mTn = Q_TN.create(new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, "block/quarter_" + path + "_tn"), tex, gen.modelOutput);
+                mTf = Q_TF.create(new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, "block/quarter_" + path + "_tf"), tex, gen.modelOutput);
+            }
 
             MultiPartGenerator multipart = MultiPartGenerator.multiPart(q);
             addQuarterPart(multipart, Direction.Axis.Z, JebbQuarterBlock.BOTTOM_NEAR, mBn, VariantProperties.Rotation.R0);
@@ -98,6 +134,14 @@ public class JebbModelProvider extends FabricModelProvider {
             addQuarterPart(multipart, Direction.Axis.X, JebbQuarterBlock.TOP_FAR, mTf, VariantProperties.Rotation.R90);
             gen.blockStateOutput.accept(multipart);
         }
+    }
+
+    private static TextureMapping btsMapping(JebbTextureMap.Faces faces) {
+        return new TextureMapping()
+                .put(TextureSlot.TOP, faces.top())
+                .put(TextureSlot.SIDE, faces.side())
+                .put(TextureSlot.BOTTOM, faces.bottom())
+                .put(TextureSlot.PARTICLE, faces.side());
     }
 
     private static void addQuarterPart(

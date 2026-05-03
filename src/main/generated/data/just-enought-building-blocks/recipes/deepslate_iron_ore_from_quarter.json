@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_deepslate_iron_ore"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_deepslate_iron_ore"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_deepslate_iron_ore"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_deepslate_iron_ore"
+    }
+  ],
+  "result": {
+    "item": "minecraft:deepslate_iron_ore"
+  }
+}

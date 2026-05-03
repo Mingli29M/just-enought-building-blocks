@@ -47,7 +47,9 @@ public final class JebbBlockFilter {
             "infested_stone", "infested_cobblestone", "infested_stone_bricks",
             "infested_mossy_stone_bricks", "infested_cracked_stone_bricks",
             "infested_chiseled_stone_bricks", "infested_deepslate",
-            "reinforced_deepslate"
+            "reinforced_deepslate",
+            "carved_pumpkin", "jack_o_lantern",
+            "sculk_sensor", "calibrated_sculk_sensor"
     );
 
     private JebbBlockFilter() {

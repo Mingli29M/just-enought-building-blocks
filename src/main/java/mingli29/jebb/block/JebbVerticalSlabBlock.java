@@ -3,9 +3,12 @@ package mingli29.jebb.block;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.FluidTags;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
@@ -20,6 +23,7 @@ import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.pathfinder.PathComputationType;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -36,8 +40,11 @@ public class JebbVerticalSlabBlock extends Block implements SimpleWaterloggedBlo
     private static final VoxelShape WEST_SHAPE = Block.box(0.0, 0.0, 0.0, 8.0, 16.0, 16.0);
     private static final VoxelShape EAST_SHAPE = Block.box(8.0, 0.0, 0.0, 16.0, 16.0, 16.0);
 
-    public JebbVerticalSlabBlock(BlockBehaviour.Properties properties) {
+    private final Block parent;
+
+    public JebbVerticalSlabBlock(Block parent, BlockBehaviour.Properties properties) {
         super(properties);
+        this.parent = parent;
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)
                 .setValue(DOUBLED, false)
@@ -103,11 +110,14 @@ public class JebbVerticalSlabBlock extends Block implements SimpleWaterloggedBlo
         if (state.getValue(DOUBLED) || !stack.is(this.asItem())) return false;
         if (!ctx.replacingClickedOnBlock()) return true;
         Direction facing = state.getValue(FACING);
+        Direction clickedFace = ctx.getClickedFace();
+        if (clickedFace == facing.getOpposite()) return true;
+        if (clickedFace == facing) return false;
         Vec3 hit = ctx.getClickLocation();
         BlockPos pos = ctx.getClickedPos();
         double off = (facing.getAxis() == Direction.Axis.X)
-                ? hit.x - pos.getX() - 0.5
-                : hit.z - pos.getZ() - 0.5;
+                ? hit.x - pos.getX() - 0.5 + clickedFace.getStepX() * 0.5
+                : hit.z - pos.getZ() - 0.5 + clickedFace.getStepZ() * 0.5;
         return facing.getAxisDirection() == Direction.AxisDirection.POSITIVE
                 ? off < 0
                 : off > 0;
@@ -143,5 +153,30 @@ public class JebbVerticalSlabBlock extends Block implements SimpleWaterloggedBlo
             case WATER -> level.getFluidState(pos).is(FluidTags.WATER);
             default -> false;
         };
+    }
+
+    @Override
+    public void fallOn(Level level, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
+        parent.fallOn(level, parent.defaultBlockState(), pos, entity, fallDistance);
+    }
+
+    @Override
+    public void updateEntityAfterFallOn(BlockGetter level, Entity entity) {
+        parent.updateEntityAfterFallOn(level, entity);
+    }
+
+    @Override
+    public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
+        parent.stepOn(level, pos, parent.defaultBlockState(), entity);
+    }
+
+    @Override
+    public void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
+        parent.entityInside(parent.defaultBlockState(), level, pos, entity);
+    }
+
+    @Override
+    public void onProjectileHit(Level level, BlockState state, BlockHitResult hit, Projectile projectile) {
+        parent.onProjectileHit(level, parent.defaultBlockState(), hit, projectile);
     }
 }

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_blue_wool"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_blue_wool"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_blue_wool"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_blue_wool"
+    }
+  ],
+  "result": {
+    "item": "minecraft:blue_wool"
+  }
+}

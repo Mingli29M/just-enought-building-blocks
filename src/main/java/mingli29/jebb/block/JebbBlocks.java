@@ -29,10 +29,10 @@ public final class JebbBlocks {
 
             JebbVerticalSlabBlock vs = registerBlock(
                     "vertical_slab_" + parentPath,
-                    new JebbVerticalSlabBlock(JebbBlockProps.copyFromParent(parent)));
+                    new JebbVerticalSlabBlock(parent, JebbBlockProps.copyFromParent(parent)));
             JebbQuarterBlock q = registerBlock(
                     "quarter_" + parentPath,
-                    new JebbQuarterBlock(JebbBlockProps.copyFromParent(parent)));
+                    new JebbQuarterBlock(parent, JebbBlockProps.copyFromParent(parent)));
 
             registerVariantItem("vertical_slab_" + parentPath, vs, parent, "jebb.vertical_slab");
             registerVariantItem("quarter_" + parentPath, q, parent, "jebb.quarter");

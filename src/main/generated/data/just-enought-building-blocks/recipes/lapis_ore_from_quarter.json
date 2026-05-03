@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_lapis_ore"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_lapis_ore"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_lapis_ore"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_lapis_ore"
+    }
+  ],
+  "result": {
+    "item": "minecraft:lapis_ore"
+  }
+}
