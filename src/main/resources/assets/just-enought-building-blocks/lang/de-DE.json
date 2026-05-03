@@ -1,8 +1,10 @@
 {
+	"block.just-enought-building-blocks.oak_muzhuan": "Framed Oak Planks",
 	"itemGroup.just-enought-building-blocks.main": "Just Enought Building Blocks",
 	"jebb.vertical_slab": "Vertical %s",
 	"jebb.quarter": "Quarter %s",
 	"jebb.corner_pillar": "Corner Pillar %s",
+	"jebb.section.mod_blocks": "--- Mod Blocks ---",
 	"jebb.section.vertical_slabs": "--- Vertical Slabs ---",
 	"jebb.section.quarters": "--- Quarter Blocks ---",
 	"jebb.section.corner_pillars": "--- Corner Pillars ---"
