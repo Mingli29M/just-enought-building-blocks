@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "minecraft:muddy_mangrove_roots"
-  },
-  "result": "just-enought-building-blocks:quarter_muddy_mangrove_roots"
-}

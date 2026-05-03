@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "minecraft:crying_obsidian"
-  },
-  "result": "just-enought-building-blocks:quarter_crying_obsidian"
-}

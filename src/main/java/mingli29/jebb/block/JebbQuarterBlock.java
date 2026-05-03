@@ -132,7 +132,11 @@ public class JebbQuarterBlock extends Block implements SimpleWaterloggedBlock {
 
         FluidState fluid = ctx.getLevel().getFluidState(pos);
         Direction.Axis axis = pickAxis(ctx);
-        BooleanProperty quad = quadrantFor(axis, offX, offY, offZ);
+        BooleanProperty quad = switch (face) {
+            case UP -> quadrantFor(axis, hit.x - pos.getX(), 0.25, hit.z - pos.getZ());
+            case DOWN -> quadrantFor(axis, hit.x - pos.getX(), 0.75, hit.z - pos.getZ());
+            default -> quadrantFor(axis, offX, offY, offZ);
+        };
         return this.defaultBlockState()
                 .setValue(AXIS, axis)
                 .setValue(BOTTOM_NEAR, false)

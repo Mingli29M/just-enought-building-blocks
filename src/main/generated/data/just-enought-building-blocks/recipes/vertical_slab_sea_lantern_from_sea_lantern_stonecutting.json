@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "minecraft:sea_lantern"
-  },
-  "result": "just-enought-building-blocks:vertical_slab_sea_lantern"
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "just-enought-building-blocks:block/template_quarter_bn_bts",
-  "textures": {
-    "bottom": "minecraft:block/dirt",
-    "side": "minecraft:block/podzol_side",
-    "top": "minecraft:block/podzol_top"
-  }
-}

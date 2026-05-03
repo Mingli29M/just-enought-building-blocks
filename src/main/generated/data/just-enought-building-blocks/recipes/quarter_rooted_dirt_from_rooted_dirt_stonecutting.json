@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "minecraft:rooted_dirt"
-  },
-  "result": "just-enought-building-blocks:quarter_rooted_dirt"
-}

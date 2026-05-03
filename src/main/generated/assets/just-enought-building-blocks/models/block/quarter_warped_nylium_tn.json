@@ -1,8 +1,0 @@
-{
-  "parent": "just-enought-building-blocks:block/template_quarter_tn_bts",
-  "textures": {
-    "bottom": "minecraft:block/netherrack",
-    "side": "minecraft:block/warped_nylium_side",
-    "top": "minecraft:block/warped_nylium"
-  }
-}

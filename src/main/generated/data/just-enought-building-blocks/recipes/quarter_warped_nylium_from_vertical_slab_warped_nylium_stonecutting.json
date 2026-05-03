@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "just-enought-building-blocks:vertical_slab_warped_nylium"
-  },
-  "result": "just-enought-building-blocks:quarter_warped_nylium"
-}

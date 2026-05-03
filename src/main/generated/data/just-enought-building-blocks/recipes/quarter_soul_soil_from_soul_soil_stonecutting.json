@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "minecraft:soul_soil"
-  },
-  "result": "just-enought-building-blocks:quarter_soul_soil"
-}
