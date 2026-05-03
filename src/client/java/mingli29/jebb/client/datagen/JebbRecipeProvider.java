@@ -12,6 +12,7 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 
 import java.util.function.Consumer;
 
@@ -76,6 +77,8 @@ public class JebbRecipeProvider extends FabricRecipeProvider {
             RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, cp, vs, 2);
             RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, q, cp, 2);
         }
+
+        RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, JebbBlocks.OAK_MUZHUAN, Blocks.OAK_PLANKS, 1);
     }
 
     private static ResourceLocation modId(String path) {

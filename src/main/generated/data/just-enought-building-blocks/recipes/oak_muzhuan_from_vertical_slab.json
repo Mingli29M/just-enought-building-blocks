@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:vertical_slab_oak_muzhuan"
+    },
+    {
+      "item": "just-enought-building-blocks:vertical_slab_oak_muzhuan"
+    }
+  ],
+  "result": {
+    "item": "just-enought-building-blocks:oak_muzhuan"
+  }
+}

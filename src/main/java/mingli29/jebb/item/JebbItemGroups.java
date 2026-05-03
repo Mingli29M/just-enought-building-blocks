@@ -12,6 +12,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -33,8 +34,11 @@ public final class JebbItemGroups {
     }
 
     public static void register() {
+        List<Block> verticalSlabTab = new ArrayList<>();
+        verticalSlabTab.add(JebbBlocks.OAK_MUZHUAN);
+        verticalSlabTab.addAll(JebbBlocks.VERTICAL_SLABS.values());
         SECTIONS = List.of(
-                new Section("jebb.section.vertical_slabs", JebbBlocks.VERTICAL_SLABS.values()),
+                new Section("jebb.section.vertical_slabs", verticalSlabTab),
                 new Section("jebb.section.quarters", JebbBlocks.QUARTERS.values()),
                 new Section("jebb.section.corner_pillars", JebbBlocks.CORNER_PILLARS.values())
         );

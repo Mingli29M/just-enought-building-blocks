@@ -23,6 +23,13 @@ public class JebbBlockLootProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
+        this.add(JebbBlocks.OAK_MUZHUAN, LootTable.lootTable()
+                .withPool(
+                        LootPool.lootPool()
+                                .setRolls(ConstantValue.exactly(1.0F))
+                                .add(this.applyExplosionDecay(
+                                        JebbBlocks.OAK_MUZHUAN,
+                                        LootItem.lootTableItem(JebbBlocks.OAK_MUZHUAN)))));
         for (Block vs : JebbBlocks.VERTICAL_SLABS.values()) {
             this.add(vs, verticalSlabDrops(vs));
         }

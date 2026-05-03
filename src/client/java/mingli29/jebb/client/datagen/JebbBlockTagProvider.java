@@ -11,6 +11,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -38,7 +39,8 @@ public class JebbBlockTagProvider extends FabricTagProvider.BlockTagProvider {
             Block vs = e.getValue();
             Block q = JebbBlocks.QUARTERS.get(parent);
             Block cp = JebbBlocks.CORNER_PILLARS.get(parent);
-            ResourceKey<Block> parentKey = BuiltInRegistries.BLOCK.getResourceKey(parent).orElseThrow();
+            Block tagSource = parent == JebbBlocks.OAK_MUZHUAN ? Blocks.OAK_PLANKS : parent;
+            ResourceKey<Block> parentKey = BuiltInRegistries.BLOCK.getResourceKey(tagSource).orElseThrow();
             var parentHolder = blocks.getOrThrow(parentKey);
             for (TagKey<Block> tag : MIRROR_TAGS) {
                 if (parentHolder.is(tag)) {
