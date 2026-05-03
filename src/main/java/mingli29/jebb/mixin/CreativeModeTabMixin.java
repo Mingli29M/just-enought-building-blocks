@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -28,24 +28,20 @@ public abstract class CreativeModeTabMixin {
     @Inject(method = "buildContents", at = @At("TAIL"))
     private void jebb$injectSectionBanners(CreativeModeTab.ItemDisplayParameters parameters, CallbackInfo ci) {
         CreativeModeTab self = (CreativeModeTab) (Object) this;
-        if (self != JebbItemGroups.MAIN_TAB || JebbItemGroups.SECTIONS == null) {
+        List<JebbItemGroups.Section> sections = JebbItemGroups.sectionsForTab(self);
+        if (sections == null) {
             return;
-        }
-
-        Set<Block> sectionBlocks = new HashSet<>();
-        for (JebbItemGroups.Section section : JebbItemGroups.SECTIONS) {
-            sectionBlocks.addAll(section.blocks());
         }
 
         List<ItemStack> remaining = new ArrayList<>(this.displayItems);
         Set<ItemStack> claimed = new LinkedHashSet<>();
 
         List<ItemStack> result = new ArrayList<>();
-        JebbItemGroups.SECTION_ROW_LABELS.clear();
+        LinkedHashMap<Integer, JebbItemGroups.SectionRowInfo> sectionRows = new LinkedHashMap<>();
         int currentRow = 0;
 
-        for (JebbItemGroups.Section section : JebbItemGroups.SECTIONS) {
-            JebbItemGroups.SECTION_ROW_LABELS.put(currentRow, section.labelKey());
+        for (JebbItemGroups.Section section : sections) {
+            sectionRows.put(currentRow, new JebbItemGroups.SectionRowInfo(section.labelKey(), section.bannerStyle()));
             for (int i = 0; i < JebbItemGroups.ROW_WIDTH; i++) {
                 result.add(ItemStack.EMPTY);
             }
@@ -77,6 +73,7 @@ public abstract class CreativeModeTabMixin {
             result.add(stack);
         }
 
+        JebbItemGroups.SECTION_ROWS_BY_TAB.put(self, sectionRows);
         this.displayItems = result;
     }
 

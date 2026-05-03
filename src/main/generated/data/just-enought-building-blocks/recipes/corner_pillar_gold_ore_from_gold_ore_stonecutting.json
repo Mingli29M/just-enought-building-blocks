@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "minecraft:gold_ore"
-  },
-  "result": "just-enought-building-blocks:corner_pillar_gold_ore"
-}

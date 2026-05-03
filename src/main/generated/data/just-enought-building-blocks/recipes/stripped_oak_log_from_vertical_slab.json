@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:vertical_slab_stripped_oak_log"
+    },
+    {
+      "item": "just-enought-building-blocks:vertical_slab_stripped_oak_log"
+    }
+  ],
+  "result": {
+    "item": "minecraft:stripped_oak_log"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "minecraft:warped_slab"
+    }
+  ],
+  "result": {
+    "item": "just-enought-building-blocks:vertical_slab_warped_planks"
+  }
+}

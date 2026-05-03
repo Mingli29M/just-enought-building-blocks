@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "minecraft:mushroom_stem"
-  },
-  "result": "just-enought-building-blocks:quarter_mushroom_stem"
-}

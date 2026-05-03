@@ -11,6 +11,7 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
@@ -29,7 +30,12 @@ public class JebbRecipeProvider extends FabricRecipeProvider {
             Block vs = e.getValue();
             Block q = JebbBlocks.QUARTERS.get(parent);
             Block cp = JebbBlocks.CORNER_PILLARS.get(parent);
-            if (q == null || cp == null) continue;
+            if (cp == null) {
+                continue;
+            }
+            if (parent.asItem() == Items.AIR) {
+                continue;
+            }
             String parentPath = BuiltInRegistries.BLOCK.getKey(parent).getPath();
 
             RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, vs, parent, 2);
@@ -39,12 +45,14 @@ public class JebbRecipeProvider extends FabricRecipeProvider {
                     .unlockedBy(RecipeProvider.getHasName(parent), RecipeProvider.has(parent))
                     .save(output);
 
-            RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, q, parent, 4);
-            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, q, 4)
-                    .define('#', parent)
-                    .pattern("##")
-                    .unlockedBy(RecipeProvider.getHasName(parent), RecipeProvider.has(parent))
-                    .save(output);
+            if (q != null) {
+                RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, q, parent, 4);
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, q, 4)
+                        .define('#', parent)
+                        .pattern("##")
+                        .unlockedBy(RecipeProvider.getHasName(parent), RecipeProvider.has(parent))
+                        .save(output);
+            }
 
             RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, cp, parent, 4);
             ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, cp, 6)
@@ -59,25 +67,29 @@ public class JebbRecipeProvider extends FabricRecipeProvider {
                     .unlockedBy(RecipeProvider.getHasName(vs), RecipeProvider.has(vs))
                     .save(output, modId(parentPath + "_from_vertical_slab"));
 
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, parent)
-                    .requires(q, 4)
-                    .unlockedBy(RecipeProvider.getHasName(q), RecipeProvider.has(q))
-                    .save(output, modId(parentPath + "_from_quarter"));
+            if (q != null) {
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, parent)
+                        .requires(q, 4)
+                        .unlockedBy(RecipeProvider.getHasName(q), RecipeProvider.has(q))
+                        .save(output, modId(parentPath + "_from_quarter"));
+            }
 
             ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, parent)
                     .requires(cp, 4)
                     .unlockedBy(RecipeProvider.getHasName(cp), RecipeProvider.has(cp))
                     .save(output, modId(parentPath + "_from_corner_pillar"));
 
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, vs)
-                    .requires(q, 2)
-                    .unlockedBy(RecipeProvider.getHasName(q), RecipeProvider.has(q))
-                    .save(output, modId("vertical_slab_" + parentPath + "_from_quarter"));
+            if (q != null) {
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, vs)
+                        .requires(q, 2)
+                        .unlockedBy(RecipeProvider.getHasName(q), RecipeProvider.has(q))
+                        .save(output, modId("vertical_slab_" + parentPath + "_from_quarter"));
 
-            RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, q, vs, 2);
+                RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, q, vs, 2);
+                RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, q, cp, 1);
+            }
+
             RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, cp, vs, 2);
-            // One quarter per corner pillar (was 2, which duped matter with 4q = 1 parent and 4cp from 1 parent)
-            RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, q, cp, 1);
 
             Optional<Block> vanillaSlab = vanillaSlabForParent(parent);
             if (vanillaSlab.isPresent()) {
@@ -85,6 +97,11 @@ public class JebbRecipeProvider extends FabricRecipeProvider {
                         .requires(vs)
                         .unlockedBy(RecipeProvider.getHasName(vs), RecipeProvider.has(vs))
                         .save(output, modId("slab_from_vertical_slab_" + parentPath));
+
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, vs)
+                        .requires(vanillaSlab.get())
+                        .unlockedBy(RecipeProvider.getHasName(vanillaSlab.get()), RecipeProvider.has(vanillaSlab.get()))
+                        .save(output, modId("vertical_slab_" + parentPath + "_from_slab"));
             }
         }
 

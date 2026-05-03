@@ -1,5 +1,9 @@
 package mingli29.jebb.client.datagen;
 
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import mingli29.jebb.JustEnoughtBuildingBlocks;
 import mingli29.jebb.block.JebbBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -14,7 +18,15 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 public final class JebbBlockTagProvider extends FabricTagProvider.BlockTagProvider {
@@ -27,6 +39,7 @@ public final class JebbBlockTagProvider extends FabricTagProvider.BlockTagProvid
             BlockTags.NEEDS_IRON_TOOL,
             BlockTags.NEEDS_STONE_TOOL
     );
+    private static final Map<ResourceLocation, List<String>> VANILLA_BLOCK_TAG_CACHE = new HashMap<>();
 
     public JebbBlockTagProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
@@ -44,39 +57,80 @@ public final class JebbBlockTagProvider extends FabricTagProvider.BlockTagProvid
             ResourceKey<Block> parentKey = BuiltInRegistries.BLOCK.getResourceKey(tagSource).orElseThrow();
             var parentHolder = blocks.getOrThrow(parentKey);
 
-            boolean mirroredFromStream = false;
-            for (TagKey<Block> tag : parentHolder.tags().toList()) {
-                if (!isMiningRelatedBlockTag(tag)) {
-                    continue;
-                }
-                var builder = this.getOrCreateTagBuilder(tag);
-                builder.add(vs, q);
-                if (cp != null) {
-                    builder.add(cp);
-                }
-                mirroredFromStream = true;
-            }
+            List<Block> targets = variantTargets(parent, vs, q, cp);
+            ResourceLocation sourceId = BuiltInRegistries.BLOCK.getKey(tagSource);
 
-            if (!mirroredFromStream) {
-                for (TagKey<Block> tag : MIRROR_TAGS) {
-                    if (parentHolder.is(tag)) {
-                        var builder = this.getOrCreateTagBuilder(tag);
-                        builder.add(vs, q);
-                        if (cp != null) {
-                            builder.add(cp);
-                        }
+            for (TagKey<Block> tag : MIRROR_TAGS) {
+                if (parentHolder.is(tag) || vanillaTagContains(tag.location(), sourceId, new HashSet<>())) {
+                    var builder = this.getOrCreateTagBuilder(tag);
+                    for (Block b : targets) {
+                        builder.add(b);
                     }
                 }
             }
         }
     }
 
-    private static boolean isMiningRelatedBlockTag(TagKey<Block> tag) {
-        ResourceLocation id = tag.location();
-        if (!"minecraft".equals(id.getNamespace())) {
+    /**
+     * Variant blocks plus our mod-owned parent (e.g. framed oak), so they receive the same mineable/needs_* tags as the vanilla template.
+     */
+    private static List<Block> variantTargets(Block parent, Block vs, Block q, Block cp) {
+        List<Block> out = new ArrayList<>(4);
+        out.add(vs);
+        if (q != null) {
+            out.add(q);
+        }
+        if (cp != null) {
+            out.add(cp);
+        }
+        if (isOurModBlock(parent)) {
+            out.add(parent);
+        }
+        return out;
+    }
+
+    private static boolean isOurModBlock(Block block) {
+        return JustEnoughtBuildingBlocks.MOD_ID.equals(BuiltInRegistries.BLOCK.getKey(block).getNamespace());
+    }
+
+    private static boolean vanillaTagContains(ResourceLocation tagId, ResourceLocation blockId, Set<ResourceLocation> seen) {
+        if (!seen.add(tagId)) {
             return false;
         }
-        String path = id.getPath();
-        return path.startsWith("mineable/") || path.startsWith("needs_");
+
+        for (String entry : vanillaBlockTagValues(tagId)) {
+            if (entry.startsWith("#")) {
+                ResourceLocation nested = new ResourceLocation(entry.substring(1));
+                if (vanillaTagContains(nested, blockId, seen)) {
+                    return true;
+                }
+            } else if (entry.equals(blockId.toString())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static List<String> vanillaBlockTagValues(ResourceLocation tagId) {
+        return VANILLA_BLOCK_TAG_CACHE.computeIfAbsent(tagId, id -> {
+            String resourcePath = "data/" + id.getNamespace() + "/tags/blocks/" + id.getPath() + ".json";
+            try (InputStream in = JebbBlockTagProvider.class.getClassLoader().getResourceAsStream(resourcePath)) {
+                if (in == null) {
+                    return List.of();
+                }
+                JsonObject root = JsonParser.parseReader(new InputStreamReader(in, StandardCharsets.UTF_8)).getAsJsonObject();
+                List<String> values = new ArrayList<>();
+                for (JsonElement value : root.getAsJsonArray("values")) {
+                    if (value.isJsonPrimitive()) {
+                        values.add(value.getAsString());
+                    } else if (value.isJsonObject()) {
+                        values.add(value.getAsJsonObject().get("id").getAsString());
+                    }
+                }
+                return values;
+            } catch (Exception e) {
+                throw new IllegalStateException("Failed to read vanilla block tag " + id, e);
+            }
+        });
     }
 }

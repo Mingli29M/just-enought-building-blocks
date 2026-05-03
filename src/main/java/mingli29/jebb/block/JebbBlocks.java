@@ -44,23 +44,29 @@ public final class JebbBlocks {
     private static void registerVariantsForParent(Block parent) {
         ResourceLocation parentKey = BuiltInRegistries.BLOCK.getKey(parent);
         String parentPath = parentKey.getPath();
+        boolean skipQuarter = JebbBlockFilter.skipsQuarterVariants(parent);
 
         JebbVerticalSlabBlock vs = registerBlock(
                 "vertical_slab_" + parentPath,
                 new JebbVerticalSlabBlock(parent, JebbBlockProps.copyFromParent(parent)));
-        JebbQuarterBlock q = registerBlock(
-                "quarter_" + parentPath,
-                new JebbQuarterBlock(parent, JebbBlockProps.copyFromParent(parent)));
+        JebbQuarterBlock q = null;
+        if (!skipQuarter) {
+            q = registerBlock(
+                    "quarter_" + parentPath,
+                    new JebbQuarterBlock(parent, JebbBlockProps.copyFromParent(parent)));
+            registerVariantItem("quarter_" + parentPath, q, parent, "jebb.quarter");
+        }
         JebbCornerPillarBlock cp = registerBlock(
                 "corner_pillar_" + parentPath,
                 new JebbCornerPillarBlock(parent, JebbBlockProps.copyFromParent(parent)));
 
         registerVariantItem("vertical_slab_" + parentPath, vs, parent, "jebb.vertical_slab");
-        registerVariantItem("quarter_" + parentPath, q, parent, "jebb.quarter");
         registerVariantItem("corner_pillar_" + parentPath, cp, parent, "jebb.corner_pillar");
 
         VERTICAL_SLABS.put(parent, vs);
-        QUARTERS.put(parent, q);
+        if (q != null) {
+            QUARTERS.put(parent, q);
+        }
         CORNER_PILLARS.put(parent, cp);
     }
 

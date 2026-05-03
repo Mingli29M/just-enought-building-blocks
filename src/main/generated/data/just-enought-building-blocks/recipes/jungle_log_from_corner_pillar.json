@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_jungle_log"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_jungle_log"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_jungle_log"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_jungle_log"
+    }
+  ],
+  "result": {
+    "item": "minecraft:jungle_log"
+  }
+}

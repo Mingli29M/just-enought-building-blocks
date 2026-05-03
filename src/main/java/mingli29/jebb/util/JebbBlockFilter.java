@@ -26,16 +26,9 @@ public final class JebbBlockFilter {
             "repeating_command_block", "structure_block", "structure_void",
             "jigsaw", "spawner", "end_portal", "end_gateway", "nether_portal",
             "light", "budding_amethyst",
-            "oak_log", "spruce_log", "birch_log", "jungle_log", "acacia_log",
-            "dark_oak_log", "mangrove_log", "cherry_log", "bamboo_block",
-            "crimson_stem", "warped_stem",
             "oak_wood", "spruce_wood", "birch_wood", "jungle_wood", "acacia_wood",
             "dark_oak_wood", "mangrove_wood", "cherry_wood",
             "crimson_hyphae", "warped_hyphae",
-            "stripped_oak_log", "stripped_spruce_log", "stripped_birch_log",
-            "stripped_jungle_log", "stripped_acacia_log", "stripped_dark_oak_log",
-            "stripped_mangrove_log", "stripped_cherry_log", "stripped_bamboo_block",
-            "stripped_crimson_stem", "stripped_warped_stem",
             "stripped_oak_wood", "stripped_spruce_wood", "stripped_birch_wood",
             "stripped_jungle_wood", "stripped_acacia_wood", "stripped_dark_oak_wood",
             "stripped_mangrove_wood", "stripped_cherry_wood",
@@ -52,7 +45,23 @@ public final class JebbBlockFilter {
             "infested_chiseled_stone_bricks", "infested_deepslate",
             "reinforced_deepslate",
             "carved_pumpkin", "jack_o_lantern",
-            "sculk_sensor", "calibrated_sculk_sensor"
+            "sculk_sensor", "calibrated_sculk_sensor",
+            "sponge", "wet_sponge",
+            "brown_mushroom_block", "red_mushroom_block", "mushroom_stem",
+            "melon", "magma_block", "slime_block",
+            "snow_block"
+    );
+
+    private static final Set<String> ORE_PATHS = Set.of(
+            "coal_ore", "deepslate_coal_ore",
+            "iron_ore", "deepslate_iron_ore",
+            "copper_ore", "deepslate_copper_ore",
+            "gold_ore", "deepslate_gold_ore",
+            "lapis_ore", "deepslate_lapis_ore",
+            "redstone_ore", "deepslate_redstone_ore",
+            "diamond_ore", "deepslate_diamond_ore",
+            "emerald_ore", "deepslate_emerald_ore",
+            "nether_quartz_ore", "nether_gold_ore"
     );
 
     /**
@@ -84,7 +93,6 @@ public final class JebbBlockFilter {
                 || holder.is(BlockTags.BASE_STONE_NETHER)
                 || holder.is(BlockTags.DIRT)
                 || holder.is(BlockTags.SAND)
-                || holder.is(BlockTags.LEAVES)
                 || holder.is(BlockTags.SNOW)
                 || holder.is(BlockTags.ICE)
                 || holder.is(BlockTags.TERRACOTTA)
@@ -98,11 +106,28 @@ public final class JebbBlockFilter {
                 || holder.is(BlockTags.EMERALD_ORES);
     }
 
+    /**
+     * Log columns (including stripped logs/stems and bamboo) get vertical slabs and corner pillars only,
+     * not quarter (¼) pieces.
+     */
+    public static boolean skipsQuarterVariants(Block block) {
+        ResourceLocation key = BuiltInRegistries.BLOCK.getKey(block);
+        if (key == null || !"minecraft".equals(key.getNamespace())) {
+            return false;
+        }
+        String path = key.getPath();
+        return path.endsWith("_log") || path.endsWith("_stem")
+                || "bamboo_block".equals(path) || "stripped_bamboo_block".equals(path);
+    }
+
     public static boolean qualifies(Block block) {
         ResourceLocation key = BuiltInRegistries.BLOCK.getKey(block);
         if (key == null || !"minecraft".equals(key.getNamespace())) return false;
-        if (DENY.contains(key.getPath())) return false;
-        if (TEMP_NATURAL_EXTRA.contains(key.getPath())) return false;
+        String path = key.getPath();
+        if (DENY.contains(path)) return false;
+        if (ORE_PATHS.contains(path)) return false;
+        if (path.startsWith("waxed_")) return false;
+        if (TEMP_NATURAL_EXTRA.contains(path)) return false;
         Optional<Holder.Reference<Block>> holderOpt = BuiltInRegistries.BLOCK.getResourceKey(block)
                 .flatMap(BuiltInRegistries.BLOCK::getHolder);
         if (holderOpt.isPresent() && isTemporaryNaturalBlock(holderOpt.get())) return false;

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_stripped_dark_oak_log"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_stripped_dark_oak_log"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_stripped_dark_oak_log"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_stripped_dark_oak_log"
+    }
+  ],
+  "result": {
+    "item": "minecraft:stripped_dark_oak_log"
+  }
+}

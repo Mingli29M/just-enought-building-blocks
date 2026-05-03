@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "minecraft:stripped_mangrove_log"
+  },
+  "result": "just-enought-building-blocks:vertical_slab_stripped_mangrove_log"
+}

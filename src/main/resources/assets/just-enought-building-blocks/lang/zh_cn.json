@@ -1,11 +1,12 @@
 {
 	"block.just-enought-building-blocks.oak_muzhuan": "镶框橡木木板",
-	"itemGroup.just-enought-building-blocks.main": "刚好够用的建筑方块",
-	"jebb.vertical_slab": "垂直%s",
+	"itemGroup.just-enought-building-blocks.main": "JEBB 方块变种",
+	"itemGroup.just-enought-building-blocks.blocks": "JEBB 方块",
+	"jebb.vertical_slab": "垂直%s台阶",
 	"jebb.quarter": "四分之一%s",
 	"jebb.corner_pillar": "%s角柱",
-	"jebb.section.mod_blocks": "—— 模组方块 ——",
+	"jebb.section.wood_variants": "—— 木材变种 ——",
 	"jebb.section.vertical_slabs": "—— 垂直台阶 ——",
-	"jebb.section.quarters": "—— 四分之一方块 ——",
+	"jebb.section.quarters": "—— 1/4 方块 ——",
 	"jebb.section.corner_pillars": "—— 角柱 ——"
 }

@@ -1,1 +1,8 @@
-// 1.20.1	2026-05-03T18:35:52.0793101	Just Enought Building Blocks/Tags for minecraft:block
+// 1.20.1	2026-05-03T21:37:52.5432484	Just Enought Building Blocks/Tags for minecraft:block
+2710c3edcb78144a7f5054a88d41a736aa01ca4f data\minecraft\tags\blocks\mineable\shovel.json
+88c6eba9f1811bdf87c978fb4a6b0565fca6a1de data\minecraft\tags\blocks\mineable\pickaxe.json
+81b495b86d3e5b35e6fa0d6e7243c48ec0ef95fb data\minecraft\tags\blocks\needs_stone_tool.json
+1d6c1e0fa593966d26d902dd9867affc5bf30701 data\minecraft\tags\blocks\needs_iron_tool.json
+40c1332b1576320399281df8a5365193d67d3880 data\minecraft\tags\blocks\mineable\hoe.json
+1ec86c200386c7cea99f5c940d1473f53ffd167f data\minecraft\tags\blocks\mineable\axe.json
+bc80123e7fa7c54ca97cca891fd328d63b210230 data\minecraft\tags\blocks\needs_diamond_tool.json

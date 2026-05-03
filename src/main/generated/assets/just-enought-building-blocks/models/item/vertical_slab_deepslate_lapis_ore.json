@@ -1,6 +1,0 @@
-{
-  "parent": "just-enought-building-blocks:block/template_item_vertical_slab",
-  "textures": {
-    "all": "minecraft:block/deepslate_lapis_ore"
-  }
-}

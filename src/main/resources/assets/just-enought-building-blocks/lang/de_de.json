@@ -1,11 +1,12 @@
 {
 	"block.just-enought-building-blocks.oak_muzhuan": "Gerahmte Eichenbretter",
-	"itemGroup.just-enought-building-blocks.main": "Just Enought Building Blocks",
-	"jebb.vertical_slab": "Vertikale Stufe (%s)",
+	"itemGroup.just-enought-building-blocks.main": "JEBB Block-Varianten",
+	"itemGroup.just-enought-building-blocks.blocks": "JEBB Blöcke",
+	"jebb.vertical_slab": "Vertikale %s-Stufe",
 	"jebb.quarter": "Viertelblock (%s)",
 	"jebb.corner_pillar": "Ecksäule (%s)",
-	"jebb.section.mod_blocks": "--- Mod-Blöcke ---",
+	"jebb.section.wood_variants": "--- Holzvarianten ---",
 	"jebb.section.vertical_slabs": "--- Vertikale Stufen ---",
-	"jebb.section.quarters": "--- Viertelblöcke ---",
+	"jebb.section.quarters": "--- 1/4-Blöcke ---",
 	"jebb.section.corner_pillars": "--- Ecksäulen ---"
 }

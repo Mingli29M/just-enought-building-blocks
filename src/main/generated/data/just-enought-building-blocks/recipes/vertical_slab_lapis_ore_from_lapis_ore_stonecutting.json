@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "minecraft:lapis_ore"
-  },
-  "result": "just-enought-building-blocks:vertical_slab_lapis_ore"
-}

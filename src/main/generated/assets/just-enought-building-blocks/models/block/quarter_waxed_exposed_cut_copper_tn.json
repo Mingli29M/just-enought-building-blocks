@@ -1,6 +1,0 @@
-{
-  "parent": "just-enought-building-blocks:block/template_quarter_tn",
-  "textures": {
-    "all": "minecraft:block/waxed_exposed_cut_copper"
-  }
-}

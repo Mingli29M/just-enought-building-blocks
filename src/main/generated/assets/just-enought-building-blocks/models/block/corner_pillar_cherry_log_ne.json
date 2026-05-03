@@ -1,0 +1,8 @@
+{
+  "parent": "just-enought-building-blocks:block/template_corner_pillar_ne_bts",
+  "textures": {
+    "bottom": "minecraft:block/cherry_log_top",
+    "side": "minecraft:block/cherry_log",
+    "top": "minecraft:block/cherry_log_top"
+  }
+}

@@ -1,0 +1,141 @@
+# Just Enought Building Blocks — developer instructions
+
+This project is a **Fabric** mod for **Minecraft 1.20.1**, using **Gradle** and **Fabric Loom**. Commands below use Windows `gradlew.bat`; on macOS or Linux use `./gradlew` instead.
+
+---
+
+## Test run (development client)
+
+From the project root:
+
+```powershell
+.\gradlew.bat runClient
+```
+
+This starts Minecraft with the mod on the **client** classpath (normal in-game testing).
+
+Optional: regenerate data-driven assets (models, recipes, tags, loot tables) after you change registration or filters:
+
+```powershell
+.\gradlew.bat runDatagen
+```
+
+---
+
+## Build (produce the mod JAR)
+
+```powershell
+.\gradlew.bat build
+```
+
+The remapped mod JAR is typically under:
+
+`build/libs/`
+
+Look for a file named like `just-enought-building-blocks-<version>.jar` (exact name depends on `mod_version` in `gradle.properties`).
+
+---
+
+## Clean build
+
+A clean build removes Gradle output, then compiles from scratch:
+
+```powershell
+.\gradlew.bat clean build
+```
+
+Use this when caches or generated files seem wrong, or after large refactors.
+
+---
+
+## Add or remove blocks from the variant list (vertical slab / corner pillar / quarter)
+
+Variants are created automatically for **vanilla full cube blocks** that pass `JebbBlockFilter.qualifies()`.
+
+- **Main filter logic:** `src/main/java/mingli29/jebb/util/JebbBlockFilter.java`  
+  - **`DENY`:** block IDs (path only, `minecraft:` namespace) that must **never** get variants.  
+  - **`ORE_PATHS`:** ore blocks excluded from variants.  
+  - **`TEMP_NATURAL_EXTRA`:** extra “natural terrain” style blocks excluded.  
+  - **`isTemporaryNaturalBlock()`:** excludes blocks in certain vanilla tags (stone, dirt, sand, etc.).
+
+- **Log columns (no quarter / ¼ block):** same file, method **`skipsQuarterVariants()`** — parents that match here still get vertical slabs and corner pillars, but **not** quarter blocks.
+
+- **Top/side/bottom textures** for non-cube parents (bookshelf-style): `src/main/java/mingli29/jebb/util/JebbTextureMap.java` — add or adjust entries, or rely on the automatic column rule for `_log` / `_stem` / bamboo paths.
+
+After you change which blocks qualify, run **`runDatagen`** so generated JSON under `src/main/generated/` stays in sync.
+
+---
+
+## Where to add custom (mod-owned) blocks
+
+- **Register blocks and items:** `src/main/java/mingli29/jebb/block/JebbBlocks.java`  
+  Example: `OAK_MUZHUAN` is a simple mod block registered there and picked up by `registerVariantsForParent()` so it also gets vertical slab / quarter / pillar variants unless you special-case it.
+
+- **Mod entrypoint (init order):** `src/main/java/mingli29/jebb/JustEnoughtBuildingBlocks.java` — calls `JebbBlocks.init()` and `JebbItemGroups.register()`.
+
+- **Client-only setup (rendering, etc.):** `src/client/java/mingli29/jebb/client/JustEnoughtBuildingBlocksClient.java`
+
+- **Data generation** (recipes, models, tags, loot): under `src/client/java/mingli29/jebb/client/datagen/` — extend providers there and ensure your data generator entry is wired in the Fabric data gen setup for this template.
+
+- **Translations:** `src/main/resources/assets/just-enought-building-blocks/lang/` (e.g. `en_us.json`).
+
+---
+
+## How to add or change creative “banners” (section headers)
+
+Section headers are the **striped bars with a title** above each group in the creative inventory.
+
+1. **Which tab and which blocks sit in each section**  
+   `src/main/java/mingli29/jebb/item/JebbItemGroups.java`  
+   - **`MAIN_SECTIONS`** — *JEBB block variants* tab (corner pillars, vertical slabs, quarters, etc.).  
+   - **`BLOCKS_SECTIONS`** — *JEBB blocks* tab (e.g. wood-style custom blocks).  
+   Each `Section` has a **translation key** (`labelKey`) and a **`SectionBannerStyle`**.
+
+2. **Banner look (height, backdrop block texture)**  
+   `src/client/java/mingli29/jebb/client/render/JebbBannerRenderer.java` — `bannerHeight()` and `backdropState()` per style.
+
+3. **Section title text**  
+   Language files, e.g. `src/main/resources/assets/just-enought-building-blocks/lang/en_us.json` — keys like `jebb.section.vertical_slabs`.
+
+4. **Layout injection (spacer row + row index for drawing)**  
+   `src/main/java/mingli29/jebb/mixin/CreativeModeTabMixin.java`
+
+5. **Drawing banners on screen**  
+   `src/client/java/mingli29/jebb/client/mixin/CreativeModeInventoryScreenMixin.java`
+
+---
+
+## Push to GitHub
+
+1. **Create a repository** on GitHub (empty repo, no need to add a README if you already have one locally).
+
+2. **From the project root**, if Git is not initialized yet:
+
+   ```powershell
+   git init
+   git add .
+   git commit -m "Initial commit"
+   ```
+
+3. **Add the remote** (replace `YOUR_USER` and `YOUR_REPO`):
+
+   ```powershell
+   git remote add origin https://github.com/YOUR_USER/YOUR_REPO.git
+   ```
+
+4. **Push** (first time, set upstream):
+
+   ```powershell
+   git branch -M main
+   git push -u origin main
+   ```
+
+Later changes:
+
+```powershell
+git add .
+git commit -m "Describe your change"
+git push
+```
+
+**Tip:** Add a `.gitignore` that excludes `build/`, `.gradle/`, `run/` (world and logs), and IDE folders if you do not want them in the repo. This template may already ignore some of these; adjust as needed before the first push.

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "just-enought-building-blocks:vertical_slab_waxed_exposed_cut_copper"
-  },
-  "result": "just-enought-building-blocks:corner_pillar_waxed_exposed_cut_copper"
-}

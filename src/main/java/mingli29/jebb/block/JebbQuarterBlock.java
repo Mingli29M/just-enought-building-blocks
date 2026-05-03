@@ -113,6 +113,22 @@ public class JebbQuarterBlock extends Block implements SimpleWaterloggedBlock {
         return perp == Direction.Axis.X ? Direction.Axis.Z : Direction.Axis.X;
     }
 
+    private static double placementOffsetX(Direction face, double hitX, BlockPos pos) {
+        return switch (face) {
+            case EAST -> 0.0;
+            case WEST -> 1.0;
+            default -> hitX - pos.getX();
+        };
+    }
+
+    private static double placementOffsetZ(Direction face, double hitZ, BlockPos pos) {
+        return switch (face) {
+            case SOUTH -> 0.0;
+            case NORTH -> 1.0;
+            default -> hitZ - pos.getZ();
+        };
+    }
+
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
@@ -132,10 +148,12 @@ public class JebbQuarterBlock extends Block implements SimpleWaterloggedBlock {
 
         FluidState fluid = ctx.getLevel().getFluidState(pos);
         Direction.Axis axis = pickAxis(ctx);
+        double placeX = placementOffsetX(face, hit.x, pos);
+        double placeZ = placementOffsetZ(face, hit.z, pos);
         BooleanProperty quad = switch (face) {
-            case UP -> quadrantFor(axis, hit.x - pos.getX(), 0.25, hit.z - pos.getZ());
-            case DOWN -> quadrantFor(axis, hit.x - pos.getX(), 0.75, hit.z - pos.getZ());
-            default -> quadrantFor(axis, offX, offY, offZ);
+            case UP -> quadrantFor(axis, placeX, 0.25, placeZ);
+            case DOWN -> quadrantFor(axis, placeX, 0.75, placeZ);
+            default -> quadrantFor(axis, placeX, offY, placeZ);
         };
         return this.defaultBlockState()
                 .setValue(AXIS, axis)

@@ -30,9 +30,10 @@ public final class JebbTextureMap {
             Map.entry("pumpkin",          new Faces(tex("pumpkin_top"),          tex("pumpkin_side"),          tex("pumpkin_top"))),
             Map.entry("melon",            new Faces(tex("melon_top"),            tex("melon_side"),            tex("melon_top"))),
             Map.entry("honey_block",      new Faces(tex("honey_block_top"),      tex("honey_block_side"),      tex("honey_block_bottom"))),
+            Map.entry("frosted_ice",      new Faces(tex("frosted_ice_0"),        tex("frosted_ice_0"),         tex("frosted_ice_0"))),
             // cube_column family (top == bottom)
             Map.entry("quartz_block",     new Faces(tex("quartz_block_top"),     tex("quartz_block_side"),     tex("quartz_block_bottom"))),
-            Map.entry("bookshelf",        new Faces(tex("bookshelf_top"),        tex("bookshelf"),             tex("bookshelf_top"))),
+            Map.entry("bookshelf",        new Faces(tex("oak_planks"),           tex("bookshelf"),             tex("oak_planks"))),
             Map.entry("dried_kelp_block", new Faces(tex("dried_kelp_top"),       tex("dried_kelp_side"),       tex("dried_kelp_bottom"))),
             Map.entry("mangrove_roots",   new Faces(tex("mangrove_roots_top"),   tex("mangrove_roots_side"),   tex("mangrove_roots_top"))),
             Map.entry("muddy_mangrove_roots", new Faces(tex("muddy_mangrove_roots_top"), tex("muddy_mangrove_roots_side"), tex("muddy_mangrove_roots_top"))),
@@ -47,8 +48,28 @@ public final class JebbTextureMap {
 
     public static Faces forParent(Block parent) {
         ResourceLocation key = BuiltInRegistries.BLOCK.getKey(parent);
-        if (key == null) return null;
-        return BY_PATH.get(key.getPath());
+        if (key == null) {
+            return null;
+        }
+        String path = key.getPath();
+        Faces fromMap = BY_PATH.get(path);
+        if (fromMap != null) {
+            return fromMap;
+        }
+        return columnTopSideBottomFaces(path);
+    }
+
+    /**
+     * Logs, stems, and bamboo columns use distinct top/end textures (same layout as bookshelf-style BTS models).
+     */
+    private static Faces columnTopSideBottomFaces(String path) {
+        if (!(path.endsWith("_log") || path.endsWith("_stem")
+                || "bamboo_block".equals(path) || "stripped_bamboo_block".equals(path))) {
+            return null;
+        }
+        ResourceLocation side = tex(path);
+        ResourceLocation top = tex(path + "_top");
+        return new Faces(top, side, top);
     }
 
     public static Faces defaultMapping(Block parent) {

@@ -1,6 +1,0 @@
-{
-  "parent": "just-enought-building-blocks:block/template_item_quarter",
-  "textures": {
-    "all": "minecraft:block/deepslate_emerald_ore"
-  }
-}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:vertical_slab_stripped_warped_stem"
+    },
+    {
+      "item": "just-enought-building-blocks:vertical_slab_stripped_warped_stem"
+    }
+  ],
+  "result": {
+    "item": "minecraft:stripped_warped_stem"
+  }
+}

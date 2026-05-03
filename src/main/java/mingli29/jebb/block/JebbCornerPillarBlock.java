@@ -92,6 +92,22 @@ public class JebbCornerPillarBlock extends Block implements SimpleWaterloggedBlo
         return hit - origin + step * 0.5;
     }
 
+    private static double placementOffsetX(Direction face, double hitX, BlockPos pos) {
+        return switch (face) {
+            case EAST -> 0.0;
+            case WEST -> 1.0;
+            default -> hitX - pos.getX();
+        };
+    }
+
+    private static double placementOffsetZ(Direction face, double hitZ, BlockPos pos) {
+        return switch (face) {
+            case SOUTH -> 0.0;
+            case NORTH -> 1.0;
+            default -> hitZ - pos.getZ();
+        };
+    }
+
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
@@ -108,7 +124,9 @@ public class JebbCornerPillarBlock extends Block implements SimpleWaterloggedBlo
         }
 
         FluidState fluid = ctx.getLevel().getFluidState(pos);
-        BooleanProperty corner = cornerFor(offX, offZ);
+        BooleanProperty corner = cornerFor(
+                placementOffsetX(face, hit.x, pos),
+                placementOffsetZ(face, hit.z, pos));
         return this.defaultBlockState()
                 .setValue(NW, false)
                 .setValue(NE, false)

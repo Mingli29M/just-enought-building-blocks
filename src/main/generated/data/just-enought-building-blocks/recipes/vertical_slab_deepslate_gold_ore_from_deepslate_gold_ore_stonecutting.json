@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "minecraft:deepslate_gold_ore"
-  },
-  "result": "just-enought-building-blocks:vertical_slab_deepslate_gold_ore"
-}

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "minecraft:wet_sponge"
-  },
-  "result": "just-enought-building-blocks:quarter_wet_sponge"
-}
