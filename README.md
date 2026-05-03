@@ -31,4 +31,4 @@ For setup instructions, see the [Fabric Documentation](https://docs.fabricmc.net
 
 ## License
 
-Released under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+Released under the [MIT License](LICENSE).
