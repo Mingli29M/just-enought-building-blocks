@@ -14,40 +14,45 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 
 public final class JebbItemGroups {
+    public static final int BANNER_WIDTH = 9;
     public static final ResourceLocation MAIN_TAB_ID = new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, "main");
 
     public static CreativeModeTab MAIN_TAB;
 
-    public static JebbSeparatorItem DIVIDER_VERTICAL_SLABS;
-    public static JebbSeparatorItem DIVIDER_QUARTERS;
-    public static JebbSeparatorItem DIVIDER_CORNER_PILLARS;
+    public static JebbSeparatorItem[] BANNER_VERTICAL_SLABS;
+    public static JebbSeparatorItem[] BANNER_QUARTERS;
+    public static JebbSeparatorItem[] BANNER_CORNER_PILLARS;
 
     private JebbItemGroups() {
     }
 
     public static void register() {
-        DIVIDER_VERTICAL_SLABS = registerSeparator("divider_vertical_slabs", "jebb.section.vertical_slabs");
-        DIVIDER_QUARTERS = registerSeparator("divider_quarters", "jebb.section.quarters");
-        DIVIDER_CORNER_PILLARS = registerSeparator("divider_corner_pillars", "jebb.section.corner_pillars");
+        BANNER_VERTICAL_SLABS = registerBanner("divider_vertical_slabs", "jebb.section.vertical_slabs");
+        BANNER_QUARTERS = registerBanner("divider_quarters", "jebb.section.quarters");
+        BANNER_CORNER_PILLARS = registerBanner("divider_corner_pillars", "jebb.section.corner_pillars");
 
         MAIN_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, MAIN_TAB_ID,
                 FabricItemGroup.builder()
                         .title(Component.translatable("itemGroup." + JustEnoughtBuildingBlocks.MOD_ID + ".main"))
                         .icon(() -> new ItemStack(Items.OAK_PLANKS))
                         .displayItems((params, output) -> {
-                            output.accept(DIVIDER_VERTICAL_SLABS);
+                            for (JebbSeparatorItem b : BANNER_VERTICAL_SLABS) output.accept(b);
                             for (Block b : JebbBlocks.VERTICAL_SLABS.values()) output.accept(b);
-                            output.accept(DIVIDER_QUARTERS);
+                            for (JebbSeparatorItem b : BANNER_QUARTERS) output.accept(b);
                             for (Block b : JebbBlocks.QUARTERS.values()) output.accept(b);
-                            output.accept(DIVIDER_CORNER_PILLARS);
+                            for (JebbSeparatorItem b : BANNER_CORNER_PILLARS) output.accept(b);
                             for (Block b : JebbBlocks.CORNER_PILLARS.values()) output.accept(b);
                         })
                         .build());
     }
 
-    private static JebbSeparatorItem registerSeparator(String name, String labelKey) {
-        ResourceLocation id = new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, name);
-        JebbSeparatorItem item = new JebbSeparatorItem(new Item.Properties().stacksTo(1), labelKey);
-        return Registry.register(BuiltInRegistries.ITEM, id, item);
+    private static JebbSeparatorItem[] registerBanner(String prefix, String labelKey) {
+        JebbSeparatorItem[] items = new JebbSeparatorItem[BANNER_WIDTH];
+        for (int i = 0; i < BANNER_WIDTH; i++) {
+            ResourceLocation id = new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, prefix + "_" + i);
+            JebbSeparatorItem item = new JebbSeparatorItem(new Item.Properties().stacksTo(1), labelKey);
+            items[i] = Registry.register(BuiltInRegistries.ITEM, id, item);
+        }
+        return items;
     }
 }

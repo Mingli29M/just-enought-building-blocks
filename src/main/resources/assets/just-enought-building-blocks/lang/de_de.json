@@ -1,0 +1,9 @@
+{
+	"itemGroup.just-enought-building-blocks.main": "Just Enought Building Blocks",
+	"jebb.vertical_slab": "Vertikale Stufe (%s)",
+	"jebb.quarter": "Viertelblock (%s)",
+	"jebb.corner_pillar": "Ecksäule (%s)",
+	"jebb.section.vertical_slabs": "--- Vertikale Stufen ---",
+	"jebb.section.quarters": "--- Viertelblöcke ---",
+	"jebb.section.corner_pillars": "--- Ecksäulen ---"
+}
