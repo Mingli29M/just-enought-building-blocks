@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_flowering_azalea_leaves"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_flowering_azalea_leaves"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_flowering_azalea_leaves"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_flowering_azalea_leaves"
+    }
+  ],
+  "result": {
+    "item": "minecraft:flowering_azalea_leaves"
+  }
+}

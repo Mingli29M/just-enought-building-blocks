@@ -1,3 +1,6 @@
 {
-  "parent": "just-enought-building-blocks:block/vertical_slab_magenta_stained_glass"
+  "parent": "just-enought-building-blocks:block/template_item_vertical_slab",
+  "textures": {
+    "all": "minecraft:block/magenta_stained_glass"
+  }
 }

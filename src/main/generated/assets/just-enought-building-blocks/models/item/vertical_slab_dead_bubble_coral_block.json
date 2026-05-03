@@ -1,3 +1,6 @@
 {
-  "parent": "just-enought-building-blocks:block/vertical_slab_dead_bubble_coral_block"
+  "parent": "just-enought-building-blocks:block/template_item_vertical_slab",
+  "textures": {
+    "all": "minecraft:block/dead_bubble_coral_block"
+  }
 }

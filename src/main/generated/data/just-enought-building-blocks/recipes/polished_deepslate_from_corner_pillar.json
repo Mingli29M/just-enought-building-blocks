@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_polished_deepslate"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_polished_deepslate"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_polished_deepslate"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_polished_deepslate"
+    }
+  ],
+  "result": {
+    "item": "minecraft:polished_deepslate"
+  }
+}

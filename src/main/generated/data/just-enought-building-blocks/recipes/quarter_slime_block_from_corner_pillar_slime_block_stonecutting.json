@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "just-enought-building-blocks:corner_pillar_slime_block"
+  },
+  "result": "just-enought-building-blocks:quarter_slime_block"
+}

@@ -1,6 +1,7 @@
 package mingli29.jebb.client.datagen;
 
 import mingli29.jebb.block.JebbBlocks;
+import mingli29.jebb.block.JebbCornerPillarBlock;
 import mingli29.jebb.block.JebbQuarterBlock;
 import mingli29.jebb.block.JebbVerticalSlabBlock;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -28,6 +29,33 @@ public class JebbBlockLootProvider extends FabricBlockLootTableProvider {
         for (Block q : JebbBlocks.QUARTERS.values()) {
             this.add(q, quarterDrops(q));
         }
+        for (Block cp : JebbBlocks.CORNER_PILLARS.values()) {
+            this.add(cp, cornerPillarDrops(cp));
+        }
+    }
+
+    private LootTable.Builder cornerPillarDrops(Block block) {
+        LootTable.Builder builder = LootTable.lootTable();
+        addCornerPool(builder, block, JebbCornerPillarBlock.NW);
+        addCornerPool(builder, block, JebbCornerPillarBlock.NE);
+        addCornerPool(builder, block, JebbCornerPillarBlock.SW);
+        addCornerPool(builder, block, JebbCornerPillarBlock.SE);
+        return builder;
+    }
+
+    private void addCornerPool(LootTable.Builder builder, Block block, BooleanProperty corner) {
+        builder.withPool(
+                LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1.0F))
+                        .add(
+                                this.applyExplosionDecay(
+                                        block,
+                                        LootItem.lootTableItem(block)
+                                                .when(
+                                                        LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
+                                                                .setProperties(
+                                                                        StatePropertiesPredicate.Builder.properties()
+                                                                                .hasProperty(corner, true))))));
     }
 
     private LootTable.Builder verticalSlabDrops(Block block) {

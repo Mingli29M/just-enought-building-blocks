@@ -1,0 +1,6 @@
+{
+  "parent": "just-enought-building-blocks:block/template_corner_pillar_nw",
+  "textures": {
+    "all": "minecraft:block/purple_glazed_terracotta"
+  }
+}

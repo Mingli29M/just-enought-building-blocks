@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "just-enought-building-blocks:corner_pillar_acacia_planks"
+  },
+  "result": "just-enought-building-blocks:quarter_acacia_planks"
+}

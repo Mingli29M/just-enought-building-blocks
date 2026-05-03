@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_frosted_ice"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_frosted_ice"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_frosted_ice"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_frosted_ice"
+    }
+  ],
+  "result": {
+    "item": "minecraft:air"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_waxed_copper_block"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_waxed_copper_block"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_waxed_copper_block"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_waxed_copper_block"
+    }
+  ],
+  "result": {
+    "item": "minecraft:waxed_copper_block"
+  }
+}

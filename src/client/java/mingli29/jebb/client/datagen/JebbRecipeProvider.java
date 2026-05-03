@@ -26,7 +26,8 @@ public class JebbRecipeProvider extends FabricRecipeProvider {
             Block parent = e.getKey();
             Block vs = e.getValue();
             Block q = JebbBlocks.QUARTERS.get(parent);
-            if (q == null) continue;
+            Block cp = JebbBlocks.CORNER_PILLARS.get(parent);
+            if (q == null || cp == null) continue;
             String parentPath = BuiltInRegistries.BLOCK.getKey(parent).getPath();
 
             RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, vs, parent, 2);
@@ -43,6 +44,14 @@ public class JebbRecipeProvider extends FabricRecipeProvider {
                     .unlockedBy(RecipeProvider.getHasName(parent), RecipeProvider.has(parent))
                     .save(output);
 
+            RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, cp, parent, 4);
+            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, cp, 6)
+                    .define('#', parent)
+                    .pattern("#")
+                    .pattern("#")
+                    .unlockedBy(RecipeProvider.getHasName(parent), RecipeProvider.has(parent))
+                    .save(output);
+
             ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, parent)
                     .requires(vs, 2)
                     .unlockedBy(RecipeProvider.getHasName(vs), RecipeProvider.has(vs))
@@ -53,12 +62,19 @@ public class JebbRecipeProvider extends FabricRecipeProvider {
                     .unlockedBy(RecipeProvider.getHasName(q), RecipeProvider.has(q))
                     .save(output, modId(parentPath + "_from_quarter"));
 
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, parent)
+                    .requires(cp, 4)
+                    .unlockedBy(RecipeProvider.getHasName(cp), RecipeProvider.has(cp))
+                    .save(output, modId(parentPath + "_from_corner_pillar"));
+
             ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, vs)
                     .requires(q, 2)
                     .unlockedBy(RecipeProvider.getHasName(q), RecipeProvider.has(q))
                     .save(output, modId("vertical_slab_" + parentPath + "_from_quarter"));
 
             RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, q, vs, 2);
+            RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, cp, vs, 2);
+            RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, q, cp, 2);
         }
     }
 

@@ -17,6 +17,7 @@ import java.util.Map;
 public final class JebbBlocks {
     public static final Map<Block, JebbVerticalSlabBlock> VERTICAL_SLABS = new LinkedHashMap<>();
     public static final Map<Block, JebbQuarterBlock> QUARTERS = new LinkedHashMap<>();
+    public static final Map<Block, JebbCornerPillarBlock> CORNER_PILLARS = new LinkedHashMap<>();
 
     private JebbBlocks() {
     }
@@ -33,16 +34,21 @@ public final class JebbBlocks {
             JebbQuarterBlock q = registerBlock(
                     "quarter_" + parentPath,
                     new JebbQuarterBlock(parent, JebbBlockProps.copyFromParent(parent)));
+            JebbCornerPillarBlock cp = registerBlock(
+                    "corner_pillar_" + parentPath,
+                    new JebbCornerPillarBlock(parent, JebbBlockProps.copyFromParent(parent)));
 
             registerVariantItem("vertical_slab_" + parentPath, vs, parent, "jebb.vertical_slab");
             registerVariantItem("quarter_" + parentPath, q, parent, "jebb.quarter");
+            registerVariantItem("corner_pillar_" + parentPath, cp, parent, "jebb.corner_pillar");
 
             VERTICAL_SLABS.put(parent, vs);
             QUARTERS.put(parent, q);
+            CORNER_PILLARS.put(parent, cp);
         }
         JustEnoughtBuildingBlocks.LOGGER.info(
-                "Registered {} vertical slab variants and {} quarter variants",
-                VERTICAL_SLABS.size(), QUARTERS.size());
+                "Registered {} vertical slab, {} quarter, {} corner pillar variants",
+                VERTICAL_SLABS.size(), QUARTERS.size(), CORNER_PILLARS.size());
     }
 
     private static <B extends Block> B registerBlock(String name, B block) {

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_end_stone_bricks"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_end_stone_bricks"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_end_stone_bricks"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_end_stone_bricks"
+    }
+  ],
+  "result": {
+    "item": "minecraft:end_stone_bricks"
+  }
+}

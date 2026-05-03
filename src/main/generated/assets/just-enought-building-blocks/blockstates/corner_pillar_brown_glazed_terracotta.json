@@ -1,0 +1,36 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "just-enought-building-blocks:block/corner_pillar_brown_glazed_terracotta_nw"
+      },
+      "when": {
+        "nw": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "just-enought-building-blocks:block/corner_pillar_brown_glazed_terracotta_ne"
+      },
+      "when": {
+        "ne": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "just-enought-building-blocks:block/corner_pillar_brown_glazed_terracotta_sw"
+      },
+      "when": {
+        "sw": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "just-enought-building-blocks:block/corner_pillar_brown_glazed_terracotta_se"
+      },
+      "when": {
+        "se": "true"
+      }
+    }
+  ]
+}

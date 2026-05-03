@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "minecraft:smooth_sandstone"
+  },
+  "result": "just-enought-building-blocks:corner_pillar_smooth_sandstone"
+}

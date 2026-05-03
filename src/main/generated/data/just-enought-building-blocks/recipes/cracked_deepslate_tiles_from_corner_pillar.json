@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_cracked_deepslate_tiles"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_cracked_deepslate_tiles"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_cracked_deepslate_tiles"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_cracked_deepslate_tiles"
+    }
+  ],
+  "result": {
+    "item": "minecraft:cracked_deepslate_tiles"
+  }
+}

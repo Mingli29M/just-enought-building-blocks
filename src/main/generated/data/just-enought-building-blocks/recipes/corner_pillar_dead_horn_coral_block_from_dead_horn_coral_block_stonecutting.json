@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "minecraft:dead_horn_coral_block"
+  },
+  "result": "just-enought-building-blocks:corner_pillar_dead_horn_coral_block"
+}

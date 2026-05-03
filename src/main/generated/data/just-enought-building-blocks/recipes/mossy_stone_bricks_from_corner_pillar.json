@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_mossy_stone_bricks"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_mossy_stone_bricks"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_mossy_stone_bricks"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_mossy_stone_bricks"
+    }
+  ],
+  "result": {
+    "item": "minecraft:mossy_stone_bricks"
+  }
+}

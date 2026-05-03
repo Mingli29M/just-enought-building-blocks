@@ -14,6 +14,7 @@ public class JustEnoughtBuildingBlocksClient implements ClientModInitializer {
     public void onInitializeClient() {
         applyParentRenderLayers(JebbBlocks.VERTICAL_SLABS);
         applyParentRenderLayers(JebbBlocks.QUARTERS);
+        applyParentRenderLayers(JebbBlocks.CORNER_PILLARS);
     }
 
     private static void applyParentRenderLayers(Map<Block, ? extends Block> map) {

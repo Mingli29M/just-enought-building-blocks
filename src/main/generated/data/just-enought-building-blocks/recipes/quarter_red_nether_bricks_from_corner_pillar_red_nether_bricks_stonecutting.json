@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "just-enought-building-blocks:corner_pillar_red_nether_bricks"
+  },
+  "result": "just-enought-building-blocks:quarter_red_nether_bricks"
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "minecraft:quartz_block"
+  },
+  "result": "just-enought-building-blocks:corner_pillar_quartz_block"
+}

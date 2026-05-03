@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "just-enought-building-blocks:vertical_slab_orange_wool"
+  },
+  "result": "just-enought-building-blocks:corner_pillar_orange_wool"
+}

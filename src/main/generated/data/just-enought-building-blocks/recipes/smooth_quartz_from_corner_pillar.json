@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_smooth_quartz"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_smooth_quartz"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_smooth_quartz"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_smooth_quartz"
+    }
+  ],
+  "result": {
+    "item": "minecraft:smooth_quartz"
+  }
+}

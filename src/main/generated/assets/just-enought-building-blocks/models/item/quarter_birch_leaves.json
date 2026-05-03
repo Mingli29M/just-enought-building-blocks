@@ -1,3 +1,6 @@
 {
-  "parent": "just-enought-building-blocks:block/quarter_birch_leaves_bn"
+  "parent": "just-enought-building-blocks:block/template_item_quarter",
+  "textures": {
+    "all": "minecraft:block/birch_leaves"
+  }
 }

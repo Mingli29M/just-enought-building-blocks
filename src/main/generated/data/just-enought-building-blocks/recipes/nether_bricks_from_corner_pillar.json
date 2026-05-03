@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_nether_bricks"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_nether_bricks"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_nether_bricks"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_nether_bricks"
+    }
+  ],
+  "result": {
+    "item": "minecraft:nether_bricks"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_mossy_cobblestone"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_mossy_cobblestone"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_mossy_cobblestone"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_mossy_cobblestone"
+    }
+  ],
+  "result": {
+    "item": "minecraft:mossy_cobblestone"
+  }
+}

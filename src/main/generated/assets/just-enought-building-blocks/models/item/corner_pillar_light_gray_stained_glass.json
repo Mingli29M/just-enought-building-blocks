@@ -1,0 +1,6 @@
+{
+  "parent": "just-enought-building-blocks:block/template_item_corner_pillar",
+  "textures": {
+    "all": "minecraft:block/light_gray_stained_glass"
+  }
+}

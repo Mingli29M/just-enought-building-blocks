@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_warped_planks"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_warped_planks"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_warped_planks"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_warped_planks"
+    }
+  ],
+  "result": {
+    "item": "minecraft:warped_planks"
+  }
+}

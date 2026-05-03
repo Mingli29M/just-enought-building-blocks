@@ -1,0 +1,36 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "just-enought-building-blocks:block/corner_pillar_sand_nw"
+      },
+      "when": {
+        "nw": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "just-enought-building-blocks:block/corner_pillar_sand_ne"
+      },
+      "when": {
+        "ne": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "just-enought-building-blocks:block/corner_pillar_sand_sw"
+      },
+      "when": {
+        "sw": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "just-enought-building-blocks:block/corner_pillar_sand_se"
+      },
+      "when": {
+        "se": "true"
+      }
+    }
+  ]
+}

@@ -35,7 +35,11 @@ public final class JebbTextureMap {
             Map.entry("bookshelf",        new Faces(tex("bookshelf_top"),        tex("bookshelf"),             tex("bookshelf_top"))),
             Map.entry("dried_kelp_block", new Faces(tex("dried_kelp_top"),       tex("dried_kelp_side"),       tex("dried_kelp_bottom"))),
             Map.entry("mangrove_roots",   new Faces(tex("mangrove_roots_top"),   tex("mangrove_roots_side"),   tex("mangrove_roots_top"))),
-            Map.entry("muddy_mangrove_roots", new Faces(tex("muddy_mangrove_roots_top"), tex("muddy_mangrove_roots_side"), tex("muddy_mangrove_roots_top")))
+            Map.entry("muddy_mangrove_roots", new Faces(tex("muddy_mangrove_roots_top"), tex("muddy_mangrove_roots_side"), tex("muddy_mangrove_roots_top"))),
+            // Smooth variants reuse another block's texture in vanilla
+            Map.entry("smooth_quartz",        new Faces(tex("quartz_block_bottom"),     tex("quartz_block_bottom"),       tex("quartz_block_bottom"))),
+            Map.entry("smooth_sandstone",     new Faces(tex("sandstone_top"),           tex("sandstone_top"),             tex("sandstone_top"))),
+            Map.entry("smooth_red_sandstone", new Faces(tex("red_sandstone_top"),       tex("red_sandstone_top"),         tex("red_sandstone_top")))
     );
 
     private JebbTextureMap() {

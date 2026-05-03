@@ -1,0 +1,36 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "just-enought-building-blocks:block/corner_pillar_mangrove_leaves_nw"
+      },
+      "when": {
+        "nw": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "just-enought-building-blocks:block/corner_pillar_mangrove_leaves_ne"
+      },
+      "when": {
+        "ne": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "just-enought-building-blocks:block/corner_pillar_mangrove_leaves_sw"
+      },
+      "when": {
+        "sw": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "just-enought-building-blocks:block/corner_pillar_mangrove_leaves_se"
+      },
+      "when": {
+        "se": "true"
+      }
+    }
+  ]
+}

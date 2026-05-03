@@ -37,11 +37,13 @@ public class JebbBlockTagProvider extends FabricTagProvider.BlockTagProvider {
             Block parent = e.getKey();
             Block vs = e.getValue();
             Block q = JebbBlocks.QUARTERS.get(parent);
+            Block cp = JebbBlocks.CORNER_PILLARS.get(parent);
             ResourceKey<Block> parentKey = BuiltInRegistries.BLOCK.getResourceKey(parent).orElseThrow();
             var parentHolder = blocks.getOrThrow(parentKey);
             for (TagKey<Block> tag : MIRROR_TAGS) {
                 if (parentHolder.is(tag)) {
-                    this.getOrCreateTagBuilder(tag).add(vs, q);
+                    var builder = this.getOrCreateTagBuilder(tag).add(vs, q);
+                    if (cp != null) builder.add(cp);
                 }
             }
         }

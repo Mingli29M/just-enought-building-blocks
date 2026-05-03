@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_glowstone"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_glowstone"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_glowstone"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_glowstone"
+    }
+  ],
+  "result": {
+    "item": "minecraft:glowstone"
+  }
+}

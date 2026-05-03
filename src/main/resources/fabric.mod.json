@@ -3,13 +3,13 @@
 	"id": "just-enought-building-blocks",
 	"version": "${version}",
 	"name": "Just Enought Building Blocks",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "AwA",
 	"authors": [
 		"Mingli29, J00000NEY"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/just-enough-building-blocks",
+		"sources": "https://github.com/Mingli29M/just-enought-building-blocks"
 	},
 	"license": "MIT",
 	"icon": "assets/just-enought-building-blocks/icon.png",

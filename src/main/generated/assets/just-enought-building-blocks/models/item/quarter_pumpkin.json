@@ -1,3 +1,8 @@
 {
-  "parent": "just-enought-building-blocks:block/quarter_pumpkin_bn"
+  "parent": "just-enought-building-blocks:block/template_item_quarter_bts",
+  "textures": {
+    "bottom": "minecraft:block/pumpkin_top",
+    "side": "minecraft:block/pumpkin_side",
+    "top": "minecraft:block/pumpkin_top"
+  }
 }

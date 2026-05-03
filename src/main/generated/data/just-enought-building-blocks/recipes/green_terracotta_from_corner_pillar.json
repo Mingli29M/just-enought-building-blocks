@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_green_terracotta"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_green_terracotta"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_green_terracotta"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_green_terracotta"
+    }
+  ],
+  "result": {
+    "item": "minecraft:green_terracotta"
+  }
+}

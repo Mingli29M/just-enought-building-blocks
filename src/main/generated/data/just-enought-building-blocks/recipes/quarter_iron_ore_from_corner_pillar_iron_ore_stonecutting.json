@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "just-enought-building-blocks:corner_pillar_iron_ore"
+  },
+  "result": "just-enought-building-blocks:quarter_iron_ore"
+}

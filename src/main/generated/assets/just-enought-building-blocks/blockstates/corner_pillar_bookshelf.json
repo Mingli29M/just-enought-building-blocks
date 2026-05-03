@@ -1,0 +1,36 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "just-enought-building-blocks:block/corner_pillar_bookshelf_nw"
+      },
+      "when": {
+        "nw": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "just-enought-building-blocks:block/corner_pillar_bookshelf_ne"
+      },
+      "when": {
+        "ne": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "just-enought-building-blocks:block/corner_pillar_bookshelf_sw"
+      },
+      "when": {
+        "sw": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "just-enought-building-blocks:block/corner_pillar_bookshelf_se"
+      },
+      "when": {
+        "se": "true"
+      }
+    }
+  ]
+}

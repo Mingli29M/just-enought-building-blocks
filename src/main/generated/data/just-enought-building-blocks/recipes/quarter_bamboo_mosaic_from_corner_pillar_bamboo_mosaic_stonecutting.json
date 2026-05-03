@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "just-enought-building-blocks:corner_pillar_bamboo_mosaic"
+  },
+  "result": "just-enought-building-blocks:quarter_bamboo_mosaic"
+}
