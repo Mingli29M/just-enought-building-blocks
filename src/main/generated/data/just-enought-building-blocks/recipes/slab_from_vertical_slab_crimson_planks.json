@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:vertical_slab_crimson_planks"
+    }
+  ],
+  "result": {
+    "item": "minecraft:crimson_slab"
+  }
+}

@@ -34,10 +34,14 @@ public final class JebbItemGroups {
     }
 
     public static void register() {
-        List<Block> verticalSlabTab = new ArrayList<>();
-        verticalSlabTab.add(JebbBlocks.OAK_MUZHUAN);
-        verticalSlabTab.addAll(JebbBlocks.VERTICAL_SLABS.values());
+        List<Block> modBlocks = List.of(
+                JebbBlocks.OAK_MUZHUAN,
+                JebbBlocks.VERTICAL_SLABS.get(JebbBlocks.OAK_MUZHUAN),
+                JebbBlocks.QUARTERS.get(JebbBlocks.OAK_MUZHUAN),
+                JebbBlocks.CORNER_PILLARS.get(JebbBlocks.OAK_MUZHUAN));
+        List<Block> verticalSlabTab = new ArrayList<>(JebbBlocks.VERTICAL_SLABS.values());
         SECTIONS = List.of(
+                new Section("jebb.section.mod_blocks", modBlocks),
                 new Section("jebb.section.vertical_slabs", verticalSlabTab),
                 new Section("jebb.section.quarters", JebbBlocks.QUARTERS.values()),
                 new Section("jebb.section.corner_pillars", JebbBlocks.CORNER_PILLARS.values())

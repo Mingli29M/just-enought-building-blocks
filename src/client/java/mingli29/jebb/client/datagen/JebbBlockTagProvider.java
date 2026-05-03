@@ -8,6 +8,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
@@ -16,7 +17,7 @@ import net.minecraft.world.level.block.Blocks;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-public class JebbBlockTagProvider extends FabricTagProvider.BlockTagProvider {
+public final class JebbBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     private static final List<TagKey<Block>> MIRROR_TAGS = List.of(
             BlockTags.MINEABLE_WITH_PICKAXE,
             BlockTags.MINEABLE_WITH_AXE,
@@ -42,12 +43,40 @@ public class JebbBlockTagProvider extends FabricTagProvider.BlockTagProvider {
             Block tagSource = parent == JebbBlocks.OAK_MUZHUAN ? Blocks.OAK_PLANKS : parent;
             ResourceKey<Block> parentKey = BuiltInRegistries.BLOCK.getResourceKey(tagSource).orElseThrow();
             var parentHolder = blocks.getOrThrow(parentKey);
-            for (TagKey<Block> tag : MIRROR_TAGS) {
-                if (parentHolder.is(tag)) {
-                    var builder = this.getOrCreateTagBuilder(tag).add(vs, q);
-                    if (cp != null) builder.add(cp);
+
+            boolean mirroredFromStream = false;
+            for (TagKey<Block> tag : parentHolder.tags().toList()) {
+                if (!isMiningRelatedBlockTag(tag)) {
+                    continue;
+                }
+                var builder = this.getOrCreateTagBuilder(tag);
+                builder.add(vs, q);
+                if (cp != null) {
+                    builder.add(cp);
+                }
+                mirroredFromStream = true;
+            }
+
+            if (!mirroredFromStream) {
+                for (TagKey<Block> tag : MIRROR_TAGS) {
+                    if (parentHolder.is(tag)) {
+                        var builder = this.getOrCreateTagBuilder(tag);
+                        builder.add(vs, q);
+                        if (cp != null) {
+                            builder.add(cp);
+                        }
+                    }
                 }
             }
         }
+    }
+
+    private static boolean isMiningRelatedBlockTag(TagKey<Block> tag) {
+        ResourceLocation id = tag.location();
+        if (!"minecraft".equals(id.getNamespace())) {
+            return false;
+        }
+        String path = id.getPath();
+        return path.startsWith("mineable/") || path.startsWith("needs_");
     }
 }

@@ -14,6 +14,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
+import java.util.Optional;
 import java.util.function.Consumer;
 
 public class JebbRecipeProvider extends FabricRecipeProvider {
@@ -75,10 +76,37 @@ public class JebbRecipeProvider extends FabricRecipeProvider {
 
             RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, q, vs, 2);
             RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, cp, vs, 2);
-            RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, q, cp, 2);
+            // One quarter per corner pillar (was 2, which duped matter with 4q = 1 parent and 4cp from 1 parent)
+            RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, q, cp, 1);
+
+            Optional<Block> vanillaSlab = vanillaSlabForParent(parent);
+            if (vanillaSlab.isPresent()) {
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, vanillaSlab.get())
+                        .requires(vs)
+                        .unlockedBy(RecipeProvider.getHasName(vs), RecipeProvider.has(vs))
+                        .save(output, modId("slab_from_vertical_slab_" + parentPath));
+            }
         }
 
         RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, JebbBlocks.OAK_MUZHUAN, Blocks.OAK_PLANKS, 1);
+    }
+
+    /**
+     * Vanilla horizontal slab id for a full-block parent, when one exists (e.g. oak_planks -> oak_slab).
+     */
+    private static Optional<Block> vanillaSlabForParent(Block parent) {
+        ResourceLocation key = BuiltInRegistries.BLOCK.getKey(parent);
+        if (key == null || !"minecraft".equals(key.getNamespace())) {
+            return Optional.empty();
+        }
+        String path = key.getPath();
+        String slabPath;
+        if (path.endsWith("_planks")) {
+            slabPath = path.substring(0, path.length() - "_planks".length()) + "_slab";
+        } else {
+            slabPath = path + "_slab";
+        }
+        return BuiltInRegistries.BLOCK.getOptional(new ResourceLocation("minecraft", slabPath));
     }
 
     private static ResourceLocation modId(String path) {

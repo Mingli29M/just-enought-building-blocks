@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:vertical_slab_smooth_red_sandstone"
+    }
+  ],
+  "result": {
+    "item": "minecraft:smooth_red_sandstone_slab"
+  }
+}

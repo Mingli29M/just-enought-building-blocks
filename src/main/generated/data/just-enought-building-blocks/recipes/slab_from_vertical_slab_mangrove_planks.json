@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:vertical_slab_mangrove_planks"
+    }
+  ],
+  "result": {
+    "item": "minecraft:mangrove_slab"
+  }
+}
