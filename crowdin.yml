@@ -1,1 +1,7 @@
-files: []
+files:
+  - source: /src/main/resources/assets/just-enought-building-blocks/lang/en_us.json
+    translation: /src/main/resources/assets/just-enought-building-blocks/lang/%locale%.json
+    languages_mapping:
+      locale:
+        de-DE: de_de
+        zh-CN: zh_cn
