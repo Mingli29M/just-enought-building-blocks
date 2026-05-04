@@ -1,0 +1,6 @@
+{
+  "parent": "just-enought-building-blocks:block/template_quarter_bf",
+  "textures": {
+    "all": "just-enought-building-blocks:block/cherry_square_brick"
+  }
+}

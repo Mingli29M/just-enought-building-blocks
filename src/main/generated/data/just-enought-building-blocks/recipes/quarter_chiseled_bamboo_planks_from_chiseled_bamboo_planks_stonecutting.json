@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "just-enought-building-blocks:chiseled_bamboo_planks"
+  },
+  "result": "just-enought-building-blocks:quarter_chiseled_bamboo_planks"
+}

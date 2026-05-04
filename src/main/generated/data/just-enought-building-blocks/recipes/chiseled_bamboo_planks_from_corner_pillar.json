@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_chiseled_bamboo_planks"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_chiseled_bamboo_planks"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_chiseled_bamboo_planks"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_chiseled_bamboo_planks"
+    }
+  ],
+  "result": {
+    "item": "just-enought-building-blocks:chiseled_bamboo_planks"
+  }
+}

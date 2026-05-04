@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/cube_all",
+    "textures": {
+        "all": "just-enought-building-blocks:block/pale_oak_square_brick"
+    }
+}

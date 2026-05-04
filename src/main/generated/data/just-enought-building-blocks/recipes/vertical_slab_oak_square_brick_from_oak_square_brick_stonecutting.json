@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "just-enought-building-blocks:oak_square_brick"
+  },
+  "result": "just-enought-building-blocks:vertical_slab_oak_square_brick"
+}

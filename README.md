@@ -1,6 +1,6 @@
 # Just Enought Building Blocks
 
-A Fabric mod for Minecraft 1.20.1.
+A Fabric mod for Minecraft 1.20.1 that adds a variety of different building blocks.
 
 ## Versions
 

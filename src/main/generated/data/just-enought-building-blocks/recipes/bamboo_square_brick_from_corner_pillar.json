@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_bamboo_square_brick"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_bamboo_square_brick"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_bamboo_square_brick"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_bamboo_square_brick"
+    }
+  ],
+  "result": {
+    "item": "just-enought-building-blocks:bamboo_square_brick"
+  }
+}

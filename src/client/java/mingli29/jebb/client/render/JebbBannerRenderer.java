@@ -56,7 +56,7 @@ public final class JebbBannerRenderer {
             case DEFAULT -> Blocks.STRIPPED_OAK_LOG.defaultBlockState();
             case VARIANT_VERTICAL_SLAB -> Blocks.OAK_SLAB.defaultBlockState();
             case VARIANT_CORNER_PILLAR -> Blocks.STONE_BRICKS.defaultBlockState();
-            case VARIANT_QUARTER -> Blocks.QUARTZ_BLOCK.defaultBlockState();
+            case VARIANT_QUARTER -> Blocks.POLISHED_ANDESITE.defaultBlockState();
         };
     }
 }

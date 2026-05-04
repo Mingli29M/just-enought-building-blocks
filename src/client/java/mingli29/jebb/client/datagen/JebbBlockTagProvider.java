@@ -53,7 +53,7 @@ public final class JebbBlockTagProvider extends FabricTagProvider.BlockTagProvid
             Block vs = e.getValue();
             Block q = JebbBlocks.QUARTERS.get(parent);
             Block cp = JebbBlocks.CORNER_PILLARS.get(parent);
-            Block tagSource = parent == JebbBlocks.OAK_MUZHUAN ? Blocks.OAK_PLANKS : parent;
+            Block tagSource = tagSourceForParent(parent);
             ResourceKey<Block> parentKey = BuiltInRegistries.BLOCK.getResourceKey(tagSource).orElseThrow();
             var parentHolder = blocks.getOrThrow(parentKey);
 
@@ -132,5 +132,45 @@ public final class JebbBlockTagProvider extends FabricTagProvider.BlockTagProvid
                 throw new IllegalStateException("Failed to read vanilla block tag " + id, e);
             }
         });
+    }
+
+    private static Block tagSourceForParent(Block parent) {
+        if (parent == JebbBlocks.OAK_SQUARE_BRICK || parent == JebbBlocks.CHISELED_OAK_PLANKS) {
+            return Blocks.OAK_PLANKS;
+        }
+        if (parent == JebbBlocks.ACACIA_SQUARE_BRICK || parent == JebbBlocks.CHISELED_ACACIA_PLANKS) {
+            return Blocks.ACACIA_PLANKS;
+        }
+        if (parent == JebbBlocks.BAMBOO_SQUARE_BRICK || parent == JebbBlocks.CHISELED_BAMBOO_PLANKS) {
+            return Blocks.BAMBOO_PLANKS;
+        }
+        if (parent == JebbBlocks.BIRCH_SQUARE_BRICK || parent == JebbBlocks.CHISELED_BIRCH_PLANKS) {
+            return Blocks.BIRCH_PLANKS;
+        }
+        if (parent == JebbBlocks.CHERRY_SQUARE_BRICK || parent == JebbBlocks.CHISELED_CHERRY_PLANKS) {
+            return Blocks.CHERRY_PLANKS;
+        }
+        if (parent == JebbBlocks.CRIMSON_SQUARE_BRICK || parent == JebbBlocks.CHISELED_CRIMSON_PLANKS) {
+            return Blocks.CRIMSON_PLANKS;
+        }
+        if (parent == JebbBlocks.DARK_OAK_SQUARE_BRICK || parent == JebbBlocks.CHISELED_DARK_OAK_PLANKS) {
+            return Blocks.DARK_OAK_PLANKS;
+        }
+        if (parent == JebbBlocks.JUNGLE_SQUARE_BRICK || parent == JebbBlocks.CHISELED_JUNGLE_PLANKS) {
+            return Blocks.JUNGLE_PLANKS;
+        }
+        if (parent == JebbBlocks.MANGROVE_SQUARE_BRICK || parent == JebbBlocks.CHISELED_MANGROVE_PLANKS) {
+            return Blocks.MANGROVE_PLANKS;
+        }
+        if (parent == JebbBlocks.SPRUCE_SQUARE_BRICK || parent == JebbBlocks.CHISELED_SPRUCE_PLANKS) {
+            return Blocks.SPRUCE_PLANKS;
+        }
+        if (parent == JebbBlocks.WARPED_SQUARE_BRICK || parent == JebbBlocks.CHISELED_WARPED_PLANKS) {
+            return Blocks.WARPED_PLANKS;
+        }
+        if (parent == JebbBlocks.PALE_OAK_SQUARE_BRICK || parent == JebbBlocks.CHISELED_PALE_OAK_PLANKS) {
+            return Blocks.OAK_PLANKS;
+        }
+        return parent;
     }
 }

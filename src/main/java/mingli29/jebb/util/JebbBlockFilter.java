@@ -48,7 +48,7 @@ public final class JebbBlockFilter {
             "sculk_sensor", "calibrated_sculk_sensor",
             "sponge", "wet_sponge",
             "brown_mushroom_block", "red_mushroom_block", "mushroom_stem",
-            "melon", "magma_block", "slime_block",
+            "melon", "magma_block",
             "snow_block"
     );
 

@@ -105,7 +105,35 @@ public class JebbRecipeProvider extends FabricRecipeProvider {
             }
         }
 
-        RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, JebbBlocks.OAK_MUZHUAN, Blocks.OAK_PLANKS, 1);
+        registerWoodRecipe(output, JebbBlocks.OAK_SQUARE_BRICK, Blocks.OAK_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.ACACIA_SQUARE_BRICK, Blocks.ACACIA_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.BAMBOO_SQUARE_BRICK, Blocks.BAMBOO_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.BIRCH_SQUARE_BRICK, Blocks.BIRCH_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.CHERRY_SQUARE_BRICK, Blocks.CHERRY_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.CRIMSON_SQUARE_BRICK, Blocks.CRIMSON_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.DARK_OAK_SQUARE_BRICK, Blocks.DARK_OAK_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.JUNGLE_SQUARE_BRICK, Blocks.JUNGLE_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.MANGROVE_SQUARE_BRICK, Blocks.MANGROVE_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.PALE_OAK_SQUARE_BRICK, Blocks.OAK_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.SPRUCE_SQUARE_BRICK, Blocks.SPRUCE_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.WARPED_SQUARE_BRICK, Blocks.WARPED_PLANKS);
+
+        registerWoodRecipe(output, JebbBlocks.CHISELED_ACACIA_PLANKS, Blocks.ACACIA_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.CHISELED_BAMBOO_PLANKS, Blocks.BAMBOO_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.CHISELED_BIRCH_PLANKS, Blocks.BIRCH_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.CHISELED_CHERRY_PLANKS, Blocks.CHERRY_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.CHISELED_CRIMSON_PLANKS, Blocks.CRIMSON_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.CHISELED_DARK_OAK_PLANKS, Blocks.DARK_OAK_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.CHISELED_JUNGLE_PLANKS, Blocks.JUNGLE_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.CHISELED_MANGROVE_PLANKS, Blocks.MANGROVE_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.CHISELED_OAK_PLANKS, Blocks.OAK_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.CHISELED_PALE_OAK_PLANKS, Blocks.OAK_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.CHISELED_SPRUCE_PLANKS, Blocks.SPRUCE_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.CHISELED_WARPED_PLANKS, Blocks.WARPED_PLANKS);
+    }
+
+    private static void registerWoodRecipe(Consumer<FinishedRecipe> output, Block result, Block parent) {
+        RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, result, parent, 1);
     }
 
     /**

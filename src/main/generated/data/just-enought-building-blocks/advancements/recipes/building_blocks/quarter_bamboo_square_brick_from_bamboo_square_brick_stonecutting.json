@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bamboo_square_brick": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "just-enought-building-blocks:bamboo_square_brick"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:quarter_bamboo_square_brick_from_bamboo_square_brick_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_bamboo_square_brick",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:quarter_bamboo_square_brick_from_bamboo_square_brick_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

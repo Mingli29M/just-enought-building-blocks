@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "minecraft:bamboo_planks"
+  },
+  "result": "just-enought-building-blocks:bamboo_square_brick"
+}

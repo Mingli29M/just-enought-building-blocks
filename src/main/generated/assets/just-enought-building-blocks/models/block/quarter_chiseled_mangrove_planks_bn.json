@@ -1,0 +1,6 @@
+{
+  "parent": "just-enought-building-blocks:block/template_quarter_bn",
+  "textures": {
+    "all": "just-enought-building-blocks:block/chiseled_mangrove_planks"
+  }
+}

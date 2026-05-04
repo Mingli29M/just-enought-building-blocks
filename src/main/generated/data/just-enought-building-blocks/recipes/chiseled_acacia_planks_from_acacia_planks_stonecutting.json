@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "minecraft:acacia_planks"
+  },
+  "result": "just-enought-building-blocks:chiseled_acacia_planks"
+}

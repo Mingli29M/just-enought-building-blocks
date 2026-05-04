@@ -73,7 +73,32 @@ public final class JebbItemGroups {
         );
 
         BLOCKS_SECTIONS = List.of(
-                new Section("jebb.section.wood_variants", SectionBannerStyle.DEFAULT, List.of(JebbBlocks.OAK_MUZHUAN))
+                new Section("jebb.section.wood_variants", SectionBannerStyle.DEFAULT, List.of(
+                        JebbBlocks.OAK_SQUARE_BRICK,
+                        JebbBlocks.ACACIA_SQUARE_BRICK,
+                        JebbBlocks.BAMBOO_SQUARE_BRICK,
+                        JebbBlocks.BIRCH_SQUARE_BRICK,
+                        JebbBlocks.CHERRY_SQUARE_BRICK,
+                        JebbBlocks.CRIMSON_SQUARE_BRICK,
+                        JebbBlocks.DARK_OAK_SQUARE_BRICK,
+                        JebbBlocks.JUNGLE_SQUARE_BRICK,
+                        JebbBlocks.MANGROVE_SQUARE_BRICK,
+                        JebbBlocks.PALE_OAK_SQUARE_BRICK,
+                        JebbBlocks.SPRUCE_SQUARE_BRICK,
+                        JebbBlocks.WARPED_SQUARE_BRICK,
+                        JebbBlocks.CHISELED_ACACIA_PLANKS,
+                        JebbBlocks.CHISELED_BAMBOO_PLANKS,
+                        JebbBlocks.CHISELED_BIRCH_PLANKS,
+                        JebbBlocks.CHISELED_CHERRY_PLANKS,
+                        JebbBlocks.CHISELED_CRIMSON_PLANKS,
+                        JebbBlocks.CHISELED_DARK_OAK_PLANKS,
+                        JebbBlocks.CHISELED_JUNGLE_PLANKS,
+                        JebbBlocks.CHISELED_MANGROVE_PLANKS,
+                        JebbBlocks.CHISELED_OAK_PLANKS,
+                        JebbBlocks.CHISELED_PALE_OAK_PLANKS,
+                        JebbBlocks.CHISELED_SPRUCE_PLANKS,
+                        JebbBlocks.CHISELED_WARPED_PLANKS
+                ))
         );
 
         MAIN_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, MAIN_TAB_ID,
@@ -95,7 +120,7 @@ public final class JebbItemGroups {
         BLOCKS_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, BLOCKS_TAB_ID,
                 FabricItemGroup.builder()
                         .title(Component.translatable("itemGroup." + JustEnoughtBuildingBlocks.MOD_ID + ".blocks"))
-                        .icon(() -> new ItemStack(JebbBlocks.OAK_MUZHUAN))
+                        .icon(() -> new ItemStack(JebbBlocks.OAK_SQUARE_BRICK))
                         .displayItems((params, output) -> {
                             Set<Block> seen = new LinkedHashSet<>();
                             for (Section s : BLOCKS_SECTIONS) {

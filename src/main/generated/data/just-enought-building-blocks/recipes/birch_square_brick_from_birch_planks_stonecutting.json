@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "minecraft:birch_planks"
+  },
+  "result": "just-enought-building-blocks:birch_square_brick"
+}

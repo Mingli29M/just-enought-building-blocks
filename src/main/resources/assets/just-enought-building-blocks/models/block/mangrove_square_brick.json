@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/cube_all",
+    "textures": {
+        "all": "just-enought-building-blocks:block/mangrove_square_brick"
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "just-enought-building-blocks:acacia_square_brick"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "just-enought-building-blocks:vertical_slab_acacia_square_brick"
+  },
+  "show_notification": true
+}

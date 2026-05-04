@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/cube_all",
+    "textures": {
+        "all": "just-enought-building-blocks:block/bamboo_square_brick"
+    }
+}
