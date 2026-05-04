@@ -15,7 +15,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
-import java.util.Optional;
 import java.util.function.Consumer;
 
 public class JebbRecipeProvider extends FabricRecipeProvider {
@@ -91,17 +90,27 @@ public class JebbRecipeProvider extends FabricRecipeProvider {
 
             RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, cp, vs, 2);
 
-            Optional<Block> vanillaSlab = vanillaSlabForParent(parent);
-            if (vanillaSlab.isPresent()) {
-                ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, vanillaSlab.get())
+            Block horizontalSlab = JebbBlocks.horizontalSlabForVariantParent(parent);
+            if (horizontalSlab != null) {
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, horizontalSlab)
                         .requires(vs)
                         .unlockedBy(RecipeProvider.getHasName(vs), RecipeProvider.has(vs))
                         .save(output, modId("slab_from_vertical_slab_" + parentPath));
 
                 ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, vs)
-                        .requires(vanillaSlab.get())
-                        .unlockedBy(RecipeProvider.getHasName(vanillaSlab.get()), RecipeProvider.has(vanillaSlab.get()))
+                        .requires(horizontalSlab)
+                        .unlockedBy(RecipeProvider.getHasName(horizontalSlab), RecipeProvider.has(horizontalSlab))
                         .save(output, modId("vertical_slab_" + parentPath + "_from_slab"));
+            }
+
+            Block modSlab = JebbBlocks.HORIZONTAL_SLABS.get(parent);
+            if (modSlab != null) {
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, modSlab, 6)
+                        .define('#', parent)
+                        .pattern("###")
+                        .unlockedBy(RecipeProvider.getHasName(parent), RecipeProvider.has(parent))
+                        .save(output);
+                RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, modSlab, parent, 1);
             }
         }
 
@@ -114,7 +123,6 @@ public class JebbRecipeProvider extends FabricRecipeProvider {
         registerWoodRecipe(output, JebbBlocks.DARK_OAK_SQUARE_BRICK, Blocks.DARK_OAK_PLANKS);
         registerWoodRecipe(output, JebbBlocks.JUNGLE_SQUARE_BRICK, Blocks.JUNGLE_PLANKS);
         registerWoodRecipe(output, JebbBlocks.MANGROVE_SQUARE_BRICK, Blocks.MANGROVE_PLANKS);
-        registerWoodRecipe(output, JebbBlocks.PALE_OAK_SQUARE_BRICK, Blocks.OAK_PLANKS);
         registerWoodRecipe(output, JebbBlocks.SPRUCE_SQUARE_BRICK, Blocks.SPRUCE_PLANKS);
         registerWoodRecipe(output, JebbBlocks.WARPED_SQUARE_BRICK, Blocks.WARPED_PLANKS);
 
@@ -127,31 +135,36 @@ public class JebbRecipeProvider extends FabricRecipeProvider {
         registerWoodRecipe(output, JebbBlocks.CHISELED_JUNGLE_PLANKS, Blocks.JUNGLE_PLANKS);
         registerWoodRecipe(output, JebbBlocks.CHISELED_MANGROVE_PLANKS, Blocks.MANGROVE_PLANKS);
         registerWoodRecipe(output, JebbBlocks.CHISELED_OAK_PLANKS, Blocks.OAK_PLANKS);
-        registerWoodRecipe(output, JebbBlocks.CHISELED_PALE_OAK_PLANKS, Blocks.OAK_PLANKS);
         registerWoodRecipe(output, JebbBlocks.CHISELED_SPRUCE_PLANKS, Blocks.SPRUCE_PLANKS);
         registerWoodRecipe(output, JebbBlocks.CHISELED_WARPED_PLANKS, Blocks.WARPED_PLANKS);
+
+        registerWoodRecipe(output, JebbBlocks.OAK_TRIANGLE_BLOCK, Blocks.OAK_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.ACACIA_TRIANGLE_BLOCK, Blocks.ACACIA_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.BAMBOO_TRIANGLE_BLOCK, Blocks.BAMBOO_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.BIRCH_TRIANGLE_BLOCK, Blocks.BIRCH_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.CHEERY_TRIANGLE_BLOCK, Blocks.CHERRY_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.CRIMSON_TRIANGLE_BLOCK, Blocks.CRIMSON_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.DARK_OAK_TRIANGLE_BLOCK, Blocks.DARK_OAK_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.JUNGLE_TRIANGLE_BLOCK, Blocks.JUNGLE_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.MANGROVE_TRIANGLE_BLOCK, Blocks.MANGROVE_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.SPRUCE_TRIANGLE_BLOCK, Blocks.SPRUCE_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.WARPED_TRIANGLE_BLOCK, Blocks.WARPED_PLANKS);
+
+        registerWoodRecipe(output, JebbBlocks.STRIPED_OAK, Blocks.OAK_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.STRIPED_DARK_OAK, Blocks.DARK_OAK_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.STRIPED_BAMBOO, Blocks.BAMBOO_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.STRIPED_ACACIA_PLANK, Blocks.ACACIA_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.STRIPED_CHEERY_PLANK, Blocks.CHERRY_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.STRIPED_CRIMSON_PLANK, Blocks.CRIMSON_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.STRIPED_JUNGLE_PLANK, Blocks.JUNGLE_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.STRIPED_MANGROVE_PLANK, Blocks.MANGROVE_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.STRIPED_SPRUCE_PLANK, Blocks.SPRUCE_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.STRIPED_WARPED_PLANK, Blocks.WARPED_PLANKS);
+        registerWoodRecipe(output, JebbBlocks.STRIPED_TRIANGLE_BLOCK, Blocks.OAK_PLANKS);
     }
 
     private static void registerWoodRecipe(Consumer<FinishedRecipe> output, Block result, Block parent) {
         RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, result, parent, 1);
-    }
-
-    /**
-     * Vanilla horizontal slab id for a full-block parent, when one exists (e.g. oak_planks -> oak_slab).
-     */
-    private static Optional<Block> vanillaSlabForParent(Block parent) {
-        ResourceLocation key = BuiltInRegistries.BLOCK.getKey(parent);
-        if (key == null || !"minecraft".equals(key.getNamespace())) {
-            return Optional.empty();
-        }
-        String path = key.getPath();
-        String slabPath;
-        if (path.endsWith("_planks")) {
-            slabPath = path.substring(0, path.length() - "_planks".length()) + "_slab";
-        } else {
-            slabPath = path + "_slab";
-        }
-        return BuiltInRegistries.BLOCK.getOptional(new ResourceLocation("minecraft", slabPath));
     }
 
     private static ResourceLocation modId(String path) {

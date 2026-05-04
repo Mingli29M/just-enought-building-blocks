@@ -47,14 +47,14 @@ public final class JebbBannerRenderer {
     private static int bannerHeight(JebbItemGroups.SectionBannerStyle style) {
         return switch (style) {
             case DEFAULT -> 16;
-            case VARIANT_VERTICAL_SLAB, VARIANT_CORNER_PILLAR, VARIANT_QUARTER -> 16;
+            case VARIANT_VERTICAL_SLAB, VARIANT_CORNER_PILLAR, VARIANT_QUARTER, VARIANT_HORIZONTAL_SLAB -> 16;
         };
     }
 
     private static BlockState backdropState(JebbItemGroups.SectionBannerStyle style) {
         return switch (style) {
             case DEFAULT -> Blocks.STRIPPED_OAK_LOG.defaultBlockState();
-            case VARIANT_VERTICAL_SLAB -> Blocks.OAK_SLAB.defaultBlockState();
+            case VARIANT_VERTICAL_SLAB, VARIANT_HORIZONTAL_SLAB -> Blocks.OAK_SLAB.defaultBlockState();
             case VARIANT_CORNER_PILLAR -> Blocks.STONE_BRICKS.defaultBlockState();
             case VARIANT_QUARTER -> Blocks.POLISHED_ANDESITE.defaultBlockState();
         };

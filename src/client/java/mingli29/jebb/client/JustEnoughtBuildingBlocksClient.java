@@ -18,6 +18,7 @@ public class JustEnoughtBuildingBlocksClient implements ClientModInitializer {
         applyParentClientRendering(JebbBlocks.VERTICAL_SLABS);
         applyParentClientRendering(JebbBlocks.QUARTERS);
         applyParentClientRendering(JebbBlocks.CORNER_PILLARS);
+        applyParentClientRendering(JebbBlocks.HORIZONTAL_SLABS);
     }
 
     private static void applyParentClientRendering(Map<Block, ? extends Block> map) {

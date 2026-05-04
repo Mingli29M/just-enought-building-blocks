@@ -3,6 +3,7 @@ package mingli29.jebb.client.datagen;
 import mingli29.jebb.JustEnoughtBuildingBlocks;
 import mingli29.jebb.block.JebbBlocks;
 import mingli29.jebb.block.JebbCornerPillarBlock;
+import mingli29.jebb.block.JebbParentSlabBlock;
 import mingli29.jebb.block.JebbQuarterBlock;
 import mingli29.jebb.block.JebbVerticalSlabBlock;
 import mingli29.jebb.util.JebbTextureMap;
@@ -25,7 +26,10 @@ import net.minecraft.data.models.model.TextureSlot;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.SlabType;
 
 import java.util.Optional;
 
@@ -70,6 +74,13 @@ public class JebbModelProvider extends FabricModelProvider {
     private static final ModelTemplate ITEM_VS_BTS = templateBts("template_item_vertical_slab_bts");
     private static final ModelTemplate ITEM_Q_BTS = templateBts("template_item_quarter_bts");
     private static final ModelTemplate ITEM_CP_BTS = templateBts("template_item_corner_pillar_bts");
+
+    private static final ModelTemplate SLAB_BOTTOM = new ModelTemplate(Optional.of(modLoc("block/template_jebb_slab_bottom")), Optional.empty(),
+            TextureSlot.BOTTOM, TextureSlot.SIDE, TextureSlot.TOP);
+    private static final ModelTemplate SLAB_TOP = new ModelTemplate(Optional.of(modLoc("block/template_jebb_slab_top")), Optional.empty(),
+            TextureSlot.BOTTOM, TextureSlot.SIDE, TextureSlot.TOP);
+    private static final ModelTemplate ITEM_SLAB = new ModelTemplate(Optional.of(modLoc("block/template_jebb_slab_bottom")), Optional.empty(),
+            TextureSlot.BOTTOM, TextureSlot.SIDE, TextureSlot.TOP);
 
     public JebbModelProvider(FabricDataOutput output) {
         super(output);
@@ -182,6 +193,44 @@ public class JebbModelProvider extends FabricModelProvider {
                     Variant.variant().with(VariantProperties.MODEL, mSe));
             gen.blockStateOutput.accept(multipart);
         }
+
+        for (var e : JebbBlocks.HORIZONTAL_SLABS.entrySet()) {
+            Block parent = e.getKey();
+            JebbParentSlabBlock hs = e.getValue();
+            String path = BuiltInRegistries.BLOCK.getKey(parent).getPath();
+            JebbTextureMap.Faces faces = JebbTextureMap.forParent(parent);
+            TextureMapping tex = faces != null ? slabMappingBts(faces) : slabMappingUniform(parent);
+            ResourceLocation mBottom = SLAB_BOTTOM.create(modLoc("block/slab_" + path + "_bottom"), tex, gen.modelOutput);
+            ResourceLocation mTop = SLAB_TOP.create(modLoc("block/slab_" + path + "_top"), tex, gen.modelOutput);
+            ResourceLocation parentModel = ModelLocationUtils.getModelLocation(parent);
+            gen.blockStateOutput.accept(
+                    MultiVariantGenerator.multiVariant(hs)
+                            .with(PropertyDispatch.properties(SlabBlock.TYPE, BlockStateProperties.WATERLOGGED)
+                                    .generate((type, _waterlogged) -> {
+                                        if (type == SlabType.DOUBLE) {
+                                            return Variant.variant().with(VariantProperties.MODEL, parentModel);
+                                        }
+                                        ResourceLocation half = type == SlabType.BOTTOM ? mBottom : mTop;
+                                        return Variant.variant().with(VariantProperties.MODEL, half);
+                                    })));
+        }
+    }
+
+    private static TextureMapping slabMappingUniform(Block parent) {
+        ResourceLocation tex = TextureMapping.getBlockTexture(parent);
+        return new TextureMapping()
+                .put(TextureSlot.BOTTOM, tex)
+                .put(TextureSlot.TOP, tex)
+                .put(TextureSlot.SIDE, tex)
+                .put(TextureSlot.PARTICLE, tex);
+    }
+
+    private static TextureMapping slabMappingBts(JebbTextureMap.Faces faces) {
+        return new TextureMapping()
+                .put(TextureSlot.BOTTOM, faces.bottom())
+                .put(TextureSlot.TOP, faces.top())
+                .put(TextureSlot.SIDE, faces.side())
+                .put(TextureSlot.PARTICLE, faces.side());
     }
 
     private static TextureMapping btsMapping(JebbTextureMap.Faces faces) {
@@ -224,6 +273,17 @@ public class JebbModelProvider extends FabricModelProvider {
             String path = BuiltInRegistries.BLOCK.getKey(parent).getPath();
             createItemModel(gen, parent, e.getValue().asItem(), "corner_pillar_item_" + path, ITEM_CP, ITEM_CP_BTS);
         }
+        for (var e : JebbBlocks.HORIZONTAL_SLABS.entrySet()) {
+            Block parent = e.getKey();
+            createHorizontalSlabItemModel(gen, parent, e.getValue().asItem());
+        }
+    }
+
+    private static void createHorizontalSlabItemModel(ItemModelGenerators gen, Block parent, Item item) {
+        ResourceLocation itemModel = ModelLocationUtils.getModelLocation(item);
+        JebbTextureMap.Faces faces = JebbTextureMap.forParent(parent);
+        TextureMapping tex = faces != null ? slabMappingBts(faces) : slabMappingUniform(parent);
+        ITEM_SLAB.create(itemModel, tex, gen.output);
     }
 
     private static void createItemModel(

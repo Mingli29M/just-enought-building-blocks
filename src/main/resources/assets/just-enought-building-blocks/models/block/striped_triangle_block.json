@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/cube_all",
+    "textures": {
+        "all": "just-enought-building-blocks:block/striped_triangle_block"
+    }
+}
+

@@ -4,14 +4,18 @@
     "just-enought-building-blocks:vertical_slab_gold_block",
     "just-enought-building-blocks:quarter_gold_block",
     "just-enought-building-blocks:corner_pillar_gold_block",
+    "just-enought-building-blocks:slab_gold_block",
     "just-enought-building-blocks:vertical_slab_diamond_block",
     "just-enought-building-blocks:quarter_diamond_block",
     "just-enought-building-blocks:corner_pillar_diamond_block",
+    "just-enought-building-blocks:slab_diamond_block",
     "just-enought-building-blocks:vertical_slab_emerald_block",
     "just-enought-building-blocks:quarter_emerald_block",
     "just-enought-building-blocks:corner_pillar_emerald_block",
+    "just-enought-building-blocks:slab_emerald_block",
     "just-enought-building-blocks:vertical_slab_raw_gold_block",
     "just-enought-building-blocks:quarter_raw_gold_block",
-    "just-enought-building-blocks:corner_pillar_raw_gold_block"
+    "just-enought-building-blocks:corner_pillar_raw_gold_block",
+    "just-enought-building-blocks:slab_raw_gold_block"
   ]
 }

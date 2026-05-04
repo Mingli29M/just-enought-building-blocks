@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/cube_all",
+    "textures": {
+        "all": "just-enought-building-blocks:block/jungle_triangle_block"
+    }
+}
+

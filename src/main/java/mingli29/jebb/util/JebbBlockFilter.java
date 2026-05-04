@@ -49,7 +49,8 @@ public final class JebbBlockFilter {
             "sponge", "wet_sponge",
             "brown_mushroom_block", "red_mushroom_block", "mushroom_stem",
             "melon", "magma_block",
-            "snow_block"
+            "snow_block",
+            "chorus_flower", "chorus_plant"
     );
 
     private static final Set<String> ORE_PATHS = Set.of(
@@ -107,17 +108,10 @@ public final class JebbBlockFilter {
     }
 
     /**
-     * Log columns (including stripped logs/stems and bamboo) get vertical slabs and corner pillars only,
-     * not quarter (¼) pieces.
+     * Reserved for future opt-outs; logs and stems now receive quarter variants like other parents.
      */
     public static boolean skipsQuarterVariants(Block block) {
-        ResourceLocation key = BuiltInRegistries.BLOCK.getKey(block);
-        if (key == null || !"minecraft".equals(key.getNamespace())) {
-            return false;
-        }
-        String path = key.getPath();
-        return path.endsWith("_log") || path.endsWith("_stem")
-                || "bamboo_block".equals(path) || "stripped_bamboo_block".equals(path);
+        return false;
     }
 
     public static boolean qualifies(Block block) {

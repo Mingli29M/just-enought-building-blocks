@@ -1,8 +1,8 @@
-// 1.20.1	2026-05-04T17:03:06.08675	Just Enought Building Blocks/Tags for minecraft:block
-1d6c1e0fa593966d26d902dd9867affc5bf30701 data/minecraft/tags/blocks/needs_iron_tool.json
-81b495b86d3e5b35e6fa0d6e7243c48ec0ef95fb data/minecraft/tags/blocks/needs_stone_tool.json
-bc80123e7fa7c54ca97cca891fd328d63b210230 data/minecraft/tags/blocks/needs_diamond_tool.json
-2710c3edcb78144a7f5054a88d41a736aa01ca4f data/minecraft/tags/blocks/mineable/shovel.json
-88c6eba9f1811bdf87c978fb4a6b0565fca6a1de data/minecraft/tags/blocks/mineable/pickaxe.json
-a563d2cd9be00d9a49977c783189d20117065b2b data/minecraft/tags/blocks/mineable/axe.json
-40c1332b1576320399281df8a5365193d67d3880 data/minecraft/tags/blocks/mineable/hoe.json
+// 1.20.1	2026-05-04T21:37:39.0224283	Just Enought Building Blocks/Tags for minecraft:block
+b2b4320b1821b871e1b2f79457fe8918e55a3f6d data\minecraft\tags\blocks\mineable\shovel.json
+051f2cbc03bf0ea0652d376056c73dc0fb5e856d data\minecraft\tags\blocks\mineable\pickaxe.json
+747c8beade48b77051e9d085f6970f87ef7af2e9 data\minecraft\tags\blocks\needs_stone_tool.json
+abb39af59562164f00ed9dddd8ebc1b65e4a655b data\minecraft\tags\blocks\mineable\axe.json
+bd505b9b023e37167ab1bb4d72c3bf7dfb3697d1 data\minecraft\tags\blocks\needs_iron_tool.json
+1b0d2ec9086028ccec53a51293fd84e63a457646 data\minecraft\tags\blocks\mineable\hoe.json
+b280723bd0c92fed0593f5eaac136c010ccd76a6 data\minecraft\tags\blocks\needs_diamond_tool.json

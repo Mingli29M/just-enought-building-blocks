@@ -38,7 +38,8 @@ public final class JebbItemGroups {
         DEFAULT,
         VARIANT_VERTICAL_SLAB,
         VARIANT_CORNER_PILLAR,
-        VARIANT_QUARTER
+        VARIANT_QUARTER,
+        VARIANT_HORIZONTAL_SLAB
     }
 
     public record Section(String labelKey, SectionBannerStyle bannerStyle, Collection<? extends Block> blocks) {
@@ -48,6 +49,18 @@ public final class JebbItemGroups {
     }
 
     private JebbItemGroups() {
+    }
+
+    /** One horizontal slab per vertical-slab parent, same key order as {@link JebbBlocks#VERTICAL_SLABS}. */
+    private static List<Block> horizontalSlabsAlignedWithVerticalSlabs() {
+        List<Block> out = new ArrayList<>(JebbBlocks.VERTICAL_SLABS.size());
+        for (Block parent : JebbBlocks.VERTICAL_SLABS.keySet()) {
+            Block slab = JebbBlocks.horizontalSlabForVariantParent(parent);
+            if (slab != null) {
+                out.add(slab);
+            }
+        }
+        return out;
     }
 
     public static List<Section> sectionsForTab(CreativeModeTab tab) {
@@ -66,9 +79,11 @@ public final class JebbItemGroups {
 
     public static void register() {
         List<Block> verticalSlabTab = new ArrayList<>(JebbBlocks.VERTICAL_SLABS.values());
+        List<Block> horizontalSlabTab = horizontalSlabsAlignedWithVerticalSlabs();
         MAIN_SECTIONS = List.of(
                 new Section("jebb.section.corner_pillars", SectionBannerStyle.VARIANT_CORNER_PILLAR, JebbBlocks.CORNER_PILLARS.values()),
                 new Section("jebb.section.vertical_slabs", SectionBannerStyle.VARIANT_VERTICAL_SLAB, verticalSlabTab),
+                new Section("jebb.section.slabs", SectionBannerStyle.VARIANT_HORIZONTAL_SLAB, horizontalSlabTab),
                 new Section("jebb.section.quarters", SectionBannerStyle.VARIANT_QUARTER, JebbBlocks.QUARTERS.values())
         );
 
@@ -83,7 +98,6 @@ public final class JebbItemGroups {
                         JebbBlocks.DARK_OAK_SQUARE_BRICK,
                         JebbBlocks.JUNGLE_SQUARE_BRICK,
                         JebbBlocks.MANGROVE_SQUARE_BRICK,
-                        JebbBlocks.PALE_OAK_SQUARE_BRICK,
                         JebbBlocks.SPRUCE_SQUARE_BRICK,
                         JebbBlocks.WARPED_SQUARE_BRICK,
                         JebbBlocks.CHISELED_ACACIA_PLANKS,
@@ -95,9 +109,30 @@ public final class JebbItemGroups {
                         JebbBlocks.CHISELED_JUNGLE_PLANKS,
                         JebbBlocks.CHISELED_MANGROVE_PLANKS,
                         JebbBlocks.CHISELED_OAK_PLANKS,
-                        JebbBlocks.CHISELED_PALE_OAK_PLANKS,
                         JebbBlocks.CHISELED_SPRUCE_PLANKS,
-                        JebbBlocks.CHISELED_WARPED_PLANKS
+                        JebbBlocks.CHISELED_WARPED_PLANKS,
+                        JebbBlocks.OAK_TRIANGLE_BLOCK,
+                        JebbBlocks.ACACIA_TRIANGLE_BLOCK,
+                        JebbBlocks.BAMBOO_TRIANGLE_BLOCK,
+                        JebbBlocks.BIRCH_TRIANGLE_BLOCK,
+                        JebbBlocks.CHEERY_TRIANGLE_BLOCK,
+                        JebbBlocks.CRIMSON_TRIANGLE_BLOCK,
+                        JebbBlocks.DARK_OAK_TRIANGLE_BLOCK,
+                        JebbBlocks.JUNGLE_TRIANGLE_BLOCK,
+                        JebbBlocks.MANGROVE_TRIANGLE_BLOCK,
+                        JebbBlocks.SPRUCE_TRIANGLE_BLOCK,
+                        JebbBlocks.WARPED_TRIANGLE_BLOCK,
+                        JebbBlocks.STRIPED_OAK,
+                        JebbBlocks.STRIPED_DARK_OAK,
+                        JebbBlocks.STRIPED_BAMBOO,
+                        JebbBlocks.STRIPED_ACACIA_PLANK,
+                        JebbBlocks.STRIPED_CHEERY_PLANK,
+                        JebbBlocks.STRIPED_CRIMSON_PLANK,
+                        JebbBlocks.STRIPED_JUNGLE_PLANK,
+                        JebbBlocks.STRIPED_MANGROVE_PLANK,
+                        JebbBlocks.STRIPED_SPRUCE_PLANK,
+                        JebbBlocks.STRIPED_WARPED_PLANK,
+                        JebbBlocks.STRIPED_TRIANGLE_BLOCK
                 ))
         );
 

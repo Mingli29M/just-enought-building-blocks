@@ -4,17 +4,21 @@ import mingli29.jebb.JustEnoughtBuildingBlocks;
 import mingli29.jebb.item.JebbVariantBlockItem;
 import mingli29.jebb.util.JebbBlockFilter;
 import mingli29.jebb.util.JebbBlockProps;
+import mingli29.jebb.util.JebbSlabIds;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+
+import org.jetbrains.annotations.Nullable;
 
 public final class JebbBlocks {
     public static Block OAK_SQUARE_BRICK;
@@ -26,7 +30,6 @@ public final class JebbBlocks {
     public static Block DARK_OAK_SQUARE_BRICK;
     public static Block JUNGLE_SQUARE_BRICK;
     public static Block MANGROVE_SQUARE_BRICK;
-    public static Block PALE_OAK_SQUARE_BRICK;
     public static Block SPRUCE_SQUARE_BRICK;
     public static Block WARPED_SQUARE_BRICK;
     public static Block CHISELED_ACACIA_PLANKS;
@@ -38,15 +41,48 @@ public final class JebbBlocks {
     public static Block CHISELED_JUNGLE_PLANKS;
     public static Block CHISELED_MANGROVE_PLANKS;
     public static Block CHISELED_OAK_PLANKS;
-    public static Block CHISELED_PALE_OAK_PLANKS;
     public static Block CHISELED_SPRUCE_PLANKS;
     public static Block CHISELED_WARPED_PLANKS;
+    public static Block OAK_TRIANGLE_BLOCK;
+    public static Block ACACIA_TRIANGLE_BLOCK;
+    public static Block BAMBOO_TRIANGLE_BLOCK;
+    public static Block BIRCH_TRIANGLE_BLOCK;
+    public static Block CHEERY_TRIANGLE_BLOCK;
+    public static Block CRIMSON_TRIANGLE_BLOCK;
+    public static Block DARK_OAK_TRIANGLE_BLOCK;
+    public static Block JUNGLE_TRIANGLE_BLOCK;
+    public static Block MANGROVE_TRIANGLE_BLOCK;
+    public static Block SPRUCE_TRIANGLE_BLOCK;
+    public static Block WARPED_TRIANGLE_BLOCK;
+    public static Block STRIPED_OAK;
+    public static Block STRIPED_DARK_OAK;
+    public static Block STRIPED_BAMBOO;
+    public static Block STRIPED_ACACIA_PLANK;
+    public static Block STRIPED_CHEERY_PLANK;
+    public static Block STRIPED_CRIMSON_PLANK;
+    public static Block STRIPED_JUNGLE_PLANK;
+    public static Block STRIPED_MANGROVE_PLANK;
+    public static Block STRIPED_SPRUCE_PLANK;
+    public static Block STRIPED_WARPED_PLANK;
+    public static Block STRIPED_TRIANGLE_BLOCK;
 
     public static final Map<Block, JebbVerticalSlabBlock> VERTICAL_SLABS = new LinkedHashMap<>();
     public static final Map<Block, JebbQuarterBlock> QUARTERS = new LinkedHashMap<>();
     public static final Map<Block, JebbCornerPillarBlock> CORNER_PILLARS = new LinkedHashMap<>();
+    /** Mod horizontal slabs for parents with no vanilla slab counterpart. */
+    public static final Map<Block, JebbParentSlabBlock> HORIZONTAL_SLABS = new LinkedHashMap<>();
 
     private JebbBlocks() {
+    }
+
+    /** Vanilla horizontal slab for this parent when it exists, otherwise the mod {@link #HORIZONTAL_SLABS} block. */
+    @Nullable
+    public static Block horizontalSlabForVariantParent(Block parent) {
+        Block slab = JebbSlabIds.vanillaSlabForParent(parent).orElse(HORIZONTAL_SLABS.get(parent));
+        if (slab == null || slab.asItem() == Items.AIR) {
+            return null;
+        }
+        return slab;
     }
 
     public static void init() {
@@ -59,7 +95,6 @@ public final class JebbBlocks {
         DARK_OAK_SQUARE_BRICK = registerSimpleBlock("dark_oak_square_brick", Blocks.DARK_OAK_PLANKS);
         JUNGLE_SQUARE_BRICK = registerSimpleBlock("jungle_square_brick", Blocks.JUNGLE_PLANKS);
         MANGROVE_SQUARE_BRICK = registerSimpleBlock("mangrove_square_brick", Blocks.MANGROVE_PLANKS);
-        PALE_OAK_SQUARE_BRICK = registerSimpleBlock("pale_oak_square_brick", Blocks.OAK_PLANKS);
         SPRUCE_SQUARE_BRICK = registerSimpleBlock("spruce_square_brick", Blocks.SPRUCE_PLANKS);
         WARPED_SQUARE_BRICK = registerSimpleBlock("warped_square_brick", Blocks.WARPED_PLANKS);
 
@@ -72,9 +107,32 @@ public final class JebbBlocks {
         CHISELED_JUNGLE_PLANKS = registerSimpleBlock("chiseled_jungle_planks", Blocks.JUNGLE_PLANKS);
         CHISELED_MANGROVE_PLANKS = registerSimpleBlock("chiseled_mangrove_planks", Blocks.MANGROVE_PLANKS);
         CHISELED_OAK_PLANKS = registerSimpleBlock("chiseled_oak_planks", Blocks.OAK_PLANKS);
-        CHISELED_PALE_OAK_PLANKS = registerSimpleBlock("chiseled_pale_oak_planks", Blocks.OAK_PLANKS);
         CHISELED_SPRUCE_PLANKS = registerSimpleBlock("chiseled_spruce_planks", Blocks.SPRUCE_PLANKS);
         CHISELED_WARPED_PLANKS = registerSimpleBlock("chiseled_warped_planks", Blocks.WARPED_PLANKS);
+
+        OAK_TRIANGLE_BLOCK = registerSimpleBlock("oak_triangle_block", Blocks.OAK_PLANKS);
+        ACACIA_TRIANGLE_BLOCK = registerSimpleBlock("acacia_triangle_block", Blocks.ACACIA_PLANKS);
+        BAMBOO_TRIANGLE_BLOCK = registerSimpleBlock("bamboo_triangle_block", Blocks.BAMBOO_PLANKS);
+        BIRCH_TRIANGLE_BLOCK = registerSimpleBlock("birch_triangle_block", Blocks.BIRCH_PLANKS);
+        CHEERY_TRIANGLE_BLOCK = registerSimpleBlock("cheery_triangle_block", Blocks.CHERRY_PLANKS);
+        CRIMSON_TRIANGLE_BLOCK = registerSimpleBlock("crimson_triangle_block", Blocks.CRIMSON_PLANKS);
+        DARK_OAK_TRIANGLE_BLOCK = registerSimpleBlock("dark_oak_triangle_block", Blocks.DARK_OAK_PLANKS);
+        JUNGLE_TRIANGLE_BLOCK = registerSimpleBlock("jungle_triangle_block", Blocks.JUNGLE_PLANKS);
+        MANGROVE_TRIANGLE_BLOCK = registerSimpleBlock("mangrove_triangle_block", Blocks.MANGROVE_PLANKS);
+        SPRUCE_TRIANGLE_BLOCK = registerSimpleBlock("spruce_triangle_block", Blocks.SPRUCE_PLANKS);
+        WARPED_TRIANGLE_BLOCK = registerSimpleBlock("warped_triangle_block", Blocks.WARPED_PLANKS);
+
+        STRIPED_OAK = registerSimpleBlock("striped_oak", Blocks.OAK_PLANKS);
+        STRIPED_DARK_OAK = registerSimpleBlock("striped_dark_oak", Blocks.DARK_OAK_PLANKS);
+        STRIPED_BAMBOO = registerSimpleBlock("striped_bamboo", Blocks.BAMBOO_PLANKS);
+        STRIPED_ACACIA_PLANK = registerSimpleBlock("striped_acacia_plank", Blocks.ACACIA_PLANKS);
+        STRIPED_CHEERY_PLANK = registerSimpleBlock("striped_cheery_plank", Blocks.CHERRY_PLANKS);
+        STRIPED_CRIMSON_PLANK = registerSimpleBlock("striped_crimson_plank", Blocks.CRIMSON_PLANKS);
+        STRIPED_JUNGLE_PLANK = registerSimpleBlock("striped_jungle_plank", Blocks.JUNGLE_PLANKS);
+        STRIPED_MANGROVE_PLANK = registerSimpleBlock("striped_mangrove_plank", Blocks.MANGROVE_PLANKS);
+        STRIPED_SPRUCE_PLANK = registerSimpleBlock("striped_spruce_plank", Blocks.SPRUCE_PLANKS);
+        STRIPED_WARPED_PLANK = registerSimpleBlock("striped_warped_plank", Blocks.WARPED_PLANKS);
+        STRIPED_TRIANGLE_BLOCK = registerSimpleBlock("striped_triangle_block", Blocks.OAK_PLANKS);
 
         for (Block parent : BuiltInRegistries.BLOCK) {
             if (!JebbBlockFilter.qualifies(parent)) continue;
@@ -90,7 +148,6 @@ public final class JebbBlocks {
                 DARK_OAK_SQUARE_BRICK,
                 JUNGLE_SQUARE_BRICK,
                 MANGROVE_SQUARE_BRICK,
-                PALE_OAK_SQUARE_BRICK,
                 SPRUCE_SQUARE_BRICK,
                 WARPED_SQUARE_BRICK,
                 CHISELED_ACACIA_PLANKS,
@@ -102,16 +159,37 @@ public final class JebbBlocks {
                 CHISELED_JUNGLE_PLANKS,
                 CHISELED_MANGROVE_PLANKS,
                 CHISELED_OAK_PLANKS,
-                CHISELED_PALE_OAK_PLANKS,
                 CHISELED_SPRUCE_PLANKS,
-                CHISELED_WARPED_PLANKS
+                CHISELED_WARPED_PLANKS,
+                OAK_TRIANGLE_BLOCK,
+                ACACIA_TRIANGLE_BLOCK,
+                BAMBOO_TRIANGLE_BLOCK,
+                BIRCH_TRIANGLE_BLOCK,
+                CHEERY_TRIANGLE_BLOCK,
+                CRIMSON_TRIANGLE_BLOCK,
+                DARK_OAK_TRIANGLE_BLOCK,
+                JUNGLE_TRIANGLE_BLOCK,
+                MANGROVE_TRIANGLE_BLOCK,
+                SPRUCE_TRIANGLE_BLOCK,
+                WARPED_TRIANGLE_BLOCK,
+                STRIPED_OAK,
+                STRIPED_DARK_OAK,
+                STRIPED_BAMBOO,
+                STRIPED_ACACIA_PLANK,
+                STRIPED_CHEERY_PLANK,
+                STRIPED_CRIMSON_PLANK,
+                STRIPED_JUNGLE_PLANK,
+                STRIPED_MANGROVE_PLANK,
+                STRIPED_SPRUCE_PLANK,
+                STRIPED_WARPED_PLANK,
+                STRIPED_TRIANGLE_BLOCK
         )) {
             registerVariantsForParent(parent);
         }
 
         JustEnoughtBuildingBlocks.LOGGER.info(
-                "Registered {} vertical slab, {} quarter, {} corner pillar variants",
-                VERTICAL_SLABS.size(), QUARTERS.size(), CORNER_PILLARS.size());
+                "Registered {} vertical slab, {} quarter, {} corner pillar, {} mod horizontal slab variants",
+                VERTICAL_SLABS.size(), QUARTERS.size(), CORNER_PILLARS.size(), HORIZONTAL_SLABS.size());
     }
 
     private static void registerVariantsForParent(Block parent) {
@@ -141,6 +219,14 @@ public final class JebbBlocks {
             QUARTERS.put(parent, q);
         }
         CORNER_PILLARS.put(parent, cp);
+
+        if (JebbSlabIds.vanillaSlabForParent(parent).isEmpty()) {
+            JebbParentSlabBlock hs = registerBlock(
+                    "slab_" + parentPath,
+                    new JebbParentSlabBlock(parent, JebbBlockProps.copyFromParent(parent)));
+            registerVariantItem("slab_" + parentPath, hs, parent, "jebb.slab");
+            HORIZONTAL_SLABS.put(parent, hs);
+        }
     }
 
     private static <B extends Block> B registerBlock(String name, B block) {

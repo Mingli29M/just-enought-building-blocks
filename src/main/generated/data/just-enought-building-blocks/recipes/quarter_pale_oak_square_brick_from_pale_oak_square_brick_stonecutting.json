@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "just-enought-building-blocks:pale_oak_square_brick"
-  },
-  "result": "just-enought-building-blocks:quarter_pale_oak_square_brick"
-}

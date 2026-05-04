@@ -75,6 +75,11 @@ jar {
 	}
 }
 
+// runDatagen writes to src/main/generated; sourcesJar includes that tree, so Gradle requires an explicit edge.
+tasks.named('sourcesJar') {
+	dependsOn(tasks.named('runDatagen'))
+}
+
 // configure the maven publication
 publishing {
 	publications {
