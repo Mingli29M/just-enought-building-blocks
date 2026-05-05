@@ -81,6 +81,51 @@ After you change which blocks qualify, run **`runDatagen`** so generated JSON un
 
 ---
 
+## Checklist for adding more blocks
+
+Use this checklist when adding another family such as square bricks, chiseled planks, triangle blocks, striped blocks, or a new specific type.
+
+1. **Choose the block id and type**
+   - Use a stable lowercase id such as `oak_triangle_block` or `striped_acacia_plank`.
+   - Decide whether it is a simple parent block only, or whether it should also get JEBB variants: vertical slab, horizontal slab, quarter, and corner pillar.
+
+2. **Register the block**
+   - Add a public field in `JebbBlocks.java`.
+   - Create it in `init()` with `registerSimpleBlock("<id>", <template parent>)`.
+   - Add it to the custom parent list passed to `registerVariantsForParent(parent)` if it should receive variants.
+   - If vanilla already has a matching slab, `JebbSlabs.vanillaSlabForParent()` will use it. Otherwise `registerVariantsForParent()` creates a mod horizontal slab named `slab_<id>`.
+
+3. **Add model and texture information**
+   - Add a base block model under `src/main/resources/assets/just-enought-building-blocks/models/block/<id>.json`.
+   - Add the item model under `models/item/<id>.json`, usually with `"parent": "just-enought-building-blocks:block/<id>"`.
+   - If you add real mod texture PNGs, place them under `textures/block/` and point the model at `just-enought-building-blocks:block/<texture>`.
+   - If the block reuses a vanilla texture, point the model at `minecraft:block/<texture>`.
+   - Add or update `JebbTextureMap.java` for any custom parent whose generated variants need special top/side/bottom textures. This is what vertical slabs, horizontal slabs, quarters, corner pillars, and item models use during datagen.
+
+4. **Add blockstates and translations**
+   - Add `blockstates/<id>.json` for the parent block.
+   - Add display names in each language file under `assets/just-enought-building-blocks/lang/`.
+   - Variant item names are composed by `JebbVariantBlockItem`, so the parent translation must exist.
+
+5. **Add recipes**
+   - In `JebbRecipeProvider.java`, add a `registerWoodRecipe(output, JebbBlocks.<FIELD>, Blocks.<PARENT>)` or another recipe for the new parent.
+   - Blocks in `registerVariantsForParent()` automatically get stonecutting/shaped/shapeless recipes for vertical slabs, horizontal slabs, quarters, and corner pillars.
+
+6. **Add loot tables**
+   - In `JebbBlockLootProvider.java`, call `addSimpleWoodBlockLoot(JebbBlocks.<FIELD>)` or the correct loot method for the parent block.
+   - Variant loot tables are generated automatically for vertical slabs, horizontal slabs, quarters, and corner pillars.
+
+7. **Add tags**
+   - In `JebbBlockTagProvider.java`, include the block in `woodVariantParents()` when it behaves like wood.
+   - Update `tagSourceForParent()` so the new custom block mirrors the correct vanilla block tags such as `mineable/axe` and tool requirements.
+
+8. **Regenerate and check output**
+   - Run `./gradlew runDatagen`.
+   - Confirm generated models under `src/main/generated/assets/just-enought-building-blocks/models/` use existing textures.
+   - Confirm generated data includes recipes, loot tables, and tags under `src/main/generated/data/just-enought-building-blocks/`.
+
+---
+
 ## How to add or change creative “banners” (section headers)
 
 Section headers are the **striped bars with a title** above each group in the creative inventory.
@@ -139,3 +184,32 @@ git push
 ```
 
 **Tip:** Add a `.gitignore` that excludes `build/`, `.gradle/`, `run/` (world and logs), and IDE folders if you do not want them in the repo. This template may already ignore some of these; adjust as needed before the first push.
+
+---
+
+## Pull from GitHub
+
+### If you do NOT have the project locally yet
+
+```powershell
+git clone https://github.com/YOUR_USER/YOUR_REPO.git
+cd YOUR_REPO
+```
+
+### If you already have the project locally
+
+From the project root:
+
+```powershell
+git status
+git pull
+```
+
+If you work on a specific branch, replace it as needed:
+
+```powershell
+git pull origin main
+```
+
+If you see conflicts, resolve them, then commit the merge.
+

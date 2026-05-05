@@ -19,6 +19,10 @@ public final class JebbTextureMap {
         return new ResourceLocation("minecraft", "block/" + name);
     }
 
+    private static ResourceLocation modTex(String name) {
+        return new ResourceLocation("just-enought-building-blocks", "block/" + name);
+    }
+
     private static final Map<String, Faces> BY_PATH = Map.ofEntries(
             // cube_bottom_top family
             Map.entry("grass_block",      new Faces(tex("grass_block_top"),      tex("grass_block_side"),      tex("dirt"))),
@@ -40,10 +44,43 @@ public final class JebbTextureMap {
             // Smooth variants reuse another block's texture in vanilla
             Map.entry("smooth_quartz",        new Faces(tex("quartz_block_bottom"),     tex("quartz_block_bottom"),       tex("quartz_block_bottom"))),
             Map.entry("smooth_sandstone",     new Faces(tex("sandstone_top"),           tex("sandstone_top"),             tex("sandstone_top"))),
-            Map.entry("smooth_red_sandstone", new Faces(tex("red_sandstone_top"),       tex("red_sandstone_top"),         tex("red_sandstone_top")))
+            Map.entry("smooth_red_sandstone", new Faces(tex("red_sandstone_top"),       tex("red_sandstone_top"),         tex("red_sandstone_top"))),
+            // Mod wood-style parents use their supplied mod textures for all generated variant shapes.
+            Map.entry("oak_triangle_block",       allMod("oak_triangle_block")),
+            Map.entry("acacia_triangle_block",    allMod("acacia_triangle_block")),
+            Map.entry("bamboo_triangle_block",    allMod("bamboo_triangle_block")),
+            Map.entry("birch_triangle_block",     allMod("birch_triangle_block")),
+            Map.entry("cheery_triangle_block",    allMod("cheery_triangle_block")),
+            Map.entry("crimson_triangle_block",   allMod("crimson_triangle_block")),
+            Map.entry("dark_oak_triangle_block",  allMod("dark_oak_triangle_block")),
+            Map.entry("jungle_triangle_block",    allMod("jungle_triangle_block")),
+            Map.entry("mangrove_triangle_block",  allMod("mangrove_triangle_block")),
+            Map.entry("spruce_triangle_block",    allMod("spruce_triangle_block")),
+            Map.entry("warped_triangle_block",    allMod("warped_triangle_block")),
+            Map.entry("striped_oak",              allMod("striped_oak")),
+            Map.entry("striped_dark_oak",         allMod("striped_dark_oak")),
+            Map.entry("striped_bamboo",           allMod("striped_bamboo")),
+            Map.entry("striped_acacia_plank",     allMod("striped_acacia_plank")),
+            Map.entry("striped_cheery_plank",     allMod("striped_cheery_plank")),
+            Map.entry("striped_crimson_plank",    allMod("striped_crimson_plank")),
+            Map.entry("striped_jungle_plank",     allMod("striped_jungle_plank")),
+            Map.entry("striped_mangrove_plank",   allMod("striped_mangrove_plank")),
+            Map.entry("striped_spruce_plank",     allMod("striped_spruce_plank")),
+            Map.entry("striped_warped_plank",     allMod("striped_warped_plank")),
+            Map.entry("striped_triangle_block",   allMod("striped_triangle_block"))
     );
 
     private JebbTextureMap() {
+    }
+
+    private static Faces all(String texture) {
+        ResourceLocation tex = tex(texture);
+        return new Faces(tex, tex, tex);
+    }
+
+    private static Faces allMod(String texture) {
+        ResourceLocation tex = modTex(texture);
+        return new Faces(tex, tex, tex);
     }
 
     public static Faces forParent(Block parent) {

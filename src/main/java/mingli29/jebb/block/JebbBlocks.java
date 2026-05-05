@@ -4,7 +4,7 @@ import mingli29.jebb.JustEnoughtBuildingBlocks;
 import mingli29.jebb.item.JebbVariantBlockItem;
 import mingli29.jebb.util.JebbBlockFilter;
 import mingli29.jebb.util.JebbBlockProps;
-import mingli29.jebb.util.JebbSlabIds;
+import mingli29.jebb.util.JebbSlabs;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -78,7 +78,7 @@ public final class JebbBlocks {
     /** Vanilla horizontal slab for this parent when it exists, otherwise the mod {@link #HORIZONTAL_SLABS} block. */
     @Nullable
     public static Block horizontalSlabForVariantParent(Block parent) {
-        Block slab = JebbSlabIds.vanillaSlabForParent(parent).orElse(HORIZONTAL_SLABS.get(parent));
+        Block slab = JebbSlabs.vanillaSlabForParent(parent).orElse(HORIZONTAL_SLABS.get(parent));
         if (slab == null || slab.asItem() == Items.AIR) {
             return null;
         }
@@ -220,7 +220,7 @@ public final class JebbBlocks {
         }
         CORNER_PILLARS.put(parent, cp);
 
-        if (JebbSlabIds.vanillaSlabForParent(parent).isEmpty()) {
+        if (JebbSlabs.vanillaSlabForParent(parent).isEmpty()) {
             JebbParentSlabBlock hs = registerBlock(
                     "slab_" + parentPath,
                     new JebbParentSlabBlock(parent, JebbBlockProps.copyFromParent(parent)));

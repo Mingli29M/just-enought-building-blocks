@@ -38,6 +38,10 @@ public class JebbModelProvider extends FabricModelProvider {
         return new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, path);
     }
 
+    private static ResourceLocation mcLoc(String path) {
+        return new ResourceLocation("minecraft", path);
+    }
+
     private static ModelTemplate templateAll(String path) {
         return new ModelTemplate(Optional.of(modLoc("block/" + path)), Optional.empty(), TextureSlot.ALL);
     }
@@ -75,11 +79,11 @@ public class JebbModelProvider extends FabricModelProvider {
     private static final ModelTemplate ITEM_Q_BTS = templateBts("template_item_quarter_bts");
     private static final ModelTemplate ITEM_CP_BTS = templateBts("template_item_corner_pillar_bts");
 
-    private static final ModelTemplate SLAB_BOTTOM = new ModelTemplate(Optional.of(modLoc("block/template_jebb_slab_bottom")), Optional.empty(),
+    private static final ModelTemplate SLAB_BOTTOM = new ModelTemplate(Optional.of(mcLoc("block/slab")), Optional.empty(),
             TextureSlot.BOTTOM, TextureSlot.SIDE, TextureSlot.TOP);
-    private static final ModelTemplate SLAB_TOP = new ModelTemplate(Optional.of(modLoc("block/template_jebb_slab_top")), Optional.empty(),
+    private static final ModelTemplate SLAB_TOP = new ModelTemplate(Optional.of(mcLoc("block/slab_top")), Optional.empty(),
             TextureSlot.BOTTOM, TextureSlot.SIDE, TextureSlot.TOP);
-    private static final ModelTemplate ITEM_SLAB = new ModelTemplate(Optional.of(modLoc("block/template_jebb_slab_bottom")), Optional.empty(),
+    private static final ModelTemplate ITEM_SLAB = new ModelTemplate(Optional.of(mcLoc("block/slab")), Optional.empty(),
             TextureSlot.BOTTOM, TextureSlot.SIDE, TextureSlot.TOP);
 
     public JebbModelProvider(FabricDataOutput output) {
