@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_deepslate_bricks"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_deepslate_bricks"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_deepslate_bricks"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_deepslate_bricks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:deepslate_bricks"
+  }
+}

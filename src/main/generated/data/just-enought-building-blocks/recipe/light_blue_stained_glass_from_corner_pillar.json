@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_light_blue_stained_glass"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_light_blue_stained_glass"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_light_blue_stained_glass"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_light_blue_stained_glass"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:light_blue_stained_glass"
+  }
+}

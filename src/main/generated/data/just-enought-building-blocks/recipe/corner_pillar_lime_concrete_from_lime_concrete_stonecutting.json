@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:lime_concrete"
+  },
+  "result": {
+    "count": 4,
+    "id": "just-enought-building-blocks:corner_pillar_lime_concrete"
+  }
+}

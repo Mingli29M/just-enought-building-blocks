@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "just-enought-building-blocks:block/warped_triangle_block",
+    "side": "just-enought-building-blocks:block/warped_triangle_block",
+    "top": "just-enought-building-blocks:block/warped_triangle_block"
+  }
+}

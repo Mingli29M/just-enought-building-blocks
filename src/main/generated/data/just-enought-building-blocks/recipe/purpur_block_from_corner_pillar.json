@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_purpur_block"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_purpur_block"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_purpur_block"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_purpur_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:purpur_block"
+  }
+}

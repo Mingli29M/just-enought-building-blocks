@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "minecraft:green_concrete_powder"
-  },
-  "result": "just-enought-building-blocks:corner_pillar_green_concrete_powder"
-}

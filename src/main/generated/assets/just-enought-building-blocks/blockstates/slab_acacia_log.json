@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_acacia_log_bottom"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_acacia_log_bottom"
+    },
+    "type=double,waterlogged=false": {
+      "model": "minecraft:block/acacia_log"
+    },
+    "type=double,waterlogged=true": {
+      "model": "minecraft:block/acacia_log"
+    },
+    "type=top,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_acacia_log_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_acacia_log_top"
+    }
+  }
+}

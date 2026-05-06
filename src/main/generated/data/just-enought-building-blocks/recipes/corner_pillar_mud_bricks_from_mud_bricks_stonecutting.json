@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "minecraft:mud_bricks"
-  },
-  "result": "just-enought-building-blocks:corner_pillar_mud_bricks"
-}

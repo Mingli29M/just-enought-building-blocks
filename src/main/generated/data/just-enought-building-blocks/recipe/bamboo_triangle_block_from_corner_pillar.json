@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_bamboo_triangle_block"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_bamboo_triangle_block"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_bamboo_triangle_block"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_bamboo_triangle_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "just-enought-building-blocks:bamboo_triangle_block"
+  }
+}

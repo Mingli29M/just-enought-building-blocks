@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_striped_acacia_plank_bottom"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_striped_acacia_plank_bottom"
+    },
+    "type=double,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/striped_acacia_plank"
+    },
+    "type=double,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/striped_acacia_plank"
+    },
+    "type=top,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_striped_acacia_plank_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_striped_acacia_plank_top"
+    }
+  }
+}

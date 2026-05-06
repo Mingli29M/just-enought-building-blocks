@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:vertical_slab_mossy_stone_bricks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:mossy_stone_brick_slab"
+  }
+}

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "just-enought-building-blocks:corner_pillar_deepslate"
-  },
-  "result": "just-enought-building-blocks:quarter_deepslate"
-}

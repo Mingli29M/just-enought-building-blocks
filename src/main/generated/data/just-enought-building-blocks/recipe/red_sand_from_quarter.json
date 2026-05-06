@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_red_sand"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_red_sand"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_red_sand"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_red_sand"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:red_sand"
+  }
+}

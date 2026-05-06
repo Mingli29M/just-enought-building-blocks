@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "minecraft:cracked_nether_bricks"
-  },
-  "result": "just-enought-building-blocks:corner_pillar_cracked_nether_bricks"
-}

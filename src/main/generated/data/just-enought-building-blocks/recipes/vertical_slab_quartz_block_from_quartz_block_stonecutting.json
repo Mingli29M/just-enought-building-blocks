@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "minecraft:quartz_block"
-  },
-  "result": "just-enought-building-blocks:vertical_slab_quartz_block"
-}

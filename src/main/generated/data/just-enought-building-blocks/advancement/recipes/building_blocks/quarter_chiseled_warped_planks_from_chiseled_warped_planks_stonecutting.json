@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chiseled_warped_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "just-enought-building-blocks:chiseled_warped_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:quarter_chiseled_warped_planks_from_chiseled_warped_planks_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_chiseled_warped_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:quarter_chiseled_warped_planks_from_chiseled_warped_planks_stonecutting"
+    ]
+  }
+}

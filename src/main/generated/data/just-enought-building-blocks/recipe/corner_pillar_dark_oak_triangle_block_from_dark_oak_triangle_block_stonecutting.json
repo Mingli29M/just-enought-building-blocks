@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "just-enought-building-blocks:dark_oak_triangle_block"
+  },
+  "result": {
+    "count": 4,
+    "id": "just-enought-building-blocks:corner_pillar_dark_oak_triangle_block"
+  }
+}

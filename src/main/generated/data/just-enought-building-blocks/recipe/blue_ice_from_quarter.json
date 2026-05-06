@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_blue_ice"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_blue_ice"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_blue_ice"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_blue_ice"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:blue_ice"
+  }
+}

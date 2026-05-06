@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:copper_grate"
+  },
+  "result": {
+    "count": 1,
+    "id": "just-enought-building-blocks:slab_copper_grate"
+  }
+}

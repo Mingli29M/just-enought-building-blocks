@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:dead_brain_coral_block"
+  },
+  "result": {
+    "count": 2,
+    "id": "just-enought-building-blocks:vertical_slab_dead_brain_coral_block"
+  }
+}

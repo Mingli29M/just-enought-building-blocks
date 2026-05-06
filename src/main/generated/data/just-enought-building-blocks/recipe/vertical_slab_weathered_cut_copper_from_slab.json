@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "minecraft:weathered_cut_copper_slab"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "just-enought-building-blocks:vertical_slab_weathered_cut_copper"
+  }
+}

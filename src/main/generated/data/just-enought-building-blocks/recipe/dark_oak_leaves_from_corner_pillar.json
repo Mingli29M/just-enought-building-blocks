@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_dark_oak_leaves"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_dark_oak_leaves"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_dark_oak_leaves"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_dark_oak_leaves"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:dark_oak_leaves"
+  }
+}

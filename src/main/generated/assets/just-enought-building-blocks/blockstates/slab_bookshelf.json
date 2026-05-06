@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_bookshelf_bottom"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_bookshelf_bottom"
+    },
+    "type=double,waterlogged=false": {
+      "model": "minecraft:block/bookshelf"
+    },
+    "type=double,waterlogged=true": {
+      "model": "minecraft:block/bookshelf"
+    },
+    "type=top,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_bookshelf_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_bookshelf_top"
+    }
+  }
+}

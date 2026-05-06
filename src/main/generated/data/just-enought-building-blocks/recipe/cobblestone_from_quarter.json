@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_cobblestone"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_cobblestone"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_cobblestone"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_cobblestone"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:cobblestone"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:vertical_slab_orange_concrete"
+    },
+    {
+      "item": "just-enought-building-blocks:vertical_slab_orange_concrete"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:orange_concrete"
+  }
+}

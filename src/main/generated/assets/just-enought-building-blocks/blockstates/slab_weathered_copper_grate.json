@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_weathered_copper_grate_bottom"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_weathered_copper_grate_bottom"
+    },
+    "type=double,waterlogged=false": {
+      "model": "minecraft:block/weathered_copper_grate"
+    },
+    "type=double,waterlogged=true": {
+      "model": "minecraft:block/weathered_copper_grate"
+    },
+    "type=top,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_weathered_copper_grate_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_weathered_copper_grate_top"
+    }
+  }
+}

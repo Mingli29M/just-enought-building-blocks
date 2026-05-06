@@ -4,7 +4,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -21,7 +21,6 @@ import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.pathfinder.PathComputationType;
-import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -162,8 +161,8 @@ public class JebbCornerPillarBlock extends Block implements SimpleWaterloggedBlo
     }
 
     @Override
-    public boolean canPlaceLiquid(BlockGetter level, BlockPos pos, BlockState state, Fluid fluid) {
-        return !isFull(state) && SimpleWaterloggedBlock.super.canPlaceLiquid(level, pos, state, fluid);
+    public boolean canPlaceLiquid(@Nullable Player player, BlockGetter level, BlockPos pos, BlockState state, Fluid fluid) {
+        return !isFull(state) && SimpleWaterloggedBlock.super.canPlaceLiquid(player, level, pos, state, fluid);
     }
 
     @Override
@@ -175,7 +174,6 @@ public class JebbCornerPillarBlock extends Block implements SimpleWaterloggedBlo
         return super.updateShape(state, direction, neighbor, level, pos, neighborPos);
     }
 
-    @Override
     public boolean isPathfindable(BlockState state, BlockGetter level, BlockPos pos, PathComputationType type) {
         return switch (type) {
             case WATER -> level.getFluidState(pos).is(FluidTags.WATER);
@@ -198,13 +196,5 @@ public class JebbCornerPillarBlock extends Block implements SimpleWaterloggedBlo
         parent.stepOn(level, pos, parent.defaultBlockState(), entity);
     }
 
-    @Override
-    public void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
-        parent.entityInside(parent.defaultBlockState(), level, pos, entity);
-    }
-
-    @Override
-    public void onProjectileHit(Level level, BlockState state, BlockHitResult hit, Projectile projectile) {
-        parent.onProjectileHit(level, parent.defaultBlockState(), hit, projectile);
-    }
+    // 1.21.x made these parent callbacks protected; keep only public behavior delegation.
 }

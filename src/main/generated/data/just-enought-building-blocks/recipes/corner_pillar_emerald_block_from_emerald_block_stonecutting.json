@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "minecraft:emerald_block"
-  },
-  "result": "just-enought-building-blocks:corner_pillar_emerald_block"
-}

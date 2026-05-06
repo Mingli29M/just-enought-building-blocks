@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "just-enought-building-blocks:warped_square_brick"
+  },
+  "result": {
+    "count": 2,
+    "id": "just-enought-building-blocks:vertical_slab_warped_square_brick"
+  }
+}

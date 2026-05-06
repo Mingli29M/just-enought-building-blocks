@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "minecraft:packed_ice"
-  },
-  "result": "just-enought-building-blocks:quarter_packed_ice"
-}

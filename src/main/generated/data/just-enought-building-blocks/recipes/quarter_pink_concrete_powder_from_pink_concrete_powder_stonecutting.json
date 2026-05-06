@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "minecraft:pink_concrete_powder"
-  },
-  "result": "just-enought-building-blocks:quarter_pink_concrete_powder"
-}

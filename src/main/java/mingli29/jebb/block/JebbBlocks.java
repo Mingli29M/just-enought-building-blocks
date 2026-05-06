@@ -230,12 +230,12 @@ public final class JebbBlocks {
     }
 
     private static <B extends Block> B registerBlock(String name, B block) {
-        ResourceLocation id = new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, name);
+        ResourceLocation id = ResourceLocation.fromNamespaceAndPath(JustEnoughtBuildingBlocks.MOD_ID, name);
         return Registry.register(BuiltInRegistries.BLOCK, id, block);
     }
 
     private static Item registerVariantItem(String name, Block block, Block parent, String prefixKey) {
-        ResourceLocation id = new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, name);
+        ResourceLocation id = ResourceLocation.fromNamespaceAndPath(JustEnoughtBuildingBlocks.MOD_ID, name);
         BlockItem item = new JebbVariantBlockItem(block, parent, prefixKey, new Item.Properties());
         Item registered = Registry.register(BuiltInRegistries.ITEM, id, item);
         item.registerBlocks(Item.BY_BLOCK, item);
@@ -244,7 +244,7 @@ public final class JebbBlocks {
 
     private static Block registerSimpleBlock(String name, Block parent) {
         Block block = registerBlock(name, new Block(JebbBlockProps.copyFromParent(parent)));
-        Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, name),
+        Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(JustEnoughtBuildingBlocks.MOD_ID, name),
                 new BlockItem(block, new Item.Properties()));
         return block;
     }

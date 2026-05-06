@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_mangrove_square_brick"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_mangrove_square_brick"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_mangrove_square_brick"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_mangrove_square_brick"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "just-enought-building-blocks:mangrove_square_brick"
+  }
+}

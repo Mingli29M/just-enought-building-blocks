@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_striped_mangrove_plank"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_striped_mangrove_plank"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_striped_mangrove_plank"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_striped_mangrove_plank"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "just-enought-building-blocks:striped_mangrove_plank"
+  }
+}

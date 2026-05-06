@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "just-enought-building-blocks:spruce_square_brick"
-  },
-  "result": "just-enought-building-blocks:quarter_spruce_square_brick"
-}

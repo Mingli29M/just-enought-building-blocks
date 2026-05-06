@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_orange_wool_bottom"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_orange_wool_bottom"
+    },
+    "type=double,waterlogged=false": {
+      "model": "minecraft:block/orange_wool"
+    },
+    "type=double,waterlogged=true": {
+      "model": "minecraft:block/orange_wool"
+    },
+    "type=top,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_orange_wool_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_orange_wool_top"
+    }
+  }
+}

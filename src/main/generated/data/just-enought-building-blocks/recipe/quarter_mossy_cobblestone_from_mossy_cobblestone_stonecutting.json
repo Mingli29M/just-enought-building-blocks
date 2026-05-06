@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:mossy_cobblestone"
+  },
+  "result": {
+    "count": 4,
+    "id": "just-enought-building-blocks:quarter_mossy_cobblestone"
+  }
+}

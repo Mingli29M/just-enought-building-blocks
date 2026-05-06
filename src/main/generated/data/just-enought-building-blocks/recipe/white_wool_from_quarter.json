@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_white_wool"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_white_wool"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_white_wool"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_white_wool"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:white_wool"
+  }
+}

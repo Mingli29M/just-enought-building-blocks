@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_stripped_spruce_log"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_stripped_spruce_log"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_stripped_spruce_log"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_stripped_spruce_log"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:stripped_spruce_log"
+  }
+}

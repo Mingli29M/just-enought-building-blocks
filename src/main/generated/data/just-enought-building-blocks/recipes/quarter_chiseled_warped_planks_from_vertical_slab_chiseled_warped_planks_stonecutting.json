@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "just-enought-building-blocks:vertical_slab_chiseled_warped_planks"
-  },
-  "result": "just-enought-building-blocks:quarter_chiseled_warped_planks"
-}

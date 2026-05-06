@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_weathered_copper_bulb"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_weathered_copper_bulb"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_weathered_copper_bulb"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_weathered_copper_bulb"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:weathered_copper_bulb"
+  }
+}

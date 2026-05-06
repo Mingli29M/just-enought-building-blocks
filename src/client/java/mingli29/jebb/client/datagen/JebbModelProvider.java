@@ -35,11 +35,11 @@ import java.util.Optional;
 
 public class JebbModelProvider extends FabricModelProvider {
     private static ResourceLocation modLoc(String path) {
-        return new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, path);
+        return ResourceLocation.fromNamespaceAndPath(JustEnoughtBuildingBlocks.MOD_ID, path);
     }
 
     private static ResourceLocation mcLoc(String path) {
-        return new ResourceLocation("minecraft", path);
+        return ResourceLocation.fromNamespaceAndPath("minecraft", path);
     }
 
     private static ModelTemplate templateAll(String path) {

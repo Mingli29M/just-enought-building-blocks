@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:quarter_shroomlight_from_vertical_slab_shroomlight_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vertical_slab_shroomlight": {
+      "conditions": {
+        "items": [
+          {
+            "items": "just-enought-building-blocks:vertical_slab_shroomlight"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vertical_slab_shroomlight"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:quarter_shroomlight_from_vertical_slab_shroomlight_stonecutting"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:birch_leaves"
+  },
+  "result": {
+    "count": 4,
+    "id": "just-enought-building-blocks:quarter_birch_leaves"
+  }
+}

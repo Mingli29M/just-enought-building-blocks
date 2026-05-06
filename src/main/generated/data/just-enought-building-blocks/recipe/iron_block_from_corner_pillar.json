@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_iron_block"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_iron_block"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_iron_block"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_iron_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:iron_block"
+  }
+}

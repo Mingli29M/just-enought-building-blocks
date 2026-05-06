@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "just-enought-building-blocks:spruce_square_brick"
+  },
+  "result": {
+    "count": 1,
+    "id": "just-enought-building-blocks:slab_spruce_square_brick"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bamboo_triangle_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "just-enought-building-blocks:bamboo_triangle_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:slab_bamboo_triangle_block_from_bamboo_triangle_block_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bamboo_triangle_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:slab_bamboo_triangle_block_from_bamboo_triangle_block_stonecutting"
+    ]
+  }
+}

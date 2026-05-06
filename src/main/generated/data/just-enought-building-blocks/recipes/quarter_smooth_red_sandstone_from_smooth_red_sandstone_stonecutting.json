@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "minecraft:smooth_red_sandstone"
-  },
-  "result": "just-enought-building-blocks:quarter_smooth_red_sandstone"
-}

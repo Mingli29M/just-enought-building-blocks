@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_corner_pillar_lime_concrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": "just-enought-building-blocks:corner_pillar_lime_concrete"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:quarter_lime_concrete_from_corner_pillar_lime_concrete_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_corner_pillar_lime_concrete"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:quarter_lime_concrete_from_corner_pillar_lime_concrete_stonecutting"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "just-enought-building-blocks:mangrove_roots_from_vertical_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vertical_slab_mangrove_roots": {
+      "conditions": {
+        "items": [
+          {
+            "items": "just-enought-building-blocks:vertical_slab_mangrove_roots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vertical_slab_mangrove_roots"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "just-enought-building-blocks:mangrove_roots_from_vertical_slab"
+    ]
+  }
+}

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "minecraft:magenta_concrete_powder"
-  },
-  "result": "just-enought-building-blocks:corner_pillar_magenta_concrete_powder"
-}

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "minecraft:magenta_glazed_terracotta"
-  },
-  "result": "just-enought-building-blocks:corner_pillar_magenta_glazed_terracotta"
-}

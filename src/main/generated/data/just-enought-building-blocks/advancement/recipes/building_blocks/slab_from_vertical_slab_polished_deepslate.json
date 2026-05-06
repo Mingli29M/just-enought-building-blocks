@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "just-enought-building-blocks:slab_from_vertical_slab_polished_deepslate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vertical_slab_polished_deepslate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "just-enought-building-blocks:vertical_slab_polished_deepslate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vertical_slab_polished_deepslate"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "just-enought-building-blocks:slab_from_vertical_slab_polished_deepslate"
+    ]
+  }
+}

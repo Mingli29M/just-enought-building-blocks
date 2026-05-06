@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_crimson_stem"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_crimson_stem"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_crimson_stem"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_crimson_stem"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:crimson_stem"
+  }
+}

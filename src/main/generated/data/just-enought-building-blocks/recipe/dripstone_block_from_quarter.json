@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_dripstone_block"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_dripstone_block"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_dripstone_block"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_dripstone_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:dripstone_block"
+  }
+}

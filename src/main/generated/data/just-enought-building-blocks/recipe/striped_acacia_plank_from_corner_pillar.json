@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_striped_acacia_plank"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_striped_acacia_plank"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_striped_acacia_plank"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_striped_acacia_plank"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "just-enought-building-blocks:striped_acacia_plank"
+  }
+}

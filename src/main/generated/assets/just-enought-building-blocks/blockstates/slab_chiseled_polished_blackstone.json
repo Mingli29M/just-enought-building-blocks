@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_chiseled_polished_blackstone_bottom"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_chiseled_polished_blackstone_bottom"
+    },
+    "type=double,waterlogged=false": {
+      "model": "minecraft:block/chiseled_polished_blackstone"
+    },
+    "type=double,waterlogged=true": {
+      "model": "minecraft:block/chiseled_polished_blackstone"
+    },
+    "type=top,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_chiseled_polished_blackstone_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_chiseled_polished_blackstone_top"
+    }
+  }
+}

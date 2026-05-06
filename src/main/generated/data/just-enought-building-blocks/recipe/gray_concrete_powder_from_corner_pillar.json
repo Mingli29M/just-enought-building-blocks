@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_gray_concrete_powder"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_gray_concrete_powder"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_gray_concrete_powder"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_gray_concrete_powder"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:gray_concrete_powder"
+  }
+}

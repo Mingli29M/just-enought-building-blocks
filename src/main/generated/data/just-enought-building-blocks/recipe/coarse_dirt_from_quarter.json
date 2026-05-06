@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_coarse_dirt"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_coarse_dirt"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_coarse_dirt"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_coarse_dirt"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:coarse_dirt"
+  }
+}

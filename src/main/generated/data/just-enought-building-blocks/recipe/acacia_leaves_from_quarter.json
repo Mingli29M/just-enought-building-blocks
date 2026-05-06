@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_acacia_leaves"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_acacia_leaves"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_acacia_leaves"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_acacia_leaves"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:acacia_leaves"
+  }
+}

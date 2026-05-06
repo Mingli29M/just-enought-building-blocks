@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_bubble_coral_block"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_bubble_coral_block"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_bubble_coral_block"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_bubble_coral_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:bubble_coral_block"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_jungle_square_brick"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_jungle_square_brick"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_jungle_square_brick"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_jungle_square_brick"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "just-enought-building-blocks:jungle_square_brick"
+  }
+}

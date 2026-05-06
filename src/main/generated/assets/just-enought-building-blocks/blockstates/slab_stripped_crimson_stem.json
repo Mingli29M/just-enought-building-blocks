@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_stripped_crimson_stem_bottom"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_stripped_crimson_stem_bottom"
+    },
+    "type=double,waterlogged=false": {
+      "model": "minecraft:block/stripped_crimson_stem"
+    },
+    "type=double,waterlogged=true": {
+      "model": "minecraft:block/stripped_crimson_stem"
+    },
+    "type=top,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_stripped_crimson_stem_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_stripped_crimson_stem_top"
+    }
+  }
+}

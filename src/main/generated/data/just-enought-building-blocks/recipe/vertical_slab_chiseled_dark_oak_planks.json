@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "just-enought-building-blocks:chiseled_dark_oak_planks"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "just-enought-building-blocks:vertical_slab_chiseled_dark_oak_planks"
+  }
+}

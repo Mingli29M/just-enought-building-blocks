@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "minecraft:purple_stained_glass"
-  },
-  "result": "just-enought-building-blocks:vertical_slab_purple_stained_glass"
-}

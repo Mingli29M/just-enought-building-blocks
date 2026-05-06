@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_dark_oak_leaves"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_dark_oak_leaves"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "just-enought-building-blocks:vertical_slab_dark_oak_leaves"
+  }
+}

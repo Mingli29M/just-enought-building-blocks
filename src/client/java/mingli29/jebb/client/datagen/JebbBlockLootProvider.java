@@ -8,6 +8,7 @@ import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.properties.SlabType;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
@@ -19,8 +20,8 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePrope
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 
 public class JebbBlockLootProvider extends FabricBlockLootTableProvider {
-    public JebbBlockLootProvider(FabricDataOutput dataOutput) {
-        super(dataOutput);
+    public JebbBlockLootProvider(FabricDataOutput dataOutput, java.util.concurrent.CompletableFuture<HolderLookup.Provider> registriesFuture) {
+        super(dataOutput, registriesFuture);
     }
 
     @Override

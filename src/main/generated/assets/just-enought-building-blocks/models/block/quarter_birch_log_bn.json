@@ -1,0 +1,8 @@
+{
+  "parent": "just-enought-building-blocks:block/template_quarter_bn_bts",
+  "textures": {
+    "bottom": "minecraft:block/birch_log_top",
+    "side": "minecraft:block/birch_log",
+    "top": "minecraft:block/birch_log_top"
+  }
+}

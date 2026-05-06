@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_crimson_triangle_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "just-enought-building-blocks:crimson_triangle_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:vertical_slab_crimson_triangle_block_from_crimson_triangle_block_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_crimson_triangle_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:vertical_slab_crimson_triangle_block_from_crimson_triangle_block_stonecutting"
+    ]
+  }
+}

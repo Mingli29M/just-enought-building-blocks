@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "just-enought-building-blocks:striped_spruce_plank"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "just-enought-building-blocks:slab_striped_spruce_plank"
+  }
+}

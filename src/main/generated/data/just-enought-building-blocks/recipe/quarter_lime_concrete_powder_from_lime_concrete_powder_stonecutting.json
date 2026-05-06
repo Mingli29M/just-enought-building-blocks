@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:lime_concrete_powder"
+  },
+  "result": {
+    "count": 4,
+    "id": "just-enought-building-blocks:quarter_lime_concrete_powder"
+  }
+}

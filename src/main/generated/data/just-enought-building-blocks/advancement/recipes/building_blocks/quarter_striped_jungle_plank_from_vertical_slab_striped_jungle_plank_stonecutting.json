@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:quarter_striped_jungle_plank_from_vertical_slab_striped_jungle_plank_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vertical_slab_striped_jungle_plank": {
+      "conditions": {
+        "items": [
+          {
+            "items": "just-enought-building-blocks:vertical_slab_striped_jungle_plank"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vertical_slab_striped_jungle_plank"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:quarter_striped_jungle_plank_from_vertical_slab_striped_jungle_plank_stonecutting"
+    ]
+  }
+}

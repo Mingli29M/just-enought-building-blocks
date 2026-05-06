@@ -1,0 +1,6 @@
+{
+  "parent": "just-enought-building-blocks:block/template_corner_pillar_sw",
+  "textures": {
+    "all": "minecraft:block/chiseled_tuff_bricks"
+  }
+}

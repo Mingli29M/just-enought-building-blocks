@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:exposed_cut_copper"
+  },
+  "result": {
+    "count": 4,
+    "id": "just-enought-building-blocks:quarter_exposed_cut_copper"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "just-enought-building-blocks:striped_acacia_plank"
+    }
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "count": 4,
+    "id": "just-enought-building-blocks:quarter_striped_acacia_plank"
+  }
+}

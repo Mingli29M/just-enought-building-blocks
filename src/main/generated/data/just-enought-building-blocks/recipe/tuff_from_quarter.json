@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_tuff"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_tuff"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_tuff"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_tuff"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:tuff"
+  }
+}

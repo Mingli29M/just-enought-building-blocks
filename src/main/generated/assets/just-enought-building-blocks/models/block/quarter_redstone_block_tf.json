@@ -1,6 +1,0 @@
-{
-  "parent": "just-enought-building-blocks:block/template_quarter_tf",
-  "textures": {
-    "all": "minecraft:block/redstone_block"
-  }
-}

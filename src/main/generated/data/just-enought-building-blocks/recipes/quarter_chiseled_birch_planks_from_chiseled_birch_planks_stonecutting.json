@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "just-enought-building-blocks:chiseled_birch_planks"
-  },
-  "result": "just-enought-building-blocks:quarter_chiseled_birch_planks"
-}

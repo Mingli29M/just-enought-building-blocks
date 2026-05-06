@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "just-enought-building-blocks:vertical_slab_warped_square_brick"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_warped_square_brick": {
+      "conditions": {
+        "items": [
+          {
+            "items": "just-enought-building-blocks:warped_square_brick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_warped_square_brick"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "just-enought-building-blocks:vertical_slab_warped_square_brick"
+    ]
+  }
+}

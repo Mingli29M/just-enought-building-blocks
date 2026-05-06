@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "minecraft:bamboo_planks"
-  },
-  "result": "just-enought-building-blocks:quarter_bamboo_planks"
-}

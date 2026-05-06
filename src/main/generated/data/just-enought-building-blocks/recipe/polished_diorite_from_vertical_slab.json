@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:vertical_slab_polished_diorite"
+    },
+    {
+      "item": "just-enought-building-blocks:vertical_slab_polished_diorite"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:polished_diorite"
+  }
+}

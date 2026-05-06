@@ -118,6 +118,8 @@ public final class JebbBlockFilter {
         ResourceLocation key = BuiltInRegistries.BLOCK.getKey(block);
         if (key == null || !"minecraft".equals(key.getNamespace())) return false;
         String path = key.getPath();
+        if ("honey_block".equals(path)) return true;
+        if ("slime_block".equals(path) || "redstone_block".equals(path) || "redstone_lamp".equals(path)) return false;
         if (DENY.contains(path)) return false;
         if (ORE_PATHS.contains(path)) return false;
         if (path.startsWith("waxed_")) return false;

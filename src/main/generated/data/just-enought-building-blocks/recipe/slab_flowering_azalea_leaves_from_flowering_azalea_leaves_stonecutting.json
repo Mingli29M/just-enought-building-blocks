@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:flowering_azalea_leaves"
+  },
+  "result": {
+    "count": 1,
+    "id": "just-enought-building-blocks:slab_flowering_azalea_leaves"
+  }
+}

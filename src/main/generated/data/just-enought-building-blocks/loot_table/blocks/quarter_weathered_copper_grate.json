@@ -1,0 +1,101 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "just-enought-building-blocks:quarter_weathered_copper_grate",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "bottom_near": "true"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:explosion_decay"
+            }
+          ],
+          "name": "just-enought-building-blocks:quarter_weathered_copper_grate"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "just-enought-building-blocks:quarter_weathered_copper_grate",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "bottom_far": "true"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:explosion_decay"
+            }
+          ],
+          "name": "just-enought-building-blocks:quarter_weathered_copper_grate"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "just-enought-building-blocks:quarter_weathered_copper_grate",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "top_near": "true"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:explosion_decay"
+            }
+          ],
+          "name": "just-enought-building-blocks:quarter_weathered_copper_grate"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "just-enought-building-blocks:quarter_weathered_copper_grate",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "top_far": "true"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:explosion_decay"
+            }
+          ],
+          "name": "just-enought-building-blocks:quarter_weathered_copper_grate"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ]
+}

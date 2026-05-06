@@ -16,11 +16,11 @@ public final class JebbTextureMap {
     }
 
     private static ResourceLocation tex(String name) {
-        return new ResourceLocation("minecraft", "block/" + name);
+        return ResourceLocation.fromNamespaceAndPath("minecraft", "block/" + name);
     }
 
     private static ResourceLocation modTex(String name) {
-        return new ResourceLocation("just-enought-building-blocks", "block/" + name);
+        return ResourceLocation.fromNamespaceAndPath("just-enought-building-blocks", "block/" + name);
     }
 
     private static final Map<String, Faces> BY_PATH = Map.ofEntries(
@@ -112,7 +112,7 @@ public final class JebbTextureMap {
     public static Faces defaultMapping(Block parent) {
         ResourceLocation key = BuiltInRegistries.BLOCK.getKey(parent);
         ResourceLocation t = key != null
-                ? new ResourceLocation(key.getNamespace(), "block/" + key.getPath())
+                ? ResourceLocation.fromNamespaceAndPath(key.getNamespace(), "block/" + key.getPath())
                 : tex("stone");
         return new Faces(t, t, t);
     }

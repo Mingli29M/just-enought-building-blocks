@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "just-enought-building-blocks:corner_pillar_striped_cheery_plank"
+  },
+  "result": {
+    "count": 1,
+    "id": "just-enought-building-blocks:quarter_striped_cheery_plank"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:nether_wart_block"
+  },
+  "result": {
+    "count": 4,
+    "id": "just-enought-building-blocks:corner_pillar_nether_wart_block"
+  }
+}

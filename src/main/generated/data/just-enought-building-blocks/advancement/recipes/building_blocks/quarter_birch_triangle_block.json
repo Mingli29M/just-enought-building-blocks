@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_birch_triangle_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "just-enought-building-blocks:birch_triangle_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "just-enought-building-blocks:quarter_birch_triangle_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_birch_triangle_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "just-enought-building-blocks:quarter_birch_triangle_block"
+    ]
+  }
+}

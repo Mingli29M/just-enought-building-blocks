@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "just-enought-building-blocks:vertical_slab_dark_oak_leaves"
-  },
-  "result": "just-enought-building-blocks:corner_pillar_dark_oak_leaves"
-}

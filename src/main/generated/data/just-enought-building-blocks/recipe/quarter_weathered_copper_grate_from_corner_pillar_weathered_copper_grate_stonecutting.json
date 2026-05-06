@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "just-enought-building-blocks:corner_pillar_weathered_copper_grate"
+  },
+  "result": {
+    "count": 1,
+    "id": "just-enought-building-blocks:quarter_weathered_copper_grate"
+  }
+}

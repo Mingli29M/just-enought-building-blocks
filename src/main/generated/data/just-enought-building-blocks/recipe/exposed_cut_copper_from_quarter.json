@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_exposed_cut_copper"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_exposed_cut_copper"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_exposed_cut_copper"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_exposed_cut_copper"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:exposed_cut_copper"
+  }
+}

@@ -18,7 +18,7 @@ public final class JebbBlockProps {
 
     public static BlockBehaviour.Properties copyFromParent(Block parent) {
         BlockState def = parent.defaultBlockState();
-        BlockBehaviour.Properties p = BlockBehaviour.Properties.copy(parent);
+        BlockBehaviour.Properties p = BlockBehaviour.Properties.ofFullCopy(parent);
         p.mapColor(def.getMapColor(EmptyBlockGetter.INSTANCE, BlockPos.ZERO));
         int light = def.getLightEmission();
         p.lightLevel(state -> light);

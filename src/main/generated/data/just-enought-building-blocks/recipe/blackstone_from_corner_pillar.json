@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_blackstone"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_blackstone"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_blackstone"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_blackstone"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:blackstone"
+  }
+}

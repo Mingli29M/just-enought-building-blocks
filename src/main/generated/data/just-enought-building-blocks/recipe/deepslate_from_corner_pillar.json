@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_deepslate"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_deepslate"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_deepslate"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_deepslate"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:deepslate"
+  }
+}

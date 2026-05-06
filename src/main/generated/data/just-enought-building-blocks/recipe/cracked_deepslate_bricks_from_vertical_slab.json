@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:vertical_slab_cracked_deepslate_bricks"
+    },
+    {
+      "item": "just-enought-building-blocks:vertical_slab_cracked_deepslate_bricks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:cracked_deepslate_bricks"
+  }
+}

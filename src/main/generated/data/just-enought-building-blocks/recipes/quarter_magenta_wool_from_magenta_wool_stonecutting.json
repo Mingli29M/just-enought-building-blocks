@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "minecraft:magenta_wool"
-  },
-  "result": "just-enought-building-blocks:quarter_magenta_wool"
-}

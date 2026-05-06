@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_birch_square_brick"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_birch_square_brick"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_birch_square_brick"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_birch_square_brick"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "just-enought-building-blocks:birch_square_brick"
+  }
+}

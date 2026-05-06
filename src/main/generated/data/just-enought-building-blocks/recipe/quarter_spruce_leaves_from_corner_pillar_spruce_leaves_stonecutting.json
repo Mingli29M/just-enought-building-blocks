@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "just-enought-building-blocks:corner_pillar_spruce_leaves"
+  },
+  "result": {
+    "count": 1,
+    "id": "just-enought-building-blocks:quarter_spruce_leaves"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_copper_block"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_copper_block"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_copper_block"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_copper_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:copper_block"
+  }
+}

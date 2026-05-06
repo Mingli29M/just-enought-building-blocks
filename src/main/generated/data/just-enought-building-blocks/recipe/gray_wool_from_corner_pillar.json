@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_gray_wool"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_gray_wool"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_gray_wool"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_gray_wool"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:gray_wool"
+  }
+}

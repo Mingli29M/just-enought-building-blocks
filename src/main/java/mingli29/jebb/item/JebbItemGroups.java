@@ -22,8 +22,8 @@ import java.util.Set;
 
 public final class JebbItemGroups {
     public static final int ROW_WIDTH = 9;
-    public static final ResourceLocation MAIN_TAB_ID = new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, "main");
-    public static final ResourceLocation BLOCKS_TAB_ID = new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, "blocks");
+    public static final ResourceLocation MAIN_TAB_ID = ResourceLocation.fromNamespaceAndPath(JustEnoughtBuildingBlocks.MOD_ID, "main");
+    public static final ResourceLocation BLOCKS_TAB_ID = ResourceLocation.fromNamespaceAndPath(JustEnoughtBuildingBlocks.MOD_ID, "blocks");
 
     public static CreativeModeTab MAIN_TAB;
     public static CreativeModeTab BLOCKS_TAB;

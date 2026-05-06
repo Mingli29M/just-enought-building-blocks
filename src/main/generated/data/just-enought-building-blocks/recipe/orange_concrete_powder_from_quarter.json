@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_orange_concrete_powder"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_orange_concrete_powder"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_orange_concrete_powder"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_orange_concrete_powder"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:orange_concrete_powder"
+  }
+}

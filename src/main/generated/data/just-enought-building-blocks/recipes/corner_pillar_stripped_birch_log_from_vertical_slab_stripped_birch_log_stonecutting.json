@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "just-enought-building-blocks:vertical_slab_stripped_birch_log"
-  },
-  "result": "just-enought-building-blocks:corner_pillar_stripped_birch_log"
-}

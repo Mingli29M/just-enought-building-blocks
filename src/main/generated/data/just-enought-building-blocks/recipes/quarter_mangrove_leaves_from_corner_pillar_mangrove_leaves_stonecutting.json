@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "just-enought-building-blocks:corner_pillar_mangrove_leaves"
-  },
-  "result": "just-enought-building-blocks:quarter_mangrove_leaves"
-}

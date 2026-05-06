@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:stripped_spruce_log"
+  },
+  "result": {
+    "count": 4,
+    "id": "just-enought-building-blocks:corner_pillar_stripped_spruce_log"
+  }
+}

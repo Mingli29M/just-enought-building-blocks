@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_packed_mud"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_packed_mud"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_packed_mud"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_packed_mud"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:packed_mud"
+  }
+}

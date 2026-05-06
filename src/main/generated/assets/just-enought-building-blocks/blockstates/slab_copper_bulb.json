@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_copper_bulb_bottom"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_copper_bulb_bottom"
+    },
+    "type=double,waterlogged=false": {
+      "model": "minecraft:block/copper_bulb"
+    },
+    "type=double,waterlogged=true": {
+      "model": "minecraft:block/copper_bulb"
+    },
+    "type=top,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_copper_bulb_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_copper_bulb_top"
+    }
+  }
+}

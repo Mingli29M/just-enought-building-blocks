@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "minecraft:cracked_deepslate_tiles"
-  },
-  "result": "just-enought-building-blocks:quarter_cracked_deepslate_tiles"
-}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_light_gray_terracotta"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_light_gray_terracotta"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_light_gray_terracotta"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_light_gray_terracotta"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:light_gray_terracotta"
+  }
+}

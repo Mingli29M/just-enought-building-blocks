@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:vertical_slab_cheery_triangle_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "just-enought-building-blocks:slab_cheery_triangle_block"
+  }
+}

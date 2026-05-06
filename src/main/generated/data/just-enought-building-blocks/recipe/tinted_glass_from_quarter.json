@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_tinted_glass"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_tinted_glass"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_tinted_glass"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_tinted_glass"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:tinted_glass"
+  }
+}

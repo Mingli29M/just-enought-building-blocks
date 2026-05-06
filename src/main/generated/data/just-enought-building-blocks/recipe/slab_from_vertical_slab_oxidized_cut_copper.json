@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:vertical_slab_oxidized_cut_copper"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:oxidized_cut_copper_slab"
+  }
+}

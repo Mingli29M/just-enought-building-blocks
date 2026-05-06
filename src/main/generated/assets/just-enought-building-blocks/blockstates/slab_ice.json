@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_ice_bottom"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_ice_bottom"
+    },
+    "type=double,waterlogged=false": {
+      "model": "minecraft:block/ice"
+    },
+    "type=double,waterlogged=true": {
+      "model": "minecraft:block/ice"
+    },
+    "type=top,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_ice_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_ice_top"
+    }
+  }
+}

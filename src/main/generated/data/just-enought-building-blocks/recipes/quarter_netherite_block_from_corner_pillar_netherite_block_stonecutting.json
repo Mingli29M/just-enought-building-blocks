@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "just-enought-building-blocks:corner_pillar_netherite_block"
-  },
-  "result": "just-enought-building-blocks:quarter_netherite_block"
-}

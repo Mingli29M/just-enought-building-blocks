@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "just-enought-building-blocks:vertical_slab_magenta_concrete_powder"
+  },
+  "result": {
+    "count": 2,
+    "id": "just-enought-building-blocks:corner_pillar_magenta_concrete_powder"
+  }
+}

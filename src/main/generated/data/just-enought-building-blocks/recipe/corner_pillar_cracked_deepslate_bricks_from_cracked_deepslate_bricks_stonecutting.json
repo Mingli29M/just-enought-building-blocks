@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:cracked_deepslate_bricks"
+  },
+  "result": {
+    "count": 4,
+    "id": "just-enought-building-blocks:corner_pillar_cracked_deepslate_bricks"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_chiseled_deepslate_bottom"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_chiseled_deepslate_bottom"
+    },
+    "type=double,waterlogged=false": {
+      "model": "minecraft:block/chiseled_deepslate"
+    },
+    "type=double,waterlogged=true": {
+      "model": "minecraft:block/chiseled_deepslate"
+    },
+    "type=top,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_chiseled_deepslate_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_chiseled_deepslate_top"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_stripped_warped_stem"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_stripped_warped_stem"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_stripped_warped_stem"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_stripped_warped_stem"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:stripped_warped_stem"
+  }
+}

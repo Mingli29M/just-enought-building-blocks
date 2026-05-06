@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "just-enought-building-blocks:chiseled_cherry_planks"
+  },
+  "result": {
+    "count": 4,
+    "id": "just-enought-building-blocks:quarter_chiseled_cherry_planks"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:mossy_cobblestone"
+    }
+  },
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "result": {
+    "count": 6,
+    "id": "just-enought-building-blocks:corner_pillar_mossy_cobblestone"
+  }
+}

@@ -5,8 +5,9 @@ import mingli29.jebb.block.JebbBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
@@ -15,15 +16,15 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
-import java.util.function.Consumer;
+import java.util.concurrent.CompletableFuture;
 
 public class JebbRecipeProvider extends FabricRecipeProvider {
-    public JebbRecipeProvider(FabricDataOutput output) {
-        super(output);
+    public JebbRecipeProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
+        super(output, registriesFuture);
     }
 
     @Override
-    public void buildRecipes(Consumer<FinishedRecipe> output) {
+    public void buildRecipes(RecipeOutput output) {
         for (var e : JebbBlocks.VERTICAL_SLABS.entrySet()) {
             Block parent = e.getKey();
             Block vs = e.getValue();
@@ -163,11 +164,11 @@ public class JebbRecipeProvider extends FabricRecipeProvider {
         registerWoodRecipe(output, JebbBlocks.STRIPED_TRIANGLE_BLOCK, Blocks.OAK_PLANKS);
     }
 
-    private static void registerWoodRecipe(Consumer<FinishedRecipe> output, Block result, Block parent) {
+    private static void registerWoodRecipe(RecipeOutput output, Block result, Block parent) {
         RecipeProvider.stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, result, parent, 1);
     }
 
     private static ResourceLocation modId(String path) {
-        return new ResourceLocation(JustEnoughtBuildingBlocks.MOD_ID, path);
+        return ResourceLocation.fromNamespaceAndPath(JustEnoughtBuildingBlocks.MOD_ID, path);
     }
 }

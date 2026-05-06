@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_honey_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:honey_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:corner_pillar_honey_block_from_honey_block_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_honey_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:corner_pillar_honey_block_from_honey_block_stonecutting"
+    ]
+  }
+}

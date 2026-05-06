@@ -178,7 +178,7 @@ public final class JebbBlockTagProvider extends FabricTagProvider.BlockTagProvid
 
         for (String entry : vanillaBlockTagValues(tagId)) {
             if (entry.startsWith("#")) {
-                ResourceLocation nested = new ResourceLocation(entry.substring(1));
+                ResourceLocation nested = ResourceLocation.parse(entry.substring(1));
                 if (vanillaTagContains(nested, blockId, seen)) {
                     return true;
                 }

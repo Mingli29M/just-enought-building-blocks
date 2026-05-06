@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:bubble_coral_block"
+  },
+  "result": {
+    "count": 4,
+    "id": "just-enought-building-blocks:quarter_bubble_coral_block"
+  }
+}

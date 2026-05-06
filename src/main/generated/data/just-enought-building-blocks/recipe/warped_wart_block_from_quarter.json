@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_warped_wart_block"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_warped_wart_block"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_warped_wart_block"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_warped_wart_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:warped_wart_block"
+  }
+}

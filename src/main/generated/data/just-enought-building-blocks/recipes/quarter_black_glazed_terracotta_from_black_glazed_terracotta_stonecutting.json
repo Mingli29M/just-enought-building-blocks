@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "minecraft:black_glazed_terracotta"
-  },
-  "result": "just-enought-building-blocks:quarter_black_glazed_terracotta"
-}

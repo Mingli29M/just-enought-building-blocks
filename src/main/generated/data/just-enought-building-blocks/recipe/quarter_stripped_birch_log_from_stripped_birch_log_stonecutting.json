@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:stripped_birch_log"
+  },
+  "result": {
+    "count": 4,
+    "id": "just-enought-building-blocks:quarter_stripped_birch_log"
+  }
+}

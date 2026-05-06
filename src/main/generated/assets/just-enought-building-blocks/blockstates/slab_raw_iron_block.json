@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_raw_iron_block_bottom"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_raw_iron_block_bottom"
+    },
+    "type=double,waterlogged=false": {
+      "model": "minecraft:block/raw_iron_block"
+    },
+    "type=double,waterlogged=true": {
+      "model": "minecraft:block/raw_iron_block"
+    },
+    "type=top,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_raw_iron_block_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_raw_iron_block_top"
+    }
+  }
+}

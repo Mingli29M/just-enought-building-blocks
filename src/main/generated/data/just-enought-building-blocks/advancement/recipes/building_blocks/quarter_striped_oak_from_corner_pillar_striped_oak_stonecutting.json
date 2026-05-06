@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_corner_pillar_striped_oak": {
+      "conditions": {
+        "items": [
+          {
+            "items": "just-enought-building-blocks:corner_pillar_striped_oak"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:quarter_striped_oak_from_corner_pillar_striped_oak_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_corner_pillar_striped_oak"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:quarter_striped_oak_from_corner_pillar_striped_oak_stonecutting"
+    ]
+  }
+}

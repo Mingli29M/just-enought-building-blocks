@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:pumpkin"
+  },
+  "result": {
+    "count": 2,
+    "id": "just-enought-building-blocks:vertical_slab_pumpkin"
+  }
+}

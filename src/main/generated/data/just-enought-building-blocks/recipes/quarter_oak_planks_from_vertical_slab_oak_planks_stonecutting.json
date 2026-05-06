@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "just-enought-building-blocks:vertical_slab_oak_planks"
-  },
-  "result": "just-enought-building-blocks:quarter_oak_planks"
-}

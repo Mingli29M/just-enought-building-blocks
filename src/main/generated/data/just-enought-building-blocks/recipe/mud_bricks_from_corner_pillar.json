@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_mud_bricks"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_mud_bricks"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_mud_bricks"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_mud_bricks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:mud_bricks"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_oxidized_copper_grate"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_oxidized_copper_grate"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_oxidized_copper_grate"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_oxidized_copper_grate"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:oxidized_copper_grate"
+  }
+}

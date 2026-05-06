@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_striped_bamboo_bottom"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_striped_bamboo_bottom"
+    },
+    "type=double,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/striped_bamboo"
+    },
+    "type=double,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/striped_bamboo"
+    },
+    "type=top,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_striped_bamboo_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_striped_bamboo_top"
+    }
+  }
+}

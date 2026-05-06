@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "minecraft:brain_coral_block"
-  },
-  "result": "just-enought-building-blocks:vertical_slab_brain_coral_block"
-}

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "minecraft:dripstone_block"
-  },
-  "result": "just-enought-building-blocks:quarter_dripstone_block"
-}

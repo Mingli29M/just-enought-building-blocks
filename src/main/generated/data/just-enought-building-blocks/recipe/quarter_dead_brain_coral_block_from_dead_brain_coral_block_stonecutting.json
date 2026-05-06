@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:dead_brain_coral_block"
+  },
+  "result": {
+    "count": 4,
+    "id": "just-enought-building-blocks:quarter_dead_brain_coral_block"
+  }
+}

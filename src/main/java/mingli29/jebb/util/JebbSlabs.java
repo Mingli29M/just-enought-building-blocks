@@ -26,18 +26,18 @@ public final class JebbSlabs {
         String path = parentId.getPath();
 
         if (path.endsWith("_planks")) {
-            return new ResourceLocation(namespace, path.replace("_planks", "_slab"));
+            return ResourceLocation.fromNamespaceAndPath(namespace, path.replace("_planks", "_slab"));
         }
         if ("bricks".equals(path)) {
-            return new ResourceLocation(namespace, "brick_slab");
+            return ResourceLocation.fromNamespaceAndPath(namespace, "brick_slab");
         }
         if (path.endsWith("_bricks")) {
-            return new ResourceLocation(namespace, path.replace("_bricks", "_brick_slab"));
+            return ResourceLocation.fromNamespaceAndPath(namespace, path.replace("_bricks", "_brick_slab"));
         }
         if ("quartz_block".equals(path)) {
-            return new ResourceLocation(namespace, "quartz_slab");
+            return ResourceLocation.fromNamespaceAndPath(namespace, "quartz_slab");
         }
 
-        return new ResourceLocation(namespace, path + "_slab");
+        return ResourceLocation.fromNamespaceAndPath(namespace, path + "_slab");
     }
 }

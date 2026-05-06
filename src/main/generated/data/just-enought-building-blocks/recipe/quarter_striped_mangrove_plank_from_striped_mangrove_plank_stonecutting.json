@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "just-enought-building-blocks:striped_mangrove_plank"
+  },
+  "result": {
+    "count": 4,
+    "id": "just-enought-building-blocks:quarter_striped_mangrove_plank"
+  }
+}

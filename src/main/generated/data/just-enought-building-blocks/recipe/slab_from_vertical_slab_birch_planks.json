@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:vertical_slab_birch_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:birch_slab"
+  }
+}

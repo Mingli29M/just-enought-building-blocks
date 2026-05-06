@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_black_terracotta_bottom"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_black_terracotta_bottom"
+    },
+    "type=double,waterlogged=false": {
+      "model": "minecraft:block/black_terracotta"
+    },
+    "type=double,waterlogged=true": {
+      "model": "minecraft:block/black_terracotta"
+    },
+    "type=top,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_black_terracotta_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_black_terracotta_top"
+    }
+  }
+}

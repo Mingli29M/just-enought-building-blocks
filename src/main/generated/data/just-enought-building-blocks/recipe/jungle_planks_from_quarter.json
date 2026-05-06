@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_jungle_planks"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_jungle_planks"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_jungle_planks"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_jungle_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:jungle_planks"
+  }
+}

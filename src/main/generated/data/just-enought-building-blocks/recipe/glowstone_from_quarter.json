@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:quarter_glowstone"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_glowstone"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_glowstone"
+    },
+    {
+      "item": "just-enought-building-blocks:quarter_glowstone"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:glowstone"
+  }
+}

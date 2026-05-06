@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_shroomlight_bottom"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_shroomlight_bottom"
+    },
+    "type=double,waterlogged=false": {
+      "model": "minecraft:block/shroomlight"
+    },
+    "type=double,waterlogged=true": {
+      "model": "minecraft:block/shroomlight"
+    },
+    "type=top,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_shroomlight_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_shroomlight_top"
+    }
+  }
+}

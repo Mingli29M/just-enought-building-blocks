@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_quarter_smooth_sandstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "just-enought-building-blocks:quarter_smooth_sandstone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "just-enought-building-blocks:smooth_sandstone_from_quarter"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_quarter_smooth_sandstone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "just-enought-building-blocks:smooth_sandstone_from_quarter"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_smooth_sandstone"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_smooth_sandstone"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_smooth_sandstone"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_smooth_sandstone"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:smooth_sandstone"
+  }
+}

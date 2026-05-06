@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "just-enought-building-blocks:vertical_slab_tuff"
-  },
-  "result": "just-enought-building-blocks:corner_pillar_tuff"
-}

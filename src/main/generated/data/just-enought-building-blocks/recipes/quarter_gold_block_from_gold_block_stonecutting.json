@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "minecraft:gold_block"
-  },
-  "result": "just-enought-building-blocks:quarter_gold_block"
-}

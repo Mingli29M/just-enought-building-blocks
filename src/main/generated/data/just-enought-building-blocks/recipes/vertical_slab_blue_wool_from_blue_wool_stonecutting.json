@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "minecraft:blue_wool"
-  },
-  "result": "just-enought-building-blocks:vertical_slab_blue_wool"
-}

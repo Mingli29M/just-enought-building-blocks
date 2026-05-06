@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:corner_pillar_chiseled_crimson_planks"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_chiseled_crimson_planks"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_chiseled_crimson_planks"
+    },
+    {
+      "item": "just-enought-building-blocks:corner_pillar_chiseled_crimson_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "just-enought-building-blocks:chiseled_crimson_planks"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_emerald_block_bottom"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_emerald_block_bottom"
+    },
+    "type=double,waterlogged=false": {
+      "model": "minecraft:block/emerald_block"
+    },
+    "type=double,waterlogged=true": {
+      "model": "minecraft:block/emerald_block"
+    },
+    "type=top,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_emerald_block_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_emerald_block_top"
+    }
+  }
+}

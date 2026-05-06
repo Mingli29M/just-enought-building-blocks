@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_striped_oak": {
+      "conditions": {
+        "items": [
+          {
+            "items": "just-enought-building-blocks:striped_oak"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:slab_striped_oak_from_striped_oak_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_striped_oak"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:slab_striped_oak_from_striped_oak_stonecutting"
+    ]
+  }
+}

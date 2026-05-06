@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:vertical_slab_gilded_blackstone"
+    },
+    {
+      "item": "just-enought-building-blocks:vertical_slab_gilded_blackstone"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:gilded_blackstone"
+  }
+}
