@@ -54,5 +54,6 @@
 	"jebb.section.wood_variants": "—— 木材变种 ——",
 	"jebb.section.vertical_slabs": "—— 垂直台阶 ——",
 	"jebb.section.quarters": "—— 1/4 方块 ——",
-	"jebb.section.corner_pillars": "—— 角柱 ——"
+	"jebb.section.corner_pillars": "—— 角柱 ——",
+	"jebb.section.slabs": "--- 台阶 ---"
 }
