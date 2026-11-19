@@ -1,0 +1,8 @@
+{
+  "parent": "just-enought-building-blocks:block/template_corner_pillar_se_bts",
+  "textures": {
+    "bottom": "just-enought-building-blocks:block/striped_warped_plank",
+    "side": "just-enought-building-blocks:block/striped_warped_plank",
+    "top": "just-enought-building-blocks:block/striped_warped_plank"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "just-enought-building-blocks:mangrove_triangle_block"
+  },
+  "result": "just-enought-building-blocks:slab_mangrove_triangle_block"
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:vertical_slab_striped_spruce_plank"
+    },
+    {
+      "item": "just-enought-building-blocks:vertical_slab_striped_spruce_plank"
+    }
+  ],
+  "result": {
+    "item": "just-enought-building-blocks:striped_spruce_plank"
+  }
+}

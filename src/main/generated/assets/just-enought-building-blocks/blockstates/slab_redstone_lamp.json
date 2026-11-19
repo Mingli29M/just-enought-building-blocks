@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_redstone_lamp_bottom"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_redstone_lamp_bottom"
+    },
+    "type=double,waterlogged=false": {
+      "model": "minecraft:block/redstone_lamp"
+    },
+    "type=double,waterlogged=true": {
+      "model": "minecraft:block/redstone_lamp"
+    },
+    "type=top,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_redstone_lamp_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_redstone_lamp_top"
+    }
+  }
+}

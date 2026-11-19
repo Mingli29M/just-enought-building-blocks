@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_striped_dark_oak_bottom"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_striped_dark_oak_bottom"
+    },
+    "type=double,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/striped_dark_oak"
+    },
+    "type=double,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/striped_dark_oak"
+    },
+    "type=top,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_striped_dark_oak_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_striped_dark_oak_top"
+    }
+  }
+}

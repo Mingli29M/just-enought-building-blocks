@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_chiseled_warped_planks_bottom"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_chiseled_warped_planks_bottom"
+    },
+    "type=double,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/chiseled_warped_planks"
+    },
+    "type=double,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/chiseled_warped_planks"
+    },
+    "type=top,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_chiseled_warped_planks_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_chiseled_warped_planks_top"
+    }
+  }
+}

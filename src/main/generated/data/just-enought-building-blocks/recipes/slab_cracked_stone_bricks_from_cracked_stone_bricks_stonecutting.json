@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "minecraft:cracked_stone_bricks"
+  },
+  "result": "just-enought-building-blocks:slab_cracked_stone_bricks"
+}

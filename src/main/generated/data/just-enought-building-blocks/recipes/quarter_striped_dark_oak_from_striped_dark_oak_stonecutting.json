@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "just-enought-building-blocks:striped_dark_oak"
+  },
+  "result": "just-enought-building-blocks:quarter_striped_dark_oak"
+}

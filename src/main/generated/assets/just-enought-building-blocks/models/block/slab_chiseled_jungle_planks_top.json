@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "just-enought-building-blocks:block/chiseled_jungle_planks",
+    "side": "just-enought-building-blocks:block/chiseled_jungle_planks",
+    "top": "just-enought-building-blocks:block/chiseled_jungle_planks"
+  }
+}

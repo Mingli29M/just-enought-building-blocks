@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "minecraft:block/frosted_ice_0",
+    "side": "minecraft:block/frosted_ice_0",
+    "top": "minecraft:block/frosted_ice_0"
+  }
+}

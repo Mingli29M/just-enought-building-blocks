@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_crimson_triangle_block_bottom"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_crimson_triangle_block_bottom"
+    },
+    "type=double,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/crimson_triangle_block"
+    },
+    "type=double,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/crimson_triangle_block"
+    },
+    "type=top,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_crimson_triangle_block_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_crimson_triangle_block_top"
+    }
+  }
+}

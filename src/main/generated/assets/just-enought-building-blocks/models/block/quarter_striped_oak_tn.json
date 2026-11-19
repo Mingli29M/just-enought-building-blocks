@@ -1,0 +1,8 @@
+{
+  "parent": "just-enought-building-blocks:block/template_quarter_tn_bts",
+  "textures": {
+    "bottom": "just-enought-building-blocks:block/striped_oak",
+    "side": "just-enought-building-blocks:block/striped_oak",
+    "top": "just-enought-building-blocks:block/striped_oak"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_light_gray_stained_glass_bottom"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_light_gray_stained_glass_bottom"
+    },
+    "type=double,waterlogged=false": {
+      "model": "minecraft:block/light_gray_stained_glass"
+    },
+    "type=double,waterlogged=true": {
+      "model": "minecraft:block/light_gray_stained_glass"
+    },
+    "type=top,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_light_gray_stained_glass_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_light_gray_stained_glass_top"
+    }
+  }
+}

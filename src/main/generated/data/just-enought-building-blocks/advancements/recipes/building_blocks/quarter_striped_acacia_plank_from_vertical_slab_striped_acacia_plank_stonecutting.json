@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:quarter_striped_acacia_plank_from_vertical_slab_striped_acacia_plank_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vertical_slab_striped_acacia_plank": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "just-enought-building-blocks:vertical_slab_striped_acacia_plank"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_vertical_slab_striped_acacia_plank",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:quarter_striped_acacia_plank_from_vertical_slab_striped_acacia_plank_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

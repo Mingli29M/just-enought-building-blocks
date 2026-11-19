@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:vertical_slab_light_blue_concrete"
+    }
+  ],
+  "result": {
+    "item": "just-enought-building-blocks:slab_light_blue_concrete"
+  }
+}

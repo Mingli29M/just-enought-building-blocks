@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "minecraft:raw_gold_block"
+  },
+  "result": "just-enought-building-blocks:slab_raw_gold_block"
+}

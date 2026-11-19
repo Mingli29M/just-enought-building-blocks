@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "minecraft:dark_oak_leaves"
+  },
+  "result": "just-enought-building-blocks:slab_dark_oak_leaves"
+}

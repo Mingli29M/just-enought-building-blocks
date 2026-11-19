@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "just-enought-building-blocks:striped_spruce_plank"
+  },
+  "result": "just-enought-building-blocks:quarter_striped_spruce_plank"
+}

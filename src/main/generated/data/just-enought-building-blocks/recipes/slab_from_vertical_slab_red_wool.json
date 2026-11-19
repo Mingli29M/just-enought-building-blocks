@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:vertical_slab_red_wool"
+    }
+  ],
+  "result": {
+    "item": "just-enought-building-blocks:slab_red_wool"
+  }
+}

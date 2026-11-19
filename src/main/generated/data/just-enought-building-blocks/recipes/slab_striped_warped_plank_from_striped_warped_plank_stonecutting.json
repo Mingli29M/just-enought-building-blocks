@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "just-enought-building-blocks:striped_warped_plank"
+  },
+  "result": "just-enought-building-blocks:slab_striped_warped_plank"
+}

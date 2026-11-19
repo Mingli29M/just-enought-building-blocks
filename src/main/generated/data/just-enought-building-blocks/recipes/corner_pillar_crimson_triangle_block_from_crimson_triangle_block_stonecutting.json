@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "just-enought-building-blocks:crimson_triangle_block"
+  },
+  "result": "just-enought-building-blocks:corner_pillar_crimson_triangle_block"
+}

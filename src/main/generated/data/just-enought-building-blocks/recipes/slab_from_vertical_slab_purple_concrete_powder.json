@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "just-enought-building-blocks:vertical_slab_purple_concrete_powder"
+    }
+  ],
+  "result": {
+    "item": "just-enought-building-blocks:slab_purple_concrete_powder"
+  }
+}

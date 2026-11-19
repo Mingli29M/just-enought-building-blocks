@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "just-enought-building-blocks:cheery_triangle_block"
+  },
+  "result": "just-enought-building-blocks:quarter_cheery_triangle_block"
+}

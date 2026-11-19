@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_blue_concrete_powder_bottom"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_blue_concrete_powder_bottom"
+    },
+    "type=double,waterlogged=false": {
+      "model": "minecraft:block/blue_concrete_powder"
+    },
+    "type=double,waterlogged=true": {
+      "model": "minecraft:block/blue_concrete_powder"
+    },
+    "type=top,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_blue_concrete_powder_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_blue_concrete_powder_top"
+    }
+  }
+}

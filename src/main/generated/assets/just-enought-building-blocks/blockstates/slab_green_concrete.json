@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_green_concrete_bottom"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_green_concrete_bottom"
+    },
+    "type=double,waterlogged=false": {
+      "model": "minecraft:block/green_concrete"
+    },
+    "type=double,waterlogged=true": {
+      "model": "minecraft:block/green_concrete"
+    },
+    "type=top,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_green_concrete_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_green_concrete_top"
+    }
+  }
+}

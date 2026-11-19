@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "minecraft:gilded_blackstone"
+  },
+  "result": "just-enought-building-blocks:slab_gilded_blackstone"
+}

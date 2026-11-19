@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_cracked_deepslate_bricks_bottom"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_cracked_deepslate_bricks_bottom"
+    },
+    "type=double,waterlogged=false": {
+      "model": "minecraft:block/cracked_deepslate_bricks"
+    },
+    "type=double,waterlogged=true": {
+      "model": "minecraft:block/cracked_deepslate_bricks"
+    },
+    "type=top,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_cracked_deepslate_bricks_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_cracked_deepslate_bricks_top"
+    }
+  }
+}

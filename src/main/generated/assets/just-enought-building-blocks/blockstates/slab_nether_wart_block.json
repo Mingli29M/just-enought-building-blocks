@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_nether_wart_block_bottom"
+    },
+    "type=bottom,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_nether_wart_block_bottom"
+    },
+    "type=double,waterlogged=false": {
+      "model": "minecraft:block/nether_wart_block"
+    },
+    "type=double,waterlogged=true": {
+      "model": "minecraft:block/nether_wart_block"
+    },
+    "type=top,waterlogged=false": {
+      "model": "just-enought-building-blocks:block/slab_nether_wart_block_top"
+    },
+    "type=top,waterlogged=true": {
+      "model": "just-enought-building-blocks:block/slab_nether_wart_block_top"
+    }
+  }
+}
